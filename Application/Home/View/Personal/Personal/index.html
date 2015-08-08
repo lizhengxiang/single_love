@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+	<div id="header"><h1>我的相册</h1></div>
+  	<div id="content">
+    <form action="./upload" enctype = "multipart/form-data" method="POST" enctype="multipart/form-data">
+	<fieldset>
+		基本信息: 
+		<img src="{$photo['head_ptoto']}"/>
+		<h2>ID: {$photo['members_id']}</h2>
+		{$data['age']}岁,{$data['gender']},{$data['schooling']}学历,来自{$data[home]},原籍{$data['place']}.</br>
+		身  高:{$data['height']}    出生年月:{$data['birth']}</br>
+		月  薪:{$data['income']}	星座:{$data['constellation']}</br>
+		居住情况:{$data['live']}	血型:{$data['type']}</br>
+		购车情况:{$data['car']}		工作地域:{$data['work']}
+	</fieldset>
+	<br/>
+
+	<fieldset>
+ 		<h2>內心独白:</h2>
+		{$lnner['lnner']}
+		
+ 	</fieldset>
+ 	<br/>
+
+	<fieldset>
+    	<h2>择偶条件</h2>
+		年龄:{$choose['agea']} --{$choose['ageb']}	身高:{$choose['heighta']} -- {$choose['heightb']}</br>
+		学历:{$choose['school']} 婚姻状况:{$choose['hunyin']}</br>
+		有无照片:{$choose['photo']} 工作处所:{$choose['work']}</br>
+    </fieldset>
+    <br />
+
+	<fieldset>
+    	<h2>外貌性格:</h2>
+		身高:{$data['height']}cm 体重:{$appearance['weight']}kg</br>
+		体型:{$appearance['size']} 健康状况:{$appearance['health']}</br>
+		外貌自评:{$appearance['evaluation']} 穿衣风格:{$appearance['clothes']}</br>
+		性格特征:{$appearance['disposition']} 脾气:{$appearance['temper']}
+    </fieldset>
+    <br />
+
+    <fieldset>
+    	<h2>工作学习</h2> 
+		单位类型:{$unit['unit']} 职业职位:{$unit['professional']}</br>
+		工作状况:{$unit['work']} 工作调动:{$unit['move']}</br>
+		毕业学校:{$unit['school']} 专业类型:{$unit['major']}</br>
+		语言能力:{$unit['language']} 事业家庭:{$unit['family']}</br>
+    </fieldset>
+    <br />
+
+	<fieldset>
+    	<h2>生活方式:</h2> 
+		吸烟:{$life['smoking']} 饮酒:{$life['drinking']}</br>
+		锻炼习惯:{$life['exercise']} 饮食习惯:{$life['diet']}</br>
+		逛街购物:{$life['shopping']} 宗教信仰:{$life['religious']}</br>
+		作息时间:{$life['worktime']} 交际圈子:{$life['social']}</br>
+		最大消费:{$life['consumption']}</br>
+		家务水平等级:{$life['home']} 家务分配情况:{$life['distributin']}</br>
+		家中排行:{$life['ranking']} 父母情况:{$life['parents']}</br>
+		是否要孩子:{$life['child']} 考虑何时结婚:{$life['married']}</br>
+		宠物喜欢程度:{$life['pet']} 关于宠物:{$life['petabout']}</br>
+    </fieldset>
+    <br />
+
+    <fieldset>
+    	<label for="user_pic">生活照五:</label> 
+    </fieldset>
+    <br />
+
+    <fieldset>
+    	<label for="user_pic">生活照六:</label> 
+    </fieldset>
+    <br />
+
+    <fieldset class="center">
+    	<input type="submit" value="上傳" />
+    	<input type="reset" value="清除" />
+    </fieldset>
+   	</form>
+ </div>
+
+  <div id="footer"></div>
+ </body>
+</html>
+
