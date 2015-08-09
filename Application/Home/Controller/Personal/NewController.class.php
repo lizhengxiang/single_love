@@ -7,7 +7,7 @@ class NewController extends Controller {
    public function index($user_id){
 		//echo $map;
 		//获取用户帐号
-		echo $map['members_id'] = $user_id;
+		$map['members_id'] = $user_id;
 
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
