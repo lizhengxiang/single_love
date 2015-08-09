@@ -12,13 +12,13 @@
   	<div id="content">
 	<fieldset>
 		<h2>最新会员</h2>
-		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_1['id']); ?>" target="_blank"><img src="<?php echo ($user_1['head_photo']); ?>"/></a>	
+		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_1['id']); ?>" target="_blank"><img src="<?php echo ($user_1['head_photo']); ?>" height="100" width="125"/></a>	
 		<p><?php echo ($user_1['nickname']); ?></p>
 		<p><?php echo ($user_1['home']); ?></p>
 	</fieldset>
 	<fieldset>
 		<h2>最新会员</h2>
-		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_2['id']); ?>" target="_blank"><img src="<?php echo ($user_2['head_photo']); ?>"/></a>	
+		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_2['id']); ?>" target="_blank"><img src="<?php echo ($user_2['head_photo']); ?>"height="100" width="120"/></a>	
 		<p><?php echo ($user_2['nickname']); ?></p>
 		<p><?php echo ($user_2['home']); ?></p>
 	</fieldset>

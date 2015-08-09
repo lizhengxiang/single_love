@@ -10,10 +10,6 @@
     <form action="./upload" enctype = "multipart/form-data" method="POST"
           enctype="multipart/form-data">
 	<fieldset>
-		會員帳號<input type = "text" name = id>
-	</fieldset>
-	<br/>
-	<fieldset>
  	 <label for="user_pic">我的头像:</label>
  	 <input type="file" name="user_pic[]" size="30" /><br />
  	</fieldset>
@@ -52,6 +48,7 @@
       <fieldset class="center">
         <input type="submit" value="上傳" />
         <input type="reset" value="清除" />
+		<a href="https://localhost/single_love/index.php/Home/Lnner/Lnner/index"><button type="button">跳过此页</button></a>
       </fieldset>
     </form>
   </div>

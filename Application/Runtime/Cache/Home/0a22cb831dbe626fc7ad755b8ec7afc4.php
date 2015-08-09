@@ -4,12 +4,11 @@
 </head>
 
 <body>
-	<div id="header"><h1>我的相册</h1></div>
+	<div id="header"><h1>会员信息</h1></div>
   	<div id="content">
     <form action="./upload" enctype = "multipart/form-data" method="POST" enctype="multipart/form-data">
 	<fieldset>
-		基本信息: 
-		<img src="<?php echo ($photo['head_ptoto']); ?>"/>
+		<img src="<?php echo ($photo['head_ptoto']); ?>"height="200" width="200"/>
 		<h2>ID: <?php echo ($photo['members_id']); ?></h2>
 		<?php echo ($data['age']); ?>岁,<?php echo ($data['gender']); ?>,<?php echo ($data['schooling']); ?>学历,来自<?php echo ($data[home]); ?>,原籍<?php echo ($data['place']); ?>.</br>
 		身  高:<?php echo ($data['height']); ?>    出生年月:<?php echo ($data['birth']); ?></br>
