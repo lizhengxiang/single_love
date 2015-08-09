@@ -6,7 +6,7 @@
 <body>
 	<ul>
   		<li><a href = "https://localhost/single_love/index.php/Home/Home/Home/index"><h1>个人主页</h1></a></li>
-  		<li><a href="https://localhost/single_love/index.php/Home/Information/Information/index/members_id/{user_id['id']}" target="_blank"><h1>修改资料</h1></a></li>
+  		<li><a href="https://localhost/single_love/index.php/Home/Information/Information/index" target="_blank"><h1>修改资料</h1></a></li>
 	</ul>
 
   	<div id="content">

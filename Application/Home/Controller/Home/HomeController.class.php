@@ -5,15 +5,11 @@ use Think\Controller;
 require_once 'NewuserController.class.php';
 class HomeController extends Controller {
 
-    public function index($user_id){
+    public function index(){
 		//取出会员的昵称等信息,调用类
 		//取出新加入的五个会员的id号
 		$think_data = M('registered');
 		$think_data_id = $think_data->field('members_id')->order('join_time  desc')->limit(4)->select();
-		
-		//模板里传递自己的id号,用于修改字料等
-		$members_id['id'] = $user_id;
-		$this->assign('user_id', $members_id);
 
 		//取出第一個會員的基本資料
 		$user_id_1 = $think_data_id[0]['members_id'];

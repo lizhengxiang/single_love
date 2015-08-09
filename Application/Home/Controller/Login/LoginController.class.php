@@ -31,7 +31,7 @@ class LoginController extends Controller {
 				//session('user', $username);
 				cookie('user', $username);
 				cookie('password',$password);
-				$this->success('登录成功', '/single_love/index.php/Home/Home/Home/index/user_id/'.$username, 0);
+				$this->success('登录成功', '/single_love/index.php/Home/Home/Home/index', 0);
 			}else{
 				$this->error("密码错误");
 			}
