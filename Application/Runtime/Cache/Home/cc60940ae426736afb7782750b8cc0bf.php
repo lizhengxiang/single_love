@@ -9,6 +9,8 @@
 	<fieldset>
 		<h2>最新会员</h2>
 		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user['id']); ?>"><img src="<?php echo ($user['head_photo']); ?>"/></a>	
+		<p><?php echo ($user['nickname']); ?></p>
+		<p><?php echo ($user['home']); ?></p>
 	</fieldset>
  </body>
 </html>

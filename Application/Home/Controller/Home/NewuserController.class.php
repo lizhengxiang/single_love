@@ -30,7 +30,7 @@ class NewuserController extends Controller {
 				$user['age'] = date("Y-m-d") - $data['birth'];
 				$user['height'] = $data['height'];	
 				$user['home'] = $data['home']; 	
-
+				$user['nickname'] = $data['nickname'];
 				//取出工作学习
 				$think_unit = M('unit');
 				$unit = $think_unit->where($map)->find();
