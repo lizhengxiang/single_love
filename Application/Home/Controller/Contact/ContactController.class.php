@@ -10,20 +10,34 @@ class ContactController extends Controller {
 		$this->display();
     }
 	public function contact(){
-		//获取网页表单
-		echo $map['members_id'] = trim(I('members_id'));
-		echo $data['name'] = trim(I('name'));
-		echo $data['unit'] = trim(I('unit'));
-		echo $data['tel'] = trim((I('tel')));
-		echo $data['blog'] = trim(I('blog'));
-		echo $data['qq'] = trim(I('qq'));
-		echo $data['weibo'] = trim(I('weibo'));
-		echo $data['msn'] = trim(I('msn'));
-		echo $data['home'] = trim(I('home'));
-		echo $data['modify'] = date('Y-m-d  h:i:sa');
-		//实例化contact对象
-		$contact = M('contact');
-		//根据条件跟新记录
-		$contact->where($map)->data($data)->save();
+		if($map_id['members_id'] = cookie('user')){
+			//根据用户名获取psssword再和cookie的password做比较
+			$password = M('registered');
+			$data = $password->where($map_id)->find();
+			//根据密码判断是不是自己
+			if(!$data['password'] === cookie('password')){
+				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+			}else{
+				//获取网页表单
+				$map['members_id'] = cookie('user');
+				$data['name'] = trim(I('name'));
+				$data['unit'] = trim(I('unit'));
+				$data['tel'] = trim((I('tel')));
+				$data['blog'] = trim(I('blog'));
+				$data['qq'] = trim(I('qq'));
+				$data['weibo'] = trim(I('weibo'));
+				$data['msn'] = trim(I('msn'));
+				$data['home'] = trim(I('home'));
+				$data['modify'] = date('Y-m-d  h:i:sa');
+				//实例化contact对象
+				$contact = M('contact');
+				//根据条件跟新记录
+				$contact->where($map)->data($data)->save();
+				//跳转到联系方式页面
+				$this->redirect('/Home/Appearance/Appearance/index', 0, '');
+			}
+		}else{
+			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+		}					
 	}
 }

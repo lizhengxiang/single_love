@@ -1,4 +1,4 @@
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <body>
 <form action="contact" method="post">
 会员帐号: <input type="text" name="members_id"><br>
