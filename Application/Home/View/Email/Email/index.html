@@ -1,0 +1,28 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+ <div id="content">
+ <fieldset>
+  <img src="{$photo['head_ptoto']}"height="200" width="200"/>
+  <h2>ID: {$photo['members_id']}</h2>
+  {$data['age']}岁,{$data['gender']}, {$data['height']},{$data['schooling']}学历,来自{$data[home]},原籍{$data['place']}.</br>
+ </fieldset>
+ <br/>
+
+ <fieldset>
+  <form action="email" method="post">
+  <h2>发送邮件:</h2>
+  <textarea  name="email" rows="8" cols="60">
+  我是一個樂觀的男孩 ... ... ... ...
+ </textarea>
+ </br>
+ <input type="submit" value="发送邮件">
+ </fieldset>
+ 	<br/>
+	</div>
+ </body>
+</html>
+

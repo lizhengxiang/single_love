@@ -18,7 +18,7 @@ class LifeController extends Controller {
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
 				//获取表單提交的基本信息
-				$map['members_id']=I('members_id');
+				$map['members_id']=cookie('user');
 				$data['smoking'] = I('smoking');
 				$data['drinking'] = I('drinking');
 				$data['exercise'] = I('exercise');
@@ -41,8 +41,8 @@ class LifeController extends Controller {
 				$life = M('life');
 				//根据条件更新记录
 				$life->where($map)->data($data)->save();
-				//跳转到联系方式页面
-				$this->redirect('/Home/Contact/Contact/index', 0, '');
+				//跳转到择偶条件
+				$this->redirect('/Home/Choose/Choose/index', 0, '');
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

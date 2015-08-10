@@ -17,11 +17,15 @@
 		购车情况:<?php echo ($data['car']); ?>		工作地域:<?php echo ($data['work']); ?>
 	</fieldset>
 	<br/>
+	<fieldset>
+      <h2>內心独白:</h2>
+         <?php echo ($lnner['lnner']); ?>
+      </fieldset>
+	<br>
 
 	<fieldset>
  		<h2>內心独白:</h2>
 		<?php echo ($lnner['lnner']); ?>
-		
  	</fieldset>
  	<br/>
 
