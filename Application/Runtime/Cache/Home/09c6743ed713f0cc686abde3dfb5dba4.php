@@ -1,4 +1,4 @@
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <body>
 <form action="unit" method="post">
 单位类型: <input type="text" name="unit_type"><br>

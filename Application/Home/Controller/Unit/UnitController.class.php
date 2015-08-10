@@ -10,20 +10,35 @@ class UnitController extends Controller {
 		$this->display();
     }
 	public function unit(){
-		//获取网页表单
-		echo $map['members_id'] = trim(I('members_id'));
-		echo $data['unit_type'] = trim(I('unit_type'));
-		echo $data['professional'] = trim(I('professional'));
-		echo $data['work'] = trim((I('work')));
-		echo $data['move'] = trim(I('move'));
-		echo $data['family'] = trim(I('family'));
-		echo $data['school'] = trim(I('school'));
-		echo $data['major'] = trim(I('major'));
-		echo $data['language'] = trim(I('language'));
-		echo $data['modify'] = date('Y-m-d  h:i:sa');
-		//实例化unit对象
-		$unit = M('unit');
-		//根据条件跟新记录
-		$unit->where($map)->data($data)->save();
+		if($map_id['members_id'] = cookie('user')){
+			//根据用户名获取psssword再和cookie的password做比较
+			$password = M('registered');
+			$data = $password->where($map_id)->find();
+			//根据密码判断是不是自己
+			if(!$data['password'] === cookie('password')){
+				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+			}else{
+				//获取网页表单
+				$map['members_id'] = cookie('user');
+				$data['unit_type'] = trim(I('unit_type'));
+				$data['professional'] = trim(I('professional'));
+				$data['work'] = trim((I('work')));
+				$data['move'] = trim(I('move'));
+				$data['family'] = trim(I('family'));
+				$data['school'] = trim(I('school'));
+				$data['major'] = trim(I('major'));
+				$data['language'] = trim(I('language'));
+				$data['modify'] = date('Y-m-d  h:i:sa');
+				//实例化unit对象
+				$unit = M('unit');
+				//根据条件跟新记录
+				$unit->where($map)->data($data)->save();
+				//跳转到生活方式页面
+				$this->redirect('/Home/Life/Life/index', 0, '');
+			}
+		}else{
+			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+		}					
 	}
 }
+

@@ -8,7 +8,7 @@
 </textarea>
 </br>
 <input type="submit" value="保存并继续">
-		<a href="https://localhost/single_love/index.php/Home/Life/Life/index"><button type="button">跳过此页</button></a>
+		<a href="https://localhost/single_love/index.php/Home/Contact/Contact/index"><button type="button">跳过此页</button></a>
 
 </form>
 
