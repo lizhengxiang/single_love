@@ -2,13 +2,11 @@
 
 namespace Home\Controller\Email;
 use Think\Controller;
-use Think\Upload;
-require_once'NewuserController.class.php';
+require_once 'EmailcountController.class.php';
+require_once 'EmailreadController.class.php';
+require_once 'EmailSendController.class.php';
 class LookemailController extends Controller {
 	public function index(){
-		$this->display();
-    }
-	public function email(){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
 			$password = M('registered');
@@ -17,15 +15,20 @@ class LookemailController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-			
-				//获取相应内容
-				$data['members_id_b'] = I('user_id');
-				$data['members_id_a'] = cookie('user');
-				echo $data['content'] = trim(I('email'));
-				$data['time_a'] = date('Y-m-d h:i:sa');
-				$data['state'] = 0;
-				$think_email = M('email');
-				$think_email->field('members_id_a,members_id_b,content,time_a,state')->data($data)->add();
+				//统计未读邮件
+				$email_count = new EmailcountController();
+				$count = $email_count->index(cookie('user'));
+				$this->assign('count', $count);
+				//统计已读邮件
+				$email_count = new EmailreadController();
+                $read = $email_count->index(cookie('user'));
+                $this->assign('read', $read);
+				//统计发送邮件
+				$email_count = new EmailSendController();
+ 				$send = $email_count->index(cookie('user'));
+ 				$this->assign('send', $send);
+
+				$this->display();
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

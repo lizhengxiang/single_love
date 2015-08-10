@@ -4,21 +4,21 @@
 </head>
 
 <body>
-	<div id="header"><h1>邮件系统</h1></div>
+	<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index"><h1>邮件系统</h1></a>
   	<div id="content">
 
 	<fieldset>
- 		<h2>收件箱(未读):</h2>
+ 		<h2>收件箱(未读):(<?php echo ($count); ?>)</h2>
  	</fieldset>
  	<br/>
 
 	<fieldset>
-    	<h2>收件箱(已读)</h2>
+    	<h2>收件箱(已读):(<?php echo ($read); ?>)</h2>
     </fieldset>
     <br/>
 
 	<fieldset>
-    	<h2>发件箱</h2>
+    	<h2>已发送:(<?php echo ($send); ?>)</h2>
     </fieldset>
     <br/>
    	</form>
