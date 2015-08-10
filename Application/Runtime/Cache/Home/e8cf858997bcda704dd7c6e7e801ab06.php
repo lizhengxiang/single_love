@@ -6,8 +6,8 @@
 <body>
  <div id="content">
  <fieldset>
-  <img src="<?php echo ($photo['head_ptoto']); ?>"height="200" width="200"/>
-  <h2>ID: <?php echo ($photo['members_id']); ?></h2>
+  <img src="<?php echo ($data['head_photo']); ?>"height="200" width="200"/>
+  <h2>ID: <?php echo ($data['members_id']); ?></h2>
   <?php echo ($data['age']); ?>岁,<?php echo ($data['gender']); ?>, <?php echo ($data['height']); ?>,<?php echo ($data['schooling']); ?>学历,来自<?php echo ($data[home]); ?>,原籍<?php echo ($data['place']); ?>.</br>
  </fieldset>
  <br/>

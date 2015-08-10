@@ -10,8 +10,8 @@ class EmailController extends Controller {
 		//获取会员资料
 		$nweuser = new NewuserController();
 		$user_1 = $nweuser->index($user_id);
-		$user_1['id'] = $user_id;
-		$this->assign('user_1', $user_1);
+		//$user_1['id'] = $user_id;
+		$this->assign('data', $user_1);
 		
 		//调用邮件发送
 		$this->display();

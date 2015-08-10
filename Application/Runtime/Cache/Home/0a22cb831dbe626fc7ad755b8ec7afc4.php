@@ -18,8 +18,7 @@
 	</fieldset>
 	<br/>
 	<fieldset>
-      <h2>內心独白:</h2>
-         <?php echo ($lnner['lnner']); ?>
+      <a href="https://localhost/single_love/index.php/Home/Email/Email/index/user_id/<?php echo ($photo['members_id']); ?>"><button type="button">发信</button></a>
       </fieldset>
 	<br>
 

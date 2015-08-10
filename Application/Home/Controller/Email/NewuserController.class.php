@@ -22,19 +22,18 @@ class NewuserController extends Controller {
 				//根据id取出照片
 				$photo = $photo1->where($map)->find();
 				$user['head_photo'] = $photo['head_ptoto'];
-
 				//取出用户基本资料
 				$data1 = M('data');
 				$data = $data1->where($map)->find();
 				//计算年龄
 				$user['age'] = date("Y-m-d") - $data['birth'];
-				$user['height'] = $data['height'];	
-				$user['home'] = $data['home']; 	
-				$user['nickname'] = $data['nickname'];
-				//取出工作学习
-				$think_unit = M('unit');
-				$unit = $think_unit->where($map)->find();
-				$user['professional'] = $unit['professional'];
+				$user['gender'] = $data['gender'];
+				$user['schooling'] = $data['schooling'];
+				$user['home'] = $data['home'];
+				$user['place'] = $data['place'];
+				$user['height'] = $data['height'];
+				$user['marriage'] = $data['marriage'];
+				$user['members_id'] = $map['members_id'];			
 				return $user;
 			}
 		
