@@ -21,7 +21,8 @@ class EmailreadController extends Controller {
 				$think_email = M('email');
 				$map['members_id_b'] = $userid;
 				$map['state'] = 1;
-				$count = $think_email->where($map)->count();		
+				$count['count'] = $think_email->where($map)->count();
+				$count['email'] = $think_email->where($map)->select();	
 				return $count;
 			}
 		

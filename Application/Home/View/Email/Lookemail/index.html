@@ -9,23 +9,35 @@
 
 	<fieldset>
  		<h2>收件箱(未读):({$count['count']})</h2>
-		<for start = "0" end = "$end_val">
+		<for start = "0" end = "$count['count']">
 			<fieldset>
 				<h4>ID:{$count["email"][$i]["members_id_a"]}</h4>
-				<h4>发送时间:{$count["email"][$i]["time_a"]}</h4>
-				
+				<h4>收信时间:{$count["email"][$i]["time_a"]}</h4>
 	    	</fieldset>
 		</for>
  	</fieldset>
  	<br/>
 
 	<fieldset>
-    	<h2>收件箱(已读):({$read})</h2>
+    	<h2>收件箱(已读):({$read['count']})</h2>
+		 <for start = "0" end = "$read['count']">
+         	<fieldset>
+            	<h4>ID:{$read["email"][$i]["members_id_b"]}</h4>
+ 	           	<h4>读信时间:{$count["email"][$i]["time_b"]}</h4>
+ 	      	</fieldset>
+ 	   	</for>
     </fieldset>
     <br/>
 
 	<fieldset>
-    	<h2>已发送:({$send})</h2>
+    	<h2>已发送:({$send['count']})</h2>
+		<for start = "0" end = "$send['count']">
+	        <fieldset>
+          		<h4>ID:{$send["email"][$i]["members_id_b"]}</h4>
+ 				<h4>发送时间:{$send["email"][$i]["time_a"]}</h4>
+ 			</fieldset>
+ 		</for>
+
     </fieldset>
     <br/>
    	</form>

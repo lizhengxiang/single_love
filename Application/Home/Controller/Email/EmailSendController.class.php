@@ -20,7 +20,8 @@ class EmailSendController extends Controller {
 				//获取发送邮件数量
 				$think_email = M('email');
 				$map['members_id_a'] = $userid;
-				$count = $think_email->where($map)->count();		
+				$count['count'] = $think_email->where($map)->count();	
+				$count['email'] = $think_email->where($map)->select();
 				return $count;
 			}
 		

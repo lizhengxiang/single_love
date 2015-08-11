@@ -9,20 +9,29 @@
 
 	<fieldset>
  		<h2>收件箱(未读):(<?php echo ($count['count']); ?>)</h2>
-		<?php $__FOR_START_707256997__=0;$__FOR_END_707256997__=$end_val;for($i=$__FOR_START_707256997__;$i < $__FOR_END_707256997__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_210665464__=0;$__FOR_END_210665464__=$count['count'];for($i=$__FOR_START_210665464__;$i < $__FOR_END_210665464__;$i+=1){ ?><fieldset>
 				<h4>ID:<?php echo ($count["email"][$i]["members_id_a"]); ?></h4>
-				<h4>发送时间:<?php echo ($count["email"][$i]["time_a"]); ?></h4>
+				<h4>收信时间:<?php echo ($count["email"][$i]["time_a"]); ?></h4>
 	    	</fieldset><?php } ?>
  	</fieldset>
  	<br/>
 
 	<fieldset>
-    	<h2>收件箱(已读):(<?php echo ($read); ?>)</h2>
+    	<h2>收件箱(已读):(<?php echo ($read['count']); ?>)</h2>
+		 <?php $__FOR_START_1094730351__=0;$__FOR_END_1094730351__=$read['count'];for($i=$__FOR_START_1094730351__;$i < $__FOR_END_1094730351__;$i+=1){ ?><fieldset>
+            	<h4>ID:<?php echo ($read["email"][$i]["members_id_b"]); ?></h4>
+ 	           	<h4>读信时间:<?php echo ($count["email"][$i]["time_b"]); ?></h4>
+ 	      	</fieldset><?php } ?>
     </fieldset>
     <br/>
 
 	<fieldset>
-    	<h2>已发送:(<?php echo ($send); ?>)</h2>
+    	<h2>已发送:(<?php echo ($send['count']); ?>)</h2>
+		<?php $__FOR_START_1919420609__=0;$__FOR_END_1919420609__=$send['count'];for($i=$__FOR_START_1919420609__;$i < $__FOR_END_1919420609__;$i+=1){ ?><fieldset>
+          		<h4>ID:<?php echo ($send["email"][$i]["members_id_b"]); ?></h4>
+ 				<h4>发送时间:<?php echo ($send["email"][$i]["time_a"]); ?></h4>
+ 			</fieldset><?php } ?>
+
     </fieldset>
     <br/>
    	</form>
