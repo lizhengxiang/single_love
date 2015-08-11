@@ -19,6 +19,9 @@ class LookemailController extends Controller {
 				$email_count = new EmailcountController();
 				$count = $email_count->index(cookie('user'));
 				$this->assign('count', $count);
+				//dump($count);
+				$end_val = count($count["email"]);
+				$this->assign('end_val',$end_val);
 				//统计已读邮件
 				$email_count = new EmailreadController();
                 $read = $email_count->index(cookie('user'));

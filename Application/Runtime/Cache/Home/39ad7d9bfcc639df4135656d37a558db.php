@@ -8,7 +8,11 @@
   	<div id="content">
 
 	<fieldset>
- 		<h2>收件箱(未读):(<?php echo ($count); ?>)</h2>
+ 		<h2>收件箱(未读):(<?php echo ($count['count']); ?>)</h2>
+		<?php $__FOR_START_707256997__=0;$__FOR_END_707256997__=$end_val;for($i=$__FOR_START_707256997__;$i < $__FOR_END_707256997__;$i+=1){ ?><fieldset>
+				<h4>ID:<?php echo ($count["email"][$i]["members_id_a"]); ?></h4>
+				<h4>发送时间:<?php echo ($count["email"][$i]["time_a"]); ?></h4>
+	    	</fieldset><?php } ?>
  	</fieldset>
  	<br/>
 

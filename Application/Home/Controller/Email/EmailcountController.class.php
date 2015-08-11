@@ -21,7 +21,10 @@ class EmailcountController extends Controller {
 				$think_email = M('email');
 				$map['members_id_b'] = $userid;
 				$map['state'] = 0;
-				$count = $think_email->where($map)->count();		
+				//统计未读邮件数量
+				$count['count'] = $think_email->where($map)->count();
+				//取出未读邮件
+				$count['email'] = $think_email->where($map)->select();		
 				return $count;
 			}
 		

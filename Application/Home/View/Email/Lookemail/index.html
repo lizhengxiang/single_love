@@ -8,7 +8,14 @@
   	<div id="content">
 
 	<fieldset>
- 		<h2>收件箱(未读):({$count})</h2>
+ 		<h2>收件箱(未读):({$count['count']})</h2>
+		<for start = "0" end = "$end_val">
+			<fieldset>
+				<h4>ID:{$count["email"][$i]["members_id_a"]}</h4>
+				<h4>发送时间:{$count["email"][$i]["time_a"]}</h4>
+				
+	    	</fieldset>
+		</for>
  	</fieldset>
  	<br/>
 
