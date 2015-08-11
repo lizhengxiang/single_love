@@ -10,6 +10,10 @@ class HomeController extends Controller {
 		//取出会员的昵称等信息,调用类
 		//取出新加入的五个会员的id号
 		$think_data = M('registered');
+		$id = cookie('user');
+		//在页面显示自己的id号
+		$this->assign('id', $id);
+
 		$think_data_id = $think_data->field('members_id')->order('join_time  desc')->limit(4)->select();
 
 		//取出第一個會員的基本資料

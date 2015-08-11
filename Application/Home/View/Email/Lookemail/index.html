@@ -13,6 +13,7 @@
 			<fieldset>
 				<h4>ID:{$count["email"][$i]["members_id_a"]}</h4>
 				<h4>收信时间:{$count["email"][$i]["time_a"]}</h4>
+				<a href="https://localhost/single_love/index.php/Home/Email/reademail/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
 	    	</fieldset>
 		</for>
  	</fieldset>
@@ -24,6 +25,7 @@
          	<fieldset>
             	<h4>ID:{$read["email"][$i]["members_id_b"]}</h4>
  	           	<h4>读信时间:{$count["email"][$i]["time_b"]}</h4>
+				<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index"><button type="button"><h4>查看邮件</h4></button></a>
  	      	</fieldset>
  	   	</for>
     </fieldset>
@@ -40,6 +42,7 @@
 					<else/>未读
 					</if>
 				</h4>
+				<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index"><button type="button"><h4>查看邮件</h4></button></a>
  			</fieldset>
  		</for>
 
