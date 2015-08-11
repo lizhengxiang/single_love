@@ -34,6 +34,8 @@ class LoginController extends Controller {
 				//写入这次的登录时间
 				$logintime = M('logintime');
 				$data['logintime'] = date('Y-m-d h:i:sa');
+				$login_time = $logintime->where($map)->find();
+				$data['logintime1'] = $login_time['logintime'];
 				$logintime->where($map)->data($data)->save();
 
 				$this->success('登录成功', '/single_love/index.php/Home/Home/Home/index', 0);

@@ -4,6 +4,7 @@ namespace Home\Controller\Home;
 use Think\Controller;
 require_once 'NewuserController.class.php';
 require_once 'EmailController.class.php';
+require_once 'LookController.class.php';
 class HomeController extends Controller {
 
     public function index(){
@@ -35,6 +36,11 @@ class HomeController extends Controller {
 		$count = $email_count->index(cookie('user'));
 		$this->assign('count', $count);
 		
+		//统计看过我的人
+		$lookCount = new LookController();
+		$look_count = $lookCount->index();
+		$this->assign('look_count', $look_count);
+
 		$this->display();
     }
 }
