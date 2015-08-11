@@ -9,7 +9,7 @@
 
 	<fieldset>
  		<h2>收件箱(未读):(<?php echo ($count['count']); ?>)</h2>
-		<?php $__FOR_START_1887017092__=0;$__FOR_END_1887017092__=$count['count'];for($i=$__FOR_START_1887017092__;$i < $__FOR_END_1887017092__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_1322823436__=0;$__FOR_END_1322823436__=$count['count'];for($i=$__FOR_START_1322823436__;$i < $__FOR_END_1322823436__;$i+=1){ ?><fieldset>
 				<h4>ID:<?php echo ($count["email"][$i]["members_id_a"]); ?></h4>
 				<h4>收信时间:<?php echo ($count["email"][$i]["time_a"]); ?></h4>
 				<a href="https://localhost/single_love/index.php/Home/Email/reademail/index/userid/<?php echo ($count["email"][$i]["members_id_a"]); ?>/id/<?php echo ($count["email"][$i]["id"]); ?>"><button type="button"><h4>查看邮件</h4></button></a>
@@ -19,7 +19,7 @@
 
 	<fieldset>
     	<h2>收件箱(已读):(<?php echo ($read['count']); ?>)</h2>
-		 <?php $__FOR_START_2070712357__=0;$__FOR_END_2070712357__=$read['count'];for($i=$__FOR_START_2070712357__;$i < $__FOR_END_2070712357__;$i+=1){ ?><fieldset>
+		 <?php $__FOR_START_576651745__=0;$__FOR_END_576651745__=$read['count'];for($i=$__FOR_START_576651745__;$i < $__FOR_END_576651745__;$i+=1){ ?><fieldset>
             	<h4>ID:<?php echo ($read["email"][$i]["members_id_b"]); ?></h4>
  	           	<h4>读信时间:<?php echo ($count["email"][$i]["time_b"]); ?></h4>
 				 <a href="https://localhost/single_love/index.php/Home/Email/read/index/userid/<?php echo ($count["email"][$i]["members_id_a"]); ?>/id/<?php echo ($count ["email"][$i]["id"]); ?>"><button type="button"><h4>查看邮件</h4></button></a>
@@ -29,7 +29,7 @@
 
 	<fieldset>
     	<h2>已发送:(<?php echo ($send['count']); ?>)</h2>
-		<?php $__FOR_START_1770258432__=0;$__FOR_END_1770258432__=$send['count'];for($i=$__FOR_START_1770258432__;$i < $__FOR_END_1770258432__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_67565812__=0;$__FOR_END_67565812__=$send['count'];for($i=$__FOR_START_67565812__;$i < $__FOR_END_67565812__;$i+=1){ ?><fieldset>
           		<h4>ID:<?php echo ($send["email"][$i]["members_id_b"]); ?></h4>
  				<h4>发送时间:<?php echo ($send["email"][$i]["time_a"]); ?></h4>
 				<h4>对方:
