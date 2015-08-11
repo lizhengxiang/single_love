@@ -17,6 +17,23 @@ class NewController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
+				//填写访问时间
+				//自己浏览自己就不需要添加浏览记录
+				if($user_id != cookie('user')){
+					$think_look = M('look');
+					$data['members_id_a'] = cookie('user');
+					$data['members_id_b'] = $user_id;
+					$data['browse'] = date('Y-m-d h:i:sa');
+					$map['members_id_a'] = $data['members_id_a'];
+					$map['members_id_b'] = $data['members_id_b'];
+					$count = $think_look->where($map)->count();
+					if($count){
+						$think_look->where($map)->data($data)->save();
+					}else{
+						$think_look->add($data);
+					}
+				}
+
 				//获取用户头像及照片
 				$photo1 = M('photo');
 				//根据id取出照片

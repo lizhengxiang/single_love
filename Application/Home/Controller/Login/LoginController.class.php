@@ -31,6 +31,11 @@ class LoginController extends Controller {
 				//session('user', $username);
 				cookie('user', $username);
 				cookie('password',$password);
+				//写入这次的登录时间
+				$logintime = M('logintime');
+				$data['logintime'] = date('Y-m-d h:i:sa');
+				$logintime->where($map)->data($data)->save();
+
 				$this->success('登录成功', '/single_love/index.php/Home/Home/Home/index', 0);
 			}else{
 				$this->error("密码错误");
