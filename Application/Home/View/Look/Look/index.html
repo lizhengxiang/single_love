@@ -4,11 +4,11 @@
 </head>
 
 <body>
-	<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index"><h1>邮件系统</h1></a>
+	<a href="https://localhost/single_love/index.php/Home/Look/Look/index"><h1>关注系统</h1></a>
   	<div id="content">
 
 	<fieldset>
- 		<h2>收件箱(未读):({$count['count']})</h2>
+ 		<h2>谁看过我</h2>
 		<for start = "0" end = "$count['count']">
 			<fieldset>
 				<h4>ID:{$count["email"][$i]["members_id_a"]}</h4>
@@ -20,19 +20,19 @@
  	<br/>
 
 	<fieldset>
-    	<h2>收件箱(已读):({$read['count']})</h2>
+    	<h2>我浏览过的人</h2>
 		 <for start = "0" end = "$read['count']">
          	<fieldset>
-            	<h4>ID:{$read["email"][$i]["members_id_a"]}</h4>
- 	           	<h4>读信时间:{$read["email"][$i]["time_b"]}</h4>
-				 <a href="https://localhost/single_love/index.php/Home/Email/read/index/userid/{$read["email"][$i]["members_id_a"]}/id/{$read["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
+            	<h4>ID:{$read["email"][$i]["members_id_b"]}</h4>
+ 	           	<h4>读信时间:{$count["email"][$i]["time_b"]}</h4>
+				 <a href="https://localhost/single_love/index.php/Home/Email/read/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count    ["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
  	      	</fieldset>
  	   	</for>
     </fieldset>
     <br/>
 
 	<fieldset>
-    	<h2>已发送:({$send['count']})</h2>
+    	<h2>谁关注我</h2>
 		<for start = "0" end = "$send['count']">
 	        <fieldset>
           		<h4>ID:{$send["email"][$i]["members_id_b"]}</h4>
@@ -42,7 +42,7 @@
 					<else/>未读
 					</if>
 				</h4>
-				<a href="https://localhost/single_love/index.php/Home/Email/Send/index/userid/{$send["email"][$i]["members_id_b"]}/id/{$send["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
+				<a href="https://localhost/single_love/index.php/Home/Email/Send/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count        ["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
  			</fieldset>
  		</for>
 
