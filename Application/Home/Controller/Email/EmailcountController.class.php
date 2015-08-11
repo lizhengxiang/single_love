@@ -24,7 +24,7 @@ class EmailcountController extends Controller {
 				//统计未读邮件数量
 				$count['count'] = $think_email->where($map)->count();
 				//取出未读邮件
-				$count['email'] = $think_email->where($map)->select();		
+				$count['email'] = $think_email->where($map)->order('time_a desc')->select();		
 				return $count;
 			}
 		

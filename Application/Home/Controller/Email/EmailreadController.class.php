@@ -17,12 +17,12 @@ class EmailreadController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-				//获取未读邮件数量
+				//获取已读邮件数量
 				$think_email = M('email');
 				$map['members_id_b'] = $userid;
 				$map['state'] = 1;
 				$count['count'] = $think_email->where($map)->count();
-				$count['email'] = $think_email->where($map)->select();	
+				$count['email'] = $think_email->where($map)->order('time_b desc')->select();	
 				return $count;
 			}
 		

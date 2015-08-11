@@ -35,6 +35,11 @@
 	        <fieldset>
           		<h4>ID:{$send["email"][$i]["members_id_b"]}</h4>
  				<h4>发送时间:{$send["email"][$i]["time_a"]}</h4>
+				<h4>对方:
+					<if condition = "$send['email'][$i]['state']"> 已读
+					<else/>未读
+					</if>
+				</h4>
  			</fieldset>
  		</for>
 

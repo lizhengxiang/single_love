@@ -21,7 +21,7 @@ class EmailSendController extends Controller {
 				$think_email = M('email');
 				$map['members_id_a'] = $userid;
 				$count['count'] = $think_email->where($map)->count();	
-				$count['email'] = $think_email->where($map)->select();
+				$count['email'] = $think_email->order('time_a desc')->where($map)->select();
 				return $count;
 			}
 		
