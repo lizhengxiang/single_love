@@ -13,17 +13,11 @@
 	</ul>
 
   	<div id="content">
-	<fieldset>
-		<h2>最新会员</h2>
-		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_1['id']); ?>" target="_blank"><img src="<?php echo ($user_1['head_photo']); ?>" height="100" width="125"/></a>	
-		<p><?php echo ($user_1['nickname']); ?></p>
-		<p><?php echo ($user_1['home']); ?></p>
-	</fieldset>
-	<fieldset>
-		<h2>最新会员</h2>
-		<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_2['id']); ?>" target="_blank"><img src="<?php echo ($user_2['head_photo']); ?>"height="100" width="120"/></a>	
-		<p><?php echo ($user_2['nickname']); ?></p>
-		<p><?php echo ($user_2['home']); ?></p>
-	</fieldset>
+	<?php $__FOR_START_895421413__=0;$__FOR_END_895421413__=$usercount;for($i=$__FOR_START_895421413__;$i < $__FOR_END_895421413__;$i+=1){ ?><fieldset>
+			<h2>最新会员</h2>
+			<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user[$i]['id']); ?>" target="_blank"><img src="<?php echo ($user[$i]['head_photo']); ?>" height="100" width="125"/></a>	
+			<p><?php echo ($user[$i]['nickname']); ?></p>
+			<p><?php echo ($user[$i]['home']); ?></p>
+		</fieldset><?php } ?>
  </body>
 </html>

@@ -9,7 +9,8 @@
 
 	<fieldset>
  		<h2>谁看过我</h2>
-		<?php $__FOR_START_772630285__=0;$__FOR_END_772630285__=$count;for($i=$__FOR_START_772630285__;$i < $__FOR_END_772630285__;$i+=1){ ?><fieldset>
+		以下的<?php echo ($count); ?>会员最近看了你,有心动的吗?
+		<?php $__FOR_START_2027409839__=0;$__FOR_END_2027409839__=$count;for($i=$__FOR_START_2027409839__;$i < $__FOR_END_2027409839__;$i+=1){ ?><fieldset>
 				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user[$i]['id']); ?>" target="_blank"><img src="<?php echo ($user[$i]['head_photo']); ?>" height="100" width="125"/></a>
 	    	</br>
 			<?php echo ($user[$i]['nickname']); ?></br>
@@ -23,7 +24,7 @@
 
 	<fieldset>
     	<h2>我浏览过的人</h2>
-		 <?php $__FOR_START_1141623419__=0;$__FOR_END_1141623419__=$read['count'];for($i=$__FOR_START_1141623419__;$i < $__FOR_END_1141623419__;$i+=1){ ?><fieldset>
+		 <?php $__FOR_START_933654646__=0;$__FOR_END_933654646__=$read['count'];for($i=$__FOR_START_933654646__;$i < $__FOR_END_933654646__;$i+=1){ ?><fieldset>
             	<h4>ID:<?php echo ($read["email"][$i]["members_id_b"]); ?></h4>
  	           	<h4>读信时间:<?php echo ($count["email"][$i]["time_b"]); ?></h4>
 				 <a href="https://localhost/single_love/index.php/Home/Email/read/index/userid/<?php echo ($count["email"][$i]["members_id_a"]); ?>/id/<?php echo ($count ["email"][$i]["id"]); ?>"><button type="button"><h4>查看邮件</h4></button></a>
@@ -33,7 +34,7 @@
 
 	<fieldset>
     	<h2>谁关注我</h2>
-		<?php $__FOR_START_717441161__=0;$__FOR_END_717441161__=$send['count'];for($i=$__FOR_START_717441161__;$i < $__FOR_END_717441161__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_140503693__=0;$__FOR_END_140503693__=$send['count'];for($i=$__FOR_START_140503693__;$i < $__FOR_END_140503693__;$i+=1){ ?><fieldset>
           		<h4>ID:<?php echo ($send["email"][$i]["members_id_b"]); ?></h4>
  				<h4>发送时间:<?php echo ($send["email"][$i]["time_a"]); ?></h4>
 				<h4>对方:

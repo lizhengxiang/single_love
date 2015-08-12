@@ -100,6 +100,12 @@ class RegisteredController extends Controller {
 		$think_choose->create($information);
 		//添加數據到列表		
 		$think_choose->add();
+		//创建登录数据表
+
+		$think_logintime = M('logintime');
+		$login['members_id'] = $data['members_id'];
+		$think_logintime->create($login);
+		$think_logintime->add();
 
 		//验证数据有没有创建成功
 		if($result){
