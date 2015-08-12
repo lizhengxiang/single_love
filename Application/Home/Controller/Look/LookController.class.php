@@ -32,7 +32,6 @@ class LookController extends Controller {
 					//保存会员的id号和浏览时间,要在html代码中用
 					$user[$i]['id'] = $user['user'][$i]['members_id_a'];
 					$user[$i]['time'] = $user['user'][$i]['browse'];
-					dump($user[$i]);
 					$this->assign('user', $user);
 				}
 				$this->display();

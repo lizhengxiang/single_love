@@ -11,10 +11,14 @@
  		<h2>谁看过我</h2>
 		<for start = "0" end = "$count">
 			<fieldset>
-				<h4>ID:{$user[$i]['id']}</h4>
-				<h4>浏览时间:{$user[$i]['time']}</h4>
-				<a href="https://localhost/single_love/index.php/Home/Email/reademail/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
-	    	</fieldset>
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}" target="_blank"><img src="{$user[$i]['head_photo']}" height="100" width="125"/></a>
+	    	</br>
+			{$user[$i]['nickname']}</br>
+			{$user[$i]['age']}岁&nbsp;{$user[$i]['height']}cm</br>
+			{$user[$i]['professional']}<br>
+			{$user[$i]['home']}</br>
+			浏览时间:{$user[$i]['time']}</br>
+			</fieldset>
 		</for>
  	</fieldset>
  	<br/>
