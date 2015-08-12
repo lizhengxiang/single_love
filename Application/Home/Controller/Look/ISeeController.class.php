@@ -2,7 +2,7 @@
 
 namespace Home\Controller\Look;
 use Think\Controller;
-class SeeController extends Controller {
+class ISeeController extends Controller {
 
    public function index(){
 		//echo $map;
@@ -21,12 +21,10 @@ class SeeController extends Controller {
 				$think_logintime = M('logintime');
 				$logintime = $think_logintime->where($mapa)->find();
 				$login_time = $logintime['logintime1'];
-				//获取看过我的人数,和会员
+				//获取我我最近看过的会员
 				$think_look = M('look');
-				$map['browse'] = array('GT', $login_time);
-				$map['members_id_b'] = cookie('user');
-				$user['user'] = $think_look->where($map)->order('browse desc')->select();
-				$user['sum'] = $think_look->where($map)->count();
+				$map['members_id_a'] = cookie('user');
+				$user['user'] = $think_look->where($map)->order('browse desc')->limit(10)->select();
 				return $user;
 			}
 		

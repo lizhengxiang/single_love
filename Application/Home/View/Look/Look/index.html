@@ -26,13 +26,18 @@
 
 	<fieldset>
     	<h2>我浏览过的人</h2>
-		 <for start = "0" end = "$read['count']">
-         	<fieldset>
-            	<h4>ID:{$read["email"][$i]["members_id_b"]}</h4>
- 	           	<h4>读信时间:{$count["email"][$i]["time_b"]}</h4>
-				 <a href="https://localhost/single_love/index.php/Home/Email/read/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count    ["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
- 	      	</fieldset>
- 	   	</for>
+		你浏览了以下的{$Seenuser}会员
+		<for start = "0" end = "$Seenuser">
+			<fieldset>
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$seen[$i]['id']}" target="_blank"><img src="{$seen[$i]['head_photo']}" height="100" width="125"/></a>
+	    	</br>
+			{$seen[$i]['nickname']}</br>
+			{$seen[$i]['age']}岁&nbsp;{$user[$i]['height']}cm</br>
+			{$seen[$i]['professional']}<br>
+			{$seen[$i]['home']}</br>
+			浏览时间:{$seen[$i]['time']}</br>
+			</fieldset>
+		</for>
     </fieldset>
     <br/>
 

@@ -4,6 +4,7 @@ namespace Home\Controller\Look;
 use Think\Controller;
 require_once 'SeeController.class.php';
 require_once 'NewuserController.class.php';
+require_once 'ISeeController.class.php';
 class LookController extends Controller {
 
    public function index(){
@@ -34,6 +35,21 @@ class LookController extends Controller {
 					$user[$i]['time'] = $user['user'][$i]['browse'];
 					$this->assign('user', $user);
 				}
+
+				//获取我浏览过的人
+				$Isee = new ISeeController();
+				$browse = $Isee->index();
+				for($i = 0, $j = 0; i < 10 and $browse['user'][$i]['members_id_b']; $j++, $i++){
+					//实例化会员信息
+ 		        	$UserInformation[$i] = new NewuserController();
+ 	                //更具会员的id号,取出会员的照片,资料
+ 	                $seen[$i] = $UserInformation[$i]->index($browse['user'][$i]['members_id_b']);
+ 	               	//保存会员的id号和浏览时间,要在html代码中用
+ 	                $seen[$i]['id'] = $browse['user'][$i]['members_id_b'];
+ 	                $seen[$i]['time'] = $browse['user'][$i]['browse'];
+ 	                $this->assign('seen', $seen);
+				}
+				$this->assign('Seenuser', $j);
 				$this->display();
 			}
 		
