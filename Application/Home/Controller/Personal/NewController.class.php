@@ -38,7 +38,7 @@ class NewController extends Controller {
 				//获取最近登录的时间
 				$think_logintime = M('logintime');
 				$logintime = $think_logintime->where($map)->find();
-				$login_time = $logintime['logintime'];
+				$login_time = $logintime['logintime1'];
 				$this->assign('login_time', $login_time);	
 			
 				//获取用户头像及照片

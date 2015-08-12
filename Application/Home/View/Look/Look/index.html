@@ -9,10 +9,10 @@
 
 	<fieldset>
  		<h2>谁看过我</h2>
-		<for start = "0" end = "$count['count']">
+		<for start = "0" end = "$count">
 			<fieldset>
-				<h4>ID:{$count["email"][$i]["members_id_a"]}</h4>
-				<h4>收信时间:{$count["email"][$i]["time_a"]}</h4>
+				<h4>ID:{$user[$i]['id']}</h4>
+				<h4>浏览时间:{$user[$i]['time']}</h4>
 				<a href="https://localhost/single_love/index.php/Home/Email/reademail/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
 	    	</fieldset>
 		</for>
