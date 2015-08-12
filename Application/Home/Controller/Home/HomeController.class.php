@@ -5,6 +5,8 @@ use Think\Controller;
 require_once 'NewuserController.class.php';
 require_once 'EmailController.class.php';
 require_once 'LookController.class.php';
+require_once 'FollowersController.class.php';
+
 class HomeController extends Controller {
 
     public function index(){
@@ -38,6 +40,10 @@ class HomeController extends Controller {
 		$look_count = $lookCount->index();
 		$this->assign('look_count', $look_count);
 
+		//统计关注我的人数
+		$Follow = new FollowersController(); 
+		$followers = $Follow->index();
+		$this->assign('followers', $followers);
 		$this->display();
     }
 }
