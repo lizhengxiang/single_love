@@ -19,6 +19,7 @@ class NewController extends Controller {
 				//填写访问时间
 				//自己浏览自己就不需要添加浏览记录
 				if($user_id != cookie('user')){
+					//dump($data);  打印出这句话就找到了为什么有bug,因为上面把个人资料取出来放在data里面了,所以data里面有id,所以导致关键字重复
 					$think_look = M('look');
 					$dataa['members_id_a'] = cookie('user');
 					$dataa['members_id_b'] = $user_id;
