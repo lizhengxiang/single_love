@@ -55,10 +55,25 @@
 			关注时间:{$Follower[$i]['time']}</br>
 			</fieldset>
 		</for>
-
     </fieldset>
     <br/>
-   	</form>
+<fieldset>
+    	<h2>谁关注我</h2>
+		我关注{$Following['count']}位会员
+		<for start = "0" end = "$Following['count']">
+			<fieldset>
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Following[$i]['id']}" target="_blank"><img src="{$Following[$i]['head_photo']}" height="100" width="125"/></a>
+	    	</br>
+			{$Following[$i]['nickname']}</br>
+			{$Following[$i]['age']}岁&nbsp;{$Following[$i]['height']}cm</br>
+			{$Following[$i]['professional']}<br>
+			{$Following[$i]['home']}</br>
+			关注时间:{$Following[$i]['time']}</br>
+			</fieldset>
+		</for>
+
+    </fieldset>
+ 
  </div>
 
   <div id="footer"></div>

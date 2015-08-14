@@ -6,6 +6,8 @@ require_once 'SeeController.class.php';
 require_once 'NewuserController.class.php';
 require_once 'ISeeController.class.php';
 require_once 'FollowersaController.class.php';
+require_once 'FollowersbController.class.php';
+
 class LookController extends Controller {
 
    public function index(){
@@ -65,6 +67,21 @@ class LookController extends Controller {
  					$Follower[$i]['time'] = $Follower['user'][$i]['time'];
  					$this->assign('Follower', $Follower);
  				}
+				//获取我关注的人					
+				$Following_b = new FollowersbController();
+                $Following_a = $Following_b->index();
+				$Following['count'] = $Following_a['count'];
+                for($i = 0; $i < $Following_a['count']; $i++){
+                	//实例化会员信息
+                    $UserInformation[$i] = new NewuserController();
+                    //更具会员的id号,取出会员的照片,资料
+                    $Following[$i] = $UserInformation[$i]->index($Following_a['user'][$i]['members_id_b']);
+                    //保存会员的id号和浏览时间,要在html代码中用
+                    $Following[$i]['id'] = $Following_a['user'][$i]['members_id_a'];
+                    $Following[$i]['time'] = $Following_a['user'][$i]['time'];
+                    $this->assign('Following', $Following);
+               	}
+
 				
 
 				$this->display();

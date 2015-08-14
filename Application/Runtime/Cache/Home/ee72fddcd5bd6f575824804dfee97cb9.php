@@ -10,7 +10,7 @@
 	<fieldset>
  		<h2>谁看过我</h2>
 		以下的<?php echo ($count); ?>位会员最近看了你,有心动的吗?
-		<?php $__FOR_START_1162012768__=0;$__FOR_END_1162012768__=$count;for($i=$__FOR_START_1162012768__;$i < $__FOR_END_1162012768__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_918364667__=0;$__FOR_END_918364667__=$count;for($i=$__FOR_START_918364667__;$i < $__FOR_END_918364667__;$i+=1){ ?><fieldset>
 				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user[$i]['id']); ?>" target="_blank"><img src="<?php echo ($user[$i]['head_photo']); ?>" height="100" width="125"/></a>
 	    	</br>
 			<?php echo ($user[$i]['nickname']); ?></br>
@@ -25,7 +25,7 @@
 	<fieldset>
     	<h2>我浏览过的人</h2>
 		你浏览了以下的<?php echo ($Seenuser); ?>位会员
-		<?php $__FOR_START_1796070375__=0;$__FOR_END_1796070375__=$Seenuser;for($i=$__FOR_START_1796070375__;$i < $__FOR_END_1796070375__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_1796080715__=0;$__FOR_END_1796080715__=$Seenuser;for($i=$__FOR_START_1796080715__;$i < $__FOR_END_1796080715__;$i+=1){ ?><fieldset>
 				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($seen[$i]['id']); ?>" target="_blank"><img src="<?php echo ($seen[$i]['head_photo']); ?>" height="100" width="125"/></a>
 	    	</br>
 			<?php echo ($seen[$i]['nickname']); ?></br>
@@ -40,7 +40,7 @@
 	<fieldset>
     	<h2>谁关注我</h2>
 		<?php echo ($Follower['count']); ?>位会员关注你
-		<?php $__FOR_START_36929050__=0;$__FOR_END_36929050__=$Follower['count'];for($i=$__FOR_START_36929050__;$i < $__FOR_END_36929050__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_1751226309__=0;$__FOR_END_1751226309__=$Follower['count'];for($i=$__FOR_START_1751226309__;$i < $__FOR_END_1751226309__;$i+=1){ ?><fieldset>
 				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($Followe[$i]['id']); ?>" target="_blank"><img src="<?php echo ($Follower[$i]['head_photo']); ?>" height="100" width="125"/></a>
 	    	</br>
 			<?php echo ($Follower[$i]['nickname']); ?></br>
@@ -49,10 +49,23 @@
 			<?php echo ($Follower[$i]['home']); ?></br>
 			关注时间:<?php echo ($Follower[$i]['time']); ?></br>
 			</fieldset><?php } ?>
-
     </fieldset>
     <br/>
-   	</form>
+<fieldset>
+    	<h2>谁关注我</h2>
+		我关注<?php echo ($Following['count']); ?>位会员
+		<?php $__FOR_START_595378222__=0;$__FOR_END_595378222__=$Following['count'];for($i=$__FOR_START_595378222__;$i < $__FOR_END_595378222__;$i+=1){ ?><fieldset>
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($Following[$i]['id']); ?>" target="_blank"><img src="<?php echo ($Following[$i]['head_photo']); ?>" height="100" width="125"/></a>
+	    	</br>
+			<?php echo ($Following[$i]['nickname']); ?></br>
+			<?php echo ($Following[$i]['age']); ?>岁&nbsp;<?php echo ($Following[$i]['height']); ?>cm</br>
+			<?php echo ($Following[$i]['professional']); ?><br>
+			<?php echo ($Following[$i]['home']); ?></br>
+			关注时间:<?php echo ($Following[$i]['time']); ?></br>
+			</fieldset><?php } ?>
+
+    </fieldset>
+ 
  </div>
 
   <div id="footer"></div>
