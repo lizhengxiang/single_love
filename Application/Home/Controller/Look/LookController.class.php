@@ -51,6 +51,22 @@ class LookController extends Controller {
  	                $this->assign('seen', $seen);
 				}
 				$this->assign('Seenuser', $j);
+				
+				//获取谁关注我
+				$Followers_a = new FollowersaController();
+				$Follower=$Followers_a->index();
+				for($i = 0; $i < $Follower['count']; $i++){
+ 		            //实例化会员信息
+ 	            	$UserInformation[$i] = new NewuserController();
+ 					//更具会员的id号,取出会员的照片,资料
+ 					$Follower[$i] = $UserInformation[$i]->index($Follower['user'][$i]['members_id_a']);
+ 					//保存会员的id号和浏览时间,要在html代码中用
+ 					$Follower[$i]['id'] = $Follower['user'][$i]['members_id_a'];
+ 					$Follower[$i]['time'] = $Follower['user'][$i]['time'];
+ 					$this->assign('Follower', $Follower);
+ 				}
+				
+
 				$this->display();
 			}
 		

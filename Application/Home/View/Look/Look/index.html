@@ -43,18 +43,18 @@
 
 	<fieldset>
     	<h2>谁关注我</h2>
-		<for start = "0" end = "$send['count']">
-	        <fieldset>
-          		<h4>ID:{$send["email"][$i]["members_id_b"]}</h4>
- 				<h4>发送时间:{$send["email"][$i]["time_a"]}</h4>
-				<h4>对方:
-					<if condition = "$send['email'][$i]['state']"> 已读
-					<else/>未读
-					</if>
-				</h4>
-				<a href="https://localhost/single_love/index.php/Home/Email/Send/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count        ["email"][$i]["id"]}"><button type="button"><h4>查看邮件</h4></button></a>
- 			</fieldset>
- 		</for>
+		{$Follower['count']}位会员关注你
+		<for start = "0" end = "$Follower['count']">
+			<fieldset>
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Followe[$i]['id']}" target="_blank"><img src="{$Follower[$i]['head_photo']}" height="100" width="125"/></a>
+	    	</br>
+			{$Follower[$i]['nickname']}</br>
+			{$Follower[$i]['age']}岁&nbsp;{$Follower[$i]['height']}cm</br>
+			{$Follower[$i]['professional']}<br>
+			{$Follower[$i]['home']}</br>
+			关注时间:{$Follower[$i]['time']}</br>
+			</fieldset>
+		</for>
 
     </fieldset>
     <br/>

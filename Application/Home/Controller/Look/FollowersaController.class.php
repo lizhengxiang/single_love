@@ -2,7 +2,7 @@
 
 namespace Home\Controller\Look;
 use Think\Controller;
-class SeeController extends Controller {
+class FollowersaController extends Controller {
 
    public function index(){
 		//echo $map;
@@ -17,17 +17,11 @@ class SeeController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-				//获取上次登录时间
-				$think_logintime = M('logintime');
-				$logintime = $think_logintime->where($mapa)->find();
-				$login_time = $logintime['logintime1'];
-				//获取看过我的人数,和会员
-				$think_look = M('look');
-				$map['browse'] = array('GT', $login_time);
-				$map['members_id_b'] = cookie('user');
-				$user['user'] = $think_look->where($map)->order('browse desc')->select();
-				$user['sum'] = $think_look->where($map)->count();
-				dump($user);
+				$think_look = M('followers');
+				$mapp['members_id_b'] = cookie('user');
+				//获取关注我的人
+				$user['user'] = $think_look->where($mapp)->select();
+				$user['count'] = $think_look->where($mapp)->count();
 				return $user;
 			}
 		
@@ -37,4 +31,3 @@ class SeeController extends Controller {
 		
 	}
 }
-?>
