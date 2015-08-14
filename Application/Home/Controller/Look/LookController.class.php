@@ -5,6 +5,7 @@ use Think\Controller;
 require_once 'SeeController.class.php';
 require_once 'NewuserController.class.php';
 require_once 'ISeeController.class.php';
+require_once 'FollowersaController.class.php';
 class LookController extends Controller {
 
    public function index(){

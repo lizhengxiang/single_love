@@ -27,6 +27,7 @@ class SeeController extends Controller {
 				$map['members_id_b'] = cookie('user');
 				$user['user'] = $think_look->where($map)->order('browse desc')->select();
 				$user['sum'] = $think_look->where($map)->count();
+				dump($user);
 				return $user;
 			}
 		
