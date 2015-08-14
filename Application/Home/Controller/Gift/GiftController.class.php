@@ -2,8 +2,8 @@
 
 namespace Home\Controller\Gift;
 use Think\Controller;
+require_once 'NewuserController.class.php';
 class GiftController extends Controller {
-
    public function index($userid){
 		//echo $map;
 		//获取用户帐号
@@ -17,12 +17,29 @@ class GiftController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
+				//实例化user对象
+				$user = new NewuserController();
+				$data = $user->index($userid);	
+				dump($data);
+				$this->assign('data', $data);
 				
+				//获取所有礼物
+				$gift_a =  M('gift');
+				$gift = $gift_a->field('gift_id, road')->select();
+				echo $count = $gift_a->count();
+				dump($gift);
+				$this->assign('count', $count);
+				$this->assign(gift, $gift);
+				
+				$this->display();
 			}
 		
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 		}				
 		
+	}
+	public function gift(){
+		//
 	}
 }

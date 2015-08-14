@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+	<a href = "https://localhost/single_love/index.php/Home/Home/Home/index"><button><h3>个人主页</h3></button></a>
+  	<div id="content">
+	<form action="gift" method="post">
+	<fieldset>
+ 		<h2>赠送礼物</h2>
+		<for start = "0" end = "$count">
+			<img src="{$gift[$i]['road']}" height="100" width="125"/>
+			礼物{$gift[$i]['gift_id']}
+			<input type = "radio", name = "gift", value = {$gift[$i]['gift_id']}>
+		</for>
+ 	</fieldset>
+	</br>
+	{$data['age']}岁,{$data['gender']},{$data['schooling']}学历,来自{$data[home]},原籍{$data['place']}.</br>
+	<fieldset>
+		<h4>祝福留言:</h4>
+		<textarea  name="message" rows="6" cols="30">
+我是一個樂觀的男孩 ... ... ... ...
+		</textarea>
+	<fieldset>
+	<input type="submit" value="赠送">
+	</form>
+ 
+ </body>
+</html>
+
