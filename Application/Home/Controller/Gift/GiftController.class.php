@@ -1,5 +1,4 @@
 <?php
-
 namespace Home\Controller\Gift;
 use Think\Controller;
 require_once 'NewuserController.class.php';
@@ -39,7 +38,12 @@ class GiftController extends Controller {
 		}				
 		
 	}
-	public function gift(){
+	public function gift($userid){
 		//
+		echo $gift = I('gift');
+		echo $message = I('message');
+		if($gift){
+			echo  "bchsbcsd";
+		}
 	}
 }

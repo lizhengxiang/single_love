@@ -6,7 +6,7 @@
 <body>
 	<a href = "https://localhost/single_love/index.php/Home/Home/Home/index"><button><h3>个人主页</h3></button></a>
   	<div id="content">
-	<form action="gift" method="post">
+	<form action="__ROOT__/index.php/Home/Gift/Gift/gift/userid/{$data['members_id']}" method="post">
 	<fieldset>
  		<h2>赠送礼物</h2>
 		<for start = "0" end = "$count">
@@ -16,7 +16,7 @@
 		</for>
  	</fieldset>
 	</br>
-	{$data['age']}岁,{$data['gender']},{$data['schooling']}学历,来自{$data[home]},原籍{$data['place']}.</br>
+	{$data['age']}岁,{$data['gender']},{$data['schooling']}学历,{$data['marriage']},来自{$data[home]},原籍{$data['place']}.</br>
 	<fieldset>
 		<h4>祝福留言:</h4>
 		<textarea  name="message" rows="6" cols="30">
