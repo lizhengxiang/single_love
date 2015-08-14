@@ -34,7 +34,7 @@ class LookController extends Controller {
 					//更具会员的id号,取出会员的照片,资料
 					$user[$i] = $UserInformation[$i]->index($user['user'][$i]['members_id_a']);
 					//保存会员的id号和浏览时间,要在html代码中用
-					$user[$i]['id'] = $user['user'][$i]['members_id_a'];
+					$user[$i]['id'] = $user['user'][$i]['members_id_b'];
 					$user[$i]['time'] = $user['user'][$i]['browse'];
 					$this->assign('user', $user);
 				}
@@ -77,7 +77,7 @@ class LookController extends Controller {
                     //更具会员的id号,取出会员的照片,资料
                     $Following[$i] = $UserInformation[$i]->index($Following_a['user'][$i]['members_id_b']);
                     //保存会员的id号和浏览时间,要在html代码中用
-                    $Following[$i]['id'] = $Following_a['user'][$i]['members_id_a'];
+                    $Following[$i]['id'] = $Following_a['user'][$i]['members_id_b'];
                     $Following[$i]['time'] = $Following_a['user'][$i]['time'];
                     $this->assign('Following', $Following);
                	}

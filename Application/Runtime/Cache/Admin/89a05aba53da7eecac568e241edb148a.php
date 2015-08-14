@@ -1,0 +1,33 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ </head>
+
+ <body>
+  <div id="header"><h1>礼物管理</h1></div>
+
+  <div id="content">
+    <form action="./upload" enctype = "multipart/form-data" method="POST"
+          enctype="multipart/form-data">
+	<fieldset>
+ 	 <label for="user_pic">上传礼物:</label>
+ 	 <input type="file" name="user_pic" size="30" /><br />
+ 	</fieldset>
+ 	<br/>
+	礼物名称: <input type="text" name="name"><br>
+	显示顺序: <input type="text" name="ordername"><br>
+	礼物类别: <input type="text" name="type"><br>
+	礼物价格: <input type="text" name="price"><br>
+	礼物链接: <input type="text" name="link"><br>
+	备注: <input type="text" name="note"><br>
+
+      <fieldset class="center">
+        <input type="submit" value="上傳" />
+        <input type="reset" value="清除" />
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="footer"></div>
+ </body>
+</html>

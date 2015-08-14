@@ -14,7 +14,7 @@
 	
 
   	<div id="content">
-	<?php $__FOR_START_940786087__=0;$__FOR_END_940786087__=$usercount;for($i=$__FOR_START_940786087__;$i < $__FOR_END_940786087__;$i+=1){ ?><fieldset>
+	<?php $__FOR_START_1011653092__=0;$__FOR_END_1011653092__=$usercount;for($i=$__FOR_START_1011653092__;$i < $__FOR_END_1011653092__;$i+=1){ ?><fieldset>
 			<h2>最新会员</h2>
 			<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user[$i]['id']); ?>" target="_blank"><img src="<?php echo ($user[$i]['head_photo']); ?>" height="100" width="125"/></a>	
 			<p><?php echo ($user[$i]['nickname']); ?></p>
