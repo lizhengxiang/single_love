@@ -9,7 +9,7 @@
 	<form action="/single_love/index.php/Home/Gift/Gift/gift/userid/<?php echo ($data['members_id']); ?>" method="post">
 	<fieldset>
  		<h2>赠送礼物</h2>
-		<?php $__FOR_START_703870802__=0;$__FOR_END_703870802__=$count;for($i=$__FOR_START_703870802__;$i < $__FOR_END_703870802__;$i+=1){ ?><img src="<?php echo ($gift[$i]['road']); ?>" height="100" width="125"/>
+		<?php $__FOR_START_995576041__=0;$__FOR_END_995576041__=$count;for($i=$__FOR_START_995576041__;$i < $__FOR_END_995576041__;$i+=1){ ?><img src="<?php echo ($gift[$i]['road']); ?>" height="100" width="125"/>
 			礼物<?php echo ($gift[$i]['gift_id']); ?>
 			<input type = "radio", name = "gift", value = <?php echo ($gift[$i]['gift_id']); ?>><?php } ?>
  	</fieldset>
@@ -20,6 +20,8 @@
 		<textarea  name="message" rows="6" cols="30">
 我是一個樂觀的男孩 ... ... ... ...
 		</textarea>
+		</br>
+		赠送方式: <input type="text" name="way">
 	<fieldset>
 	<input type="submit" value="赠送">
 	</form>

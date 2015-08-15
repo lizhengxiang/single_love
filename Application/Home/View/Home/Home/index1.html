@@ -10,19 +10,19 @@
 		<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index" target="_blank"><button><h3>收件箱({$count})</h3></button></a>
 		<a href="https://localhost/single_love/index.php/Home/Look/Look/index" target="_blank"><button><h3>谁看过我({$look_count})</h3></button></a>
 		<a href="https://localhost/single_love/index.php/Home/Look/Look/index" target="_blank"><button><h3>谁关注我({$followers})</h3></button></a>
-		<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index"><button><h3>我收到的礼物({$giftcount})</h3></button></a>
+		<a href="#"><button><h3>我收到的礼物({$giftcount})</h3></button></a>
 		<h3>ID:{$id}</h3>
 	
 
   	<div id="content">
-	<fieldset>
-	<h2>最新会员</h2>
 	<for start = "0" end = "$usercount">
+		<fieldset>
+			<h2>最新会员</h2>
 			<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}" target="_blank"><img src="{$user[$i]['head_photo']}" height="100" width="125"/></a>	
-			{$user[$i]['nickname']}
-			{$user[$i]['home']}
+			<p>{$user[$i]['nickname']}</p>
+			<p>{$user[$i]['home']}</p>
+		</fieldset>
 	</for>
-	</fieldset>
  </body>
 </html>
 
