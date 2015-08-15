@@ -16,22 +16,23 @@ class GetGiftController extends Controller {
 			}else{
 				//获取给我发送礼物基本信息
 				$usergift = new UserGiftController();
-				dump($gift = $usergift->index());
+				$gift = $usergift->index();
 				$this->assign('gift', $gift);
 				//获取给我发送礼物好友的基本信息函数
 				$newuser = new NewuserController();;
-				
+				//我收到礼物的数量
+				$this->assign('count', $gift['sum']);
 				//实例化礼物数据库
 				$think_gift = M('gift');
 				//根据id号去出送我礼物好友的基本信息,和礼物路径
-
 				for($i = 0; $i < $gift['sum']; $i++){
 					$user[$i] = $newuser->index($gift['user'][$i]['members_id_a']);
-					$giftroat[$i] = $think_gift->where($gift['user'][$i]['giftid'])->field('road')->find();
+					$map['gift_id'] = $gift['user'][$i]['giftid'];
+					$giftroat[$i] = $think_gift->field('road,name')->where($map)->find();
 				}
-				dump($giftroat);
-				dump($user);
+				$this->assign('giftroat', $giftroat);
 				$this->assign('user', $user);
+				$this->display();
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

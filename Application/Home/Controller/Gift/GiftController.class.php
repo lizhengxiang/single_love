@@ -16,14 +16,12 @@ class GiftController extends Controller {
 				//实例化user对象
 				$user = new NewuserController();
 				$data = $user->index($userid);	
-				dump($data);
 				$this->assign('data', $data);
 				
 				//获取所有礼物
 				$gift_a =  M('gift');
 				$gift = $gift_a->field('gift_id, road')->select();
-				echo $count = $gift_a->count();
-				dump($gift);
+				$count = $gift_a->count();
 				$this->assign('count', $count);
 				$this->assign(gift, $gift);
 				

@@ -9,7 +9,7 @@
 	<form action="/single_love/index.php/Home/Gift/Gift/gift/userid/<?php echo ($data['members_id']); ?>" method="post">
 	<fieldset>
  		<h2>赠送礼物</h2>
-		<?php $__FOR_START_1003648333__=0;$__FOR_END_1003648333__=$count;for($i=$__FOR_START_1003648333__;$i < $__FOR_END_1003648333__;$i+=1){ ?><img src="<?php echo ($gift[$i]['road']); ?>" height="100" width="125"/>
+		<?php $__FOR_START_1119772468__=0;$__FOR_END_1119772468__=$count;for($i=$__FOR_START_1119772468__;$i < $__FOR_END_1119772468__;$i+=1){ ?><img src="<?php echo ($gift[$i]['road']); ?>" height="100" width="125"/>
 			礼物<?php echo ($gift[$i]['gift_id']); ?>
 			<input type = "radio", name = "gift", value = <?php echo ($gift[$i]['gift_id']); ?>><?php } ?>
  	</fieldset>
