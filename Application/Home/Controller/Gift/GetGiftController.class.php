@@ -3,6 +3,7 @@ namespace Home\Controller\Gift;
 use Think\Controller;
 require_once 'UserGiftController.class.php';
 require_once 'NewuserController.class.php';
+require_once 'SendGiftController.class.php';
 
 class GetGiftController extends Controller {
 	public function index(){
@@ -32,6 +33,26 @@ class GetGiftController extends Controller {
 				}
 				$this->assign('giftroat', $giftroat);
 				$this->assign('user', $user);
+		
+				//获取我发送礼物基本信息
+				$usergift1 = new SendGiftController();
+				$gift1 = $usergift1->index();
+				$this->assign('gift1', $gift1);
+				//获取我发送礼物好友的基本信息函数
+				$newuser1 = new NewuserController();;
+				//我发送礼物的数量
+				$this->assign('count1', $gift1['sum']);
+				//实例化礼物数据库
+				$think_gift1 = M('gift');
+				//根据id号去出送我礼物好友的基本信息,和礼物路径
+				for($i = 0; $i < $gift1['sum']; $i++){
+					$user1[$i] = $newuser1->index($gift1['user'][$i]['members_id_b']);
+					$map1['gift_id'] = $gift1['user'][$i]['giftid'];
+					$giftroat1[$i] = $think_gift1->field('road,name')->where($map1)->find();
+				}
+				$this->assign('giftroat1', $giftroat1);
+				$this->assign('user1', $user1);
+
 				$this->display();
 			}
 		}else{

@@ -2,6 +2,7 @@
 namespace Home\Controller\Gift;
 use Think\Controller;
 require_once 'NewuserController.class.php';
+
 class GiftController extends Controller {
    public function index($userid){
 		//echo $map;
