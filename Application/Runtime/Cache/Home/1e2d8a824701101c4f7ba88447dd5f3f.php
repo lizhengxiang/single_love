@@ -10,6 +10,7 @@
 
     <!-- Bootstrap -->
     <link href="/single_love/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
+
   </head>
   <body>
 <div class="container">
@@ -52,7 +53,7 @@
 					<div class="col-md-6">
 						<div class="row">
 							<div class="col-md-2">xxx</div>
-							<div class="col-md-2">id:</div>
+							<div class="col-md-2">Id:<?php echo ($photo['members_id']); ?></div>
 							<div class="col-md-2">在线</div>
 							<div class="col-md-2"></div>
 							<div class="col-md-4"><?php echo ($login_time); ?></div>
@@ -182,7 +183,6 @@
 										<div class="col-md-3">穿衣风格：</div>
 										<div class="col-md-3"><?php echo ($appearance['clothes']); ?></div>
 									</div>
-
 								</td>
 							</tr>
 						</table>
@@ -194,27 +194,27 @@
 									</div>
 									<div class="row">
 										<div class="col-md-3">单位类型：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['unit']); ?></div>
 										<div class="col-md-3">职业职位：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['professional']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">工作状况：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['work']); ?></div>
 										<div class="col-md-3">工作调动：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['move']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">毕业学校：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['school']); ?></div>
 										<div class="col-md-3">专业类型：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['major']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">语言能力：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['language']); ?></div>
 										<div class="col-md-3">事业家庭：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($unit['family']); ?></div>
 									</div>
 								</td>
 							</tr>
@@ -227,51 +227,51 @@
 									</div>
 									<div class="row">
 										<div class="col-md-3">吸烟：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['smoking']); ?></div>
 										<div class="col-md-3">锻炼习惯：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['exercise']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">饮酒：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['drinking']); ?></div>
 										<div class="col-md-3">饮食习惯：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['diet']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">逛街购物：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['shopping']); ?></div>
 										<div class="col-md-3">宗教信仰：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['religious']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">作息时间：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['worktime']); ?></div>
 										<div class="col-md-3">交际圈子：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['social']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">最大消费：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['consumption']); ?></div>
 										<div class="col-md-3">家中排行：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['ranking']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">父母情况：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['parents']); ?></div>
 										<div class="col-md-3">是否要孩子：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['child']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">家务水平等级：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['home']); ?></div>
 										<div class="col-md-3">家务分配情况：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['distribution']); ?></div>
 									</div>
 									<div class="row">
 										<div class="col-md-3">考虑何时结婚：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['married']); ?></div>
 										<div class="col-md-3">宠物喜欢程度：</div>
-										<div class="col-md-3"></div>
+										<div class="col-md-3"><?php echo ($life['pet']); ?></div>
 									</div>
 								</td>
 							</tr>
@@ -282,6 +282,20 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
+									<div class="row">
+										<div class="col-md-12"><h4>最新加入的会员</h4></div>
+										<?php $__FOR_START_1858602127__=0;$__FOR_END_1858602127__=$usercount;for($i=$__FOR_START_1858602127__;$i < $__FOR_END_1858602127__;$i+=1){ ?><div class="row">
+ 				                   				<div class="col-md-8"><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user1[$i]['id']); ?>"><img src="<?php echo ($user1[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
+												<div class="col-md-4">
+													<div class="row">
+														<div class="col-md-12"><?php echo ($user1[$i]['nickname']); ?></div>
+													</div>
+													<div class="row">
+														<div class="col-md-12"><?php echo ($user1[$i]['home']); ?></div>
+													</div>
+												</div>
+											</div><?php } ?>
+									</div>
 								</td>
 							</tr>
 						</table>

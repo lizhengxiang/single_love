@@ -19,7 +19,7 @@
   	<div id="content">
 	<fieldset>
 	<h2>最新会员</h2>
-	<?php $__FOR_START_987270265__=0;$__FOR_END_987270265__=$usercount;for($i=$__FOR_START_987270265__;$i < $__FOR_END_987270265__;$i+=1){ ?><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user[$i]['id']); ?>" target="_blank"><img src="<?php echo ($user[$i]['head_photo']); ?>" height="100" width="125"/></a>	
+	<?php $__FOR_START_663153342__=0;$__FOR_END_663153342__=$usercount;for($i=$__FOR_START_663153342__;$i < $__FOR_END_663153342__;$i+=1){ ?><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user[$i]['id']); ?>" target="_blank"><img src="<?php echo ($user[$i]['head_photo']); ?>" height="100" width="125"/></a>	
 			<?php echo ($user[$i]['nickname']); ?>
 			<?php echo ($user[$i]['home']); } ?>
 	</fieldset>

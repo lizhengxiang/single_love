@@ -1,9 +1,27 @@
 <?php
-
 namespace Home\Controller\Personal;
 use Think\Controller;
+require_once 'NewuserController.class.php';
+
 class NewController extends Controller {
    public function index($user_id){
+
+		//取出新加入的五个会员的id号
+		$think_data1 = M('registered');
+		$think_data_id1 = $think_data1->field('members_id')->order('join_time  desc')->limit(3)->select();
+		//取出这些会员的资料
+		$nweuser1 = new NewuserController();
+		for($i = 0; $i < 3; $i++){
+			$user_id1 = $think_data_id1[$i]['members_id'];
+			$user1[$i] = $nweuser1->index($user_id1);
+			$user1[$i]['id'] = $user_id1;
+			$this->assign('user1', $user1);	
+		}
+		//要去出新会员的用户数量
+		$usercount = 3;
+		$this->assign('usercount', $usercount);
+		
+
 		//获取用户帐号
 		$map['members_id'] = $user_id;
 
