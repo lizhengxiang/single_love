@@ -3,7 +3,6 @@
 namespace Home\Controller\Personal;
 use Think\Controller;
 class NewController extends Controller {
-
    public function index($user_id){
 		//获取用户帐号
 		$map['members_id'] = $user_id;
@@ -25,14 +24,14 @@ class NewController extends Controller {
 					$dataa['members_id_b'] = $user_id;
 					$dataa['browse'] = date('Y-m-d h:i:sa');
 					$mapp['members_id_a'] = $dataa['members_id_a'];
-					$mapp['members_id_b'] = $dataa['members_id_b'];
+					$mapp['members_id_b'] = $user_id;
 					//查看是不是已经在数据库里面有着两个人的资料
 					//若有就更新,若没有就添加
 					$count = $think_look->where($mapp)->count();
 					if($count){
 						$think_look->where($mapp)->data($dataa)->save();
 					}else{
-						$think_look->add($dataa);
+						$think_look->data($dataa)->add();
 					}
 				}
 

@@ -36,13 +36,16 @@ class LookController extends Controller {
 					//保存会员的id号和浏览时间,要在html代码中用
 					$user[$i]['id'] = $user['user'][$i]['members_id_b'];
 					$user[$i]['time'] = $user['user'][$i]['browse'];
-					$this->assign('user', $user);
+					//$this->assign('user', $user);
 				}
+				$this->assign('user', $user);
+
 
 				//获取我浏览过的人
 				$Isee = new ISeeController();
 				$browse = $Isee->index();
-				for($i = 0, $j = 0; i < 10 and $browse['user'][$i]['members_id_b']; $j++, $i++){
+	
+				for($i = 0; $i < $browse['count']; $i++){
 					//实例化会员信息
  		        	$UserInformation[$i] = new NewuserController();
  	                //更具会员的id号,取出会员的照片,资料
@@ -50,9 +53,10 @@ class LookController extends Controller {
  	               	//保存会员的id号和浏览时间,要在html代码中用
  	                $seen[$i]['id'] = $browse['user'][$i]['members_id_b'];
  	                $seen[$i]['time'] = $browse['user'][$i]['browse'];
- 	                $this->assign('seen', $seen);
+ 	                //$this->assign('seen', $seen);
 				}
-				$this->assign('Seenuser', $j);
+				$this->assign('seen', $seen);
+				$this->assign('Seenuser', $browse['count']);
 				
 				//获取谁关注我
 				$Followers_a = new FollowersaController();

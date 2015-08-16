@@ -24,7 +24,12 @@ class ISeeController extends Controller {
 				//获取我我最近看过的会员
 				$think_look = M('look');
 				$map['members_id_a'] = cookie('user');
-				$user['user'] = $think_look->where($map)->order('browse desc')->limit(10)->select();
+				$user['user'] = $think_look->where($map)->order('browse desc')->select();
+				$user['count'] = $think_look->where($map)->count();
+				if($user['count'] > 10){
+					$user['count'] = 10;
+				}
+				$user['count'];
 				return $user;
 			}
 		
