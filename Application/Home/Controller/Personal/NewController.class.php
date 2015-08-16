@@ -80,7 +80,7 @@ class NewController extends Controller {
 				$choose = $think_choose->where($map)->find();
 				$this->assign('choose', $choose);
 		
-				$this->display('Personal/Personal/index');
+				$this->display('Personal/Personal/mode/index');
 			}
 		
 		}else{
