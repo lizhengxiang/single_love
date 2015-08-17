@@ -17,6 +17,12 @@ class HomeController extends Controller {
 		$id = cookie('user');
 		//在页面显示自己的id号
 		$this->assign('id', $id);
+		//获取用户头像及照片
+		$photo1 = M('photo');
+ 		//根据id取出照片
+ 		$head = $photo1->field('head_ptoto')->where($map)->find();
+ 		//给模板变量赋
+ 		$this->assign('head', $head);
 		
 		$think_data_id = $think_data->field('members_id')->order('join_time  desc')->limit(3)->select();
 		//取出这些会员的资料
@@ -51,6 +57,6 @@ class HomeController extends Controller {
 		$giftcount = $gift->index();
 		$this->assign('giftcount', $giftcount);
 
-		$this->display();
+		$this->display('Personal/Personal/mode/home');
     }
 }
