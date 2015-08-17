@@ -15,6 +15,7 @@ class HomeController extends Controller {
 		//取出新加入的五个会员的id号
 		$think_data = M('registered');
 		$id = cookie('user');
+		$map['members_id'] = $id;
 		//在页面显示自己的id号
 		$this->assign('id', $id);
 		//获取用户头像及照片
