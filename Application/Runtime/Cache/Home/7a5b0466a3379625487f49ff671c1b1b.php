@@ -32,7 +32,7 @@
 	</div>
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">个人主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
 		<div class="col-md-1"></div>
@@ -72,6 +72,13 @@
 												<a href="#"><button type="button" class="btn btn-default btn-lg btn-block">更改头像</button></a>
 											</div>
 										</div>
+										<div class = "row">
+											<div class="col-md-0.5"></div>
+											<div class="col-md-11">
+												<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>"><button type="button" class="btn btn-default btn-lg btn-block">我的资料</button></a>
+											</div>
+										</div>
+
 										<div class = "row">
  										 	<div class="col-md-0.5"></div>
 										 	<div class="col-md-11">
