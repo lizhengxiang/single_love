@@ -10,7 +10,7 @@
 	<fieldset>
  		<h2>收到礼物</h2>
 
-		<?php $__FOR_START_1382179015__=0;$__FOR_END_1382179015__=$count;for($i=$__FOR_START_1382179015__;$i < $__FOR_END_1382179015__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_673991094__=0;$__FOR_END_673991094__=$count;for($i=$__FOR_START_673991094__;$i < $__FOR_END_673991094__;$i+=1){ ?><fieldset>
 			<img src="<?php echo ($giftroat[$i][road]); ?>" height="200" width="200"/></br>
 			礼物名称:<?php echo ($giftroat[$i]['name']); ?>赠送时间<?php echo ($gift['user'][$i]['time']); ?></br>
 			赠送人:<?php echo ($user[$i]['members_id']); ?></br>
@@ -24,7 +24,7 @@
 	<fieldset>
  		<h2>已发送礼物</h2>
 
-		<?php $__FOR_START_7344899__=0;$__FOR_END_7344899__=$count1;for($i=$__FOR_START_7344899__;$i < $__FOR_END_7344899__;$i+=1){ ?><fieldset>
+		<?php $__FOR_START_1268550113__=0;$__FOR_END_1268550113__=$count1;for($i=$__FOR_START_1268550113__;$i < $__FOR_END_1268550113__;$i+=1){ ?><fieldset>
 			<img src="<?php echo ($giftroat1[$i][road]); ?>" height="200" width="200"/></br>
 			礼物名称:<?php echo ($giftroat1[$i]['name']); ?>赠送时间<?php echo ($gift1['user'][$i]['time']); ?></br>
 			赠送人:<?php echo ($user1[$i]['members_id']); ?></br>

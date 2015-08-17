@@ -51,7 +51,7 @@ class GiftController extends Controller {
 				if($dataa['giftid']){
 					$sendgift = M('sendgift');
 					$dataa['members_id_a'] = cookie('user');
-					$dataa['members_id_b'] = $userid;
+					echo $dataa['members_id_b'] = $userid;
 					$dataa['time'] = date('Y-m-d h:i:sa');
 					$dataa['state'] = 0;
 					$dataa['way'] = I('way');

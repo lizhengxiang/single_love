@@ -8,10 +8,10 @@ class NewController extends Controller {
 
 		//取出新加入的五个会员的id号
 		$think_data1 = M('registered');
-		$think_data_id1 = $think_data1->field('members_id')->order('join_time  desc')->limit(3)->select();
+		$think_data_id1 = $think_data1->field('members_id')->order('join_time  desc')->limit(4)->select();
 		//取出这些会员的资料
 		$nweuser1 = new NewuserController();
-		for($i = 0; $i < 3; $i++){
+		for($i = 0; $i < 4; $i++){
 			$user_id1 = $think_data_id1[$i]['members_id'];
 			$user1[$i] = $nweuser1->index($user_id1);
 			$user1[$i]['id'] = $user_id1;
@@ -21,6 +21,7 @@ class NewController extends Controller {
 		$usercount = 3;
 		$this->assign('usercount', $usercount);
 		
+			
 
 		//获取用户帐号
 		$map['members_id'] = $user_id;
@@ -33,6 +34,14 @@ class NewController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
+
+				//获取所有礼物
+				$gift_a =  M('gift');
+				$gift = $gift_a->field('gift_id, road')->select();
+				$countGift = $gift_a->count();
+				$this->assign('countGift', $countGift);
+				$this->assign(gift, $gift);
+
 				//填写访问时间
 				//自己浏览自己就不需要添加浏览记录
 				if($user_id != cookie('user')){
@@ -62,7 +71,7 @@ class NewController extends Controller {
 				$photo1 = M('photo');
 				//根据id取出照片
 				$photo = $photo1->where($map)->find();
-				//给模板变量赋值
+				//给模板变量赋
 				$this->assign('photo', $photo);
 		
 				//取出用户基本资料

@@ -5,7 +5,6 @@ use Think\Controller;
 class FollowersController extends Controller {
 
    public function index($user_id){
-		//echo $map;
 		//获取用户帐号
 		$mapa['members_id'] = cookie('user');
 
