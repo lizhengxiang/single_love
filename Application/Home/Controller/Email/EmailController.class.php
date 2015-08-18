@@ -27,9 +27,9 @@ class EmailController extends Controller {
 			}else{
 			
 				//获取相应内容
-				echo $data['members_id_b'] = I('user_id');
-				echo $data['members_id_a'] = cookie('user');
-				echo $data['content'] = trim(I('email'));
+				$data['members_id_b'] = I('user_id');
+				$data['members_id_a'] = cookie('user');
+				$data['content'] = trim(I('email'));
 				$data['time_a'] = date('Y-m-d h:i:sa');
 				$data['state'] = 0;
 				$think_email = M('email');

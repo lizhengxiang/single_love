@@ -23,6 +23,8 @@ class EmailreadController extends Controller {
 				$map['state'] = 1;
 				$count['count'] = $think_email->where($map)->count();
 				$count['email'] = $think_email->where($map)->order('time_b desc')->select();	
+
+
 				return $count;
 			}
 		

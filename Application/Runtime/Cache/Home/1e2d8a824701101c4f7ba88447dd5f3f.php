@@ -43,7 +43,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">修改资料</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">使用帮助</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">退出</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
 	
@@ -165,7 +165,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_2119255435__=0;$__FOR_END_2119255435__=$countGift;for($i=$__FOR_START_2119255435__;$i < $__FOR_END_2119255435__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1656859931__=0;$__FOR_END_1656859931__=$countGift;for($i=$__FOR_START_1656859931__;$i < $__FOR_END_1656859931__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -450,7 +450,7 @@
 										<div class="col-md-8"><h4>最新加入的会员</h4></div>
 										<div class="col-md-2"></div>
 									</div>
-										<?php $__FOR_START_860704472__=0;$__FOR_END_860704472__=$usercount;for($i=$__FOR_START_860704472__;$i < $__FOR_END_860704472__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_979093894__=0;$__FOR_END_979093894__=$usercount;for($i=$__FOR_START_979093894__;$i < $__FOR_END_979093894__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-7"><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user1[$i]['id']); ?>"><img src="<?php echo ($user1[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-4">

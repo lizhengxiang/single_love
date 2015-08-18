@@ -22,13 +22,8 @@ class EmailSendController extends Controller {
 				$map['members_id_a'] = $userid;
 				$count['count'] = $think_email->where($map)->count();	
 				$count['email'] = $think_email->order('time_a desc')->where($map)->select();
-							
-				//获取用户头像及照片
-				$photo1 = M('photo');
-				//根据id取出照片
-				$photo = $photo1->where($map)->find();
 				for($i = 0; $i < $count['count']; $i++){
-					$count['photo'][$i] = $photo1->where($count['email'][$i]['members_id_b'])->field('head_ptoto')->find();
+					echo $count['email'][$i]['members_id_b'];
 				}
 				return $count;
 			}

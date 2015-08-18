@@ -22,14 +22,14 @@ class LookemailController extends Controller {
 				
 				//统计已读邮件
 				$email_count = new EmailreadController();
-                $read = $email_count->index(cookie('user'));
-                $this->assign('read', $read);
+        $read = $email_count->index(cookie('user'));
+        $this->assign('read', $read);
 				//统计发送邮件
 				$email_count = new EmailSendController();
  				$send = $email_count->index(cookie('user'));
  				$this->assign('send', $send);
 
-				$this->display();
+				$this->display('Personal/Personal/mode/lookemail');
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
