@@ -46,7 +46,6 @@
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
-{$read["email"][$i]["members_id_a"]}
 <div class="row">
 <div class="col-md-12">
 <table class="table table-bordered">
@@ -80,77 +79,12 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-
-<for tart = "0" end = "$count['count']">
-<div class="row">
-<div class="col-md-3">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$count["email"][$i]["members_id_a"]}"><img src="{$count["photo"][$i]["head_ptoto"]}" alt="..." class="img-rounded"  width="100%" height="100"></a>
-</div>
-<div class="col-md-1"></div>
-<div class="col-md-4">
-<div class = "row">
-	<div class="col-md-12">&nbsp;</div>
-	<div class="col-md-12">
-		ID:{$count["email"][$i]["members_id_a"]}
-	</div>
-	<div class="col-md-12">
-		发送时间:{$count["email"][$i]["time_a"]}
-	</div>
-	<div class="col-md-12">
-		未读
-	</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class = "row">
-<div class="col-md-12">&nbsp;</div>
-<div class="col-md-12">&nbsp;</div>
-<div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">看信</button>
-</div>
-<div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
-</div>
-</div>
-<div class="modal fade" id="exampleModal2{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">查看信件</h4>
-      </div>
-		<div class = "row">
-			<div class="col-md-12">&nbsp;</div>
-			<div class="col-md-12">ID:{$count["email"][$i]["members_id_b"]}</div>
-			<div class="col-md-12">发送时间:{$count["email"][$i]["time_a"]}</div>
-			<div class="col-md-12">正文:</div>
-			<div class="col-md-12">
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$count["email"][$i]["content"]}</p>
-			</div>
-		</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-		<button type="button" class="btn btn-primary">look</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-&nbsp;
-</div>
-</div>
-</for>
-
-
 </div>
 </div>
 </div>
 </div>
 </div>
-<div role="tabpanel" class="tab-pane" id="messages">
+<div role="tabpanel" class="tab-pane" id="profile">
 
 <div class="row">
 <div class="col-md-1"></div>
@@ -228,78 +162,164 @@
 </div>
 </div>
 
+
+</div>
+<div role="tabpanel" class="tab-pane" id="messages">
+
+<div class="row">
+
+<div class="col-md-1"></div>
+
+<div class="col-md-10">
+
+<div class="row">
+
+<div class="col-md-12"> 
+
+
+
+<for tart = "0" end = "$send['count']">
+
+<div class="row">
+
+<div class="col-md-3">
+
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$send["email"][$i]["members_id_b"]}"><img src="{$send["photo"][$i]["head_ptoto"]}" alt="..." class="img-rounded"  width="100%" height="100"></a>
+
 </div>
 
-<div role="tabpanel" class="tab-pane" id="profile">
-<div class="row">
 <div class="col-md-1"></div>
-<div class="col-md-10">
-<div class="row">
-<div class="col-md-12"> 
-<for tart = "0" end = "$read['count']">
-<div class="row">
-<div class="col-md-3">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$read["email"][$i]["members_id_a"]}"><img src="{$read["photo"][$i]["head_ptoto"]}" alt="..." class="img-rounded"  width="100%" height="100"></a>
-</div>
-<div class="col-md-1"></div>
+
 <div class="col-md-4">
+
 <div class = "row">
+
 	<div class="col-md-12">&nbsp;</div>
+
 	<div class="col-md-12">
-		ID:{$read["email"][$i]["members_id_a"]}
+
+		ID:{$send["email"][$i]["members_id_b"]}
+
 	</div>
+
 	<div class="col-md-12">
-		读信时间:{$read["email"][$i]["time_b"]}
+
+		发送时间:{$send["email"][$i]["time_a"]}
+
 	</div>
+
 	<div class="col-md-12">
+
+		对方:
+
+		<if condition = "$send['email'][$i]['state']"> 已读
+
+		<else/>未读
+
+		</if>
+
 	</div>
+
 </div>
+
 </div>
+
 <div class="col-md-4">
+
 <div class = "row">
+
 <div class="col-md-12">&nbsp;</div>
+
 <div class="col-md-12">&nbsp;</div>
+
 <div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal{$i}" data-whatever="@mdo">看信</button>
+
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo">看信</button>
+
 </div>
+
 <div class="col-md-6">
+
 <a class="btn btn-warning" href="#" role="button">删除</a>
+
 </div>
+
 </div>
-<div class="modal fade" id="exampleModal{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+
+<div class="modal fade" id="exampleModal1{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+
   <div class="modal-dialog" role="document">
+
     <div class="modal-content">
+
       <div class="modal-header">
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
         <h4 class="modal-title" id="exampleModalLabel">查看信件</h4>
+
       </div>
+
 		<div class = "row">
+
 			<div class="col-md-12">&nbsp;</div>
-			<div class="col-md-12">ID:{$read["email"][$i]["members_id_a"]}</div>
-			<div class="col-md-12">读信时间:{$read["email"][$i]["time_b"]}</div>
+
+			<div class="col-md-12">ID:{$send["email"][$i]["members_id_b"]}</div>
+
+			<div class="col-md-12">发送时间:{$send["email"][$i]["time_a"]}</div>
+
 			<div class="col-md-12">正文:</div>
+
 			<div class="col-md-12">
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$read["email"][$i]["content"]}</p>
+
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$send["email"][$i]["content"]}</p>
+
 			</div>
+
 		</div>
+
       <div class="modal-footer">
+
         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
+
+
+
 </div>
+
 </div>
+
 <div class="row">
+
 <div class="col-md-12">
+
 &nbsp;
+
 </div>
+
 </div>
+
 </for>
+
 </div>
+
 </div>
+
 </div>
+
 </div>
+
+
+
+
+
 
 </div>
 

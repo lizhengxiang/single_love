@@ -30,7 +30,7 @@ class EmailController extends Controller {
 				$data['members_id_b'] = I('user_id');
 				$data['members_id_a'] = cookie('user');
 				$data['content'] = trim(I('email'));
-				$data['time_a'] = date('Y-m-d h:i:sa');
+				$data['time_a'] = date('Y-m-d H:i:s');
 				$data['state'] = 0;
 				$think_email = M('email');
 				$think_email->field('members_id_a,members_id_b,content,time_a,state')->data($data)->add();

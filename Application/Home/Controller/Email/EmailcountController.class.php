@@ -25,6 +25,14 @@ class EmailcountController extends Controller {
 				$count['count'] = $think_email->where($map)->count();
 				//取出未读邮件
 				$count['email'] = $think_email->where($map)->order('time_a desc')->select();		
+				//获取用户头像及照片
+				$photo1 = M('photo');
+				//根据id取出照片
+				//$photo = $photo1->where($map)->find();
+				for($i = 0; $i < $count['count']; $i++){
+					$map['members_id'] = $count['email'][$i]['members_id_a'];
+					$count['photo'][$i] = $photo1->where($map)->field('head_ptoto')->find();
+				}
 				return $count;
 			}
 		

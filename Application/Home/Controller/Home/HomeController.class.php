@@ -11,6 +11,7 @@ require_once 'GiftController.class.php';
 class HomeController extends Controller {
 
     public function index(){
+		
 		//取出会员的昵称等信息,调用类
 		//取出新加入的五个会员的id号
 		$think_data = M('registered');

@@ -26,9 +26,10 @@ class EmailSendController extends Controller {
 				//获取用户头像及照片
 				$photo1 = M('photo');
 				//根据id取出照片
-				$photo = $photo1->where($map)->find();
+				//$photo = $photo1->where($map)->find();
 				for($i = 0; $i < $count['count']; $i++){
-					$count['photo'][$i] = $photo1->where($count['email'][$i]['members_id_b'])->field('head_ptoto')->find();
+					$map['members_id'] = $count['email'][$i]['members_id_b'];
+					$count['photo'][$i] = $photo1->where($map)->field('head_ptoto')->find();
 				}
 				return $count;
 			}
