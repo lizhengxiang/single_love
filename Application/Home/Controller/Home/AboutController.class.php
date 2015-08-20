@@ -22,6 +22,7 @@ class AboutController extends Controller {
 				$map['members_id_a'] = cookie('user');
 				$tag = $think_look->field('members_id_b')->where($map)->select();
 				$num = $think_look->field('members_id_b')->where($map)->count();
+				//取出我关注人的id号然后查找他们的说说
 				if($num){
 					for($i = 0; $i < $num; $i++){
 						if($i != 0){
@@ -31,13 +32,16 @@ class AboutController extends Controller {
 						$li .= $tag[$i]['members_id_b'];
 					}
 					$li .= ' OR '.'members_id = '.cookie('user');
-					$think_about = M('about');
-					$about['bout'] = $think_about->where($li)->limit(30)->order('time desc')->select();
-					$number = $think_about->where($li)->count();
-					if($number >= 50)
-						$number = 50;
-					$about['num'] = $number;
 				}
+				//若我没有关注任何人则显示自己的说说
+				if($num == 0)
+					$li = 'members_id = '.cookie('user');
+				$think_about = M('about');
+				$about['about'] = $think_about->where($li)->limit(30)->order('time desc')->select();
+				$number = $think_about->where($li)->count();
+				if($number >= 50)
+					$number = 50;
+				$about['num'] = $number;
 				return $about;
 			}
 		
