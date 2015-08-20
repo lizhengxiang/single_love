@@ -394,6 +394,53 @@
 								</div>
 								</div>
 								</form>
+<div class="row">
+<div class="col-md-7">
+<table class="table table-bordered">
+<tr class = "success">
+<td>
+<?php $__FOR_START_1755373553__=0;$__FOR_END_1755373553__=$about['num'];for($i=$__FOR_START_1755373553__;$i < $__FOR_END_1755373553__;$i+=1){ ?><div class = "row">	
+	<div class="col-md-12">
+		<div class = "row">
+			<div class="col-md-3">
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i]['head_ptoto']); ?>" height="50" width="100%"/></a>	
+			</div>
+			<div class="col-md-9">
+				<div class = "row">
+					<?php echo ($about['about'][$i]['members_id']); ?>()
+				</div>
+				<div class = "row">
+					<?php echo ($about['about'][$i]['time']); ?>
+				<div>
+			</div>
+		</div>
+		</div>	
+		<div class = "row">
+			<div class="col-md-12">
+			<div class="col-md-1"></div>
+			<div class="col-md-11">
+				<?php echo ($about['about'][$i]['content']); ?>
+			</div>
+			</div>
+		</div>
+	</div><?php } ?>
+
+</td>
+</tr>
+</table>
+</div>
+<div class="col-md-8">
+<!---->
+
+</div>
+</div>
+
+
+
+
+
+
+
 
 	
 						</div>
