@@ -5,6 +5,7 @@ use Think\Controller;
 use Think\Upload;
 require_once'NewuserController.class.php';
 class EmailController extends Controller {
+	/*
 	public static $members_id_a = 9;
 	public function index($user_id){
 		$this->$members_id_a = $user_id;
@@ -15,7 +16,7 @@ class EmailController extends Controller {
 		$this->assign('data', $user_1);	
 		//调用邮件发送
 		$this->display();
-    }
+    }*/
 	public function email(){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
@@ -34,6 +35,7 @@ class EmailController extends Controller {
 				$data['state'] = 0;
 				$think_email = M('email');
 				$think_email->field('members_id_a,members_id_b,content,time_a,state')->data($data)->add();
+				$this->redirect('/Home/Email/Lookemail/index');
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

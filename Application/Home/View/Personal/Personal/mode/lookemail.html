@@ -46,20 +46,20 @@
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
-{$read["email"][$i]["members_id_a"]}
+
 <div class="row">
 <div class="col-md-12">
-<table class="table table-bordered">
-<tr class = "success">
-<td>
+<!--<table class="table table-bordered">
+<tr class = "default">
+<td>!-->
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12">
-<table class="table table-bordered">
+<!--<table class="table table-bordered">
 <tr class = "default">
-<td>
+<td>-->
 <div class="row">
 <div class="col-md-3"></div>
 <div>
@@ -80,7 +80,6 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-
 <for tart = "0" end = "$count['count']">
 <div class="row">
 <div class="col-md-3">
@@ -129,8 +128,7 @@
 			</div>
 		</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-		<button type="button" class="btn btn-primary">look</button>
+		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Email/reademail/index/userid/{$count["email"][$i]["members_id_a"]}/id/{$count["email"][$i]["id"]}" role="button">确认已读</a>
       </div>
     </div>
   </div>
@@ -308,17 +306,17 @@
 
 </div>
 </div>
-</td>
+<!--</td>
 </tr>
-</table>
+</table>-->
 </div>
 </div>
 </div>
 <div class="col-md-1"></div>
 </div>
-</td>
+<!--</td>
 </tr>
-</table>
+</table>-->
 </div>
 </div>
 

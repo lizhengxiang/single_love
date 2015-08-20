@@ -46,20 +46,20 @@
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
-<?php echo ($read["email"][$i]["members_id_a"]); ?>
+
 <div class="row">
 <div class="col-md-12">
-<table class="table table-bordered">
-<tr class = "success">
-<td>
+<!--<table class="table table-bordered">
+<tr class = "default">
+<td>!-->
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12">
-<table class="table table-bordered">
+<!--<table class="table table-bordered">
 <tr class = "default">
-<td>
+<td>-->
 <div class="row">
 <div class="col-md-3"></div>
 <div>
@@ -80,8 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-
-<?php $__FOR_START_430895625__=0;$__FOR_END_430895625__=$count['count'];for($i=$__FOR_START_430895625__;$i < $__FOR_END_430895625__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_41751950__=0;$__FOR_END_41751950__=$count['count'];for($i=$__FOR_START_41751950__;$i < $__FOR_END_41751950__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($count["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($count["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -128,8 +127,7 @@
 			</div>
 		</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-		<button type="button" class="btn btn-primary">look</button>
+		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Email/reademail/index/userid/<?php echo ($count["email"][$i]["members_id_a"]); ?>/id/<?php echo ($count["email"][$i]["id"]); ?>" role="button">确认已读</a>
       </div>
     </div>
   </div>
@@ -156,7 +154,7 @@
 <div class="row">
 <div class="col-md-12"> 
 
-<?php $__FOR_START_705939368__=0;$__FOR_END_705939368__=$send['count'];for($i=$__FOR_START_705939368__;$i < $__FOR_END_705939368__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_909102529__=0;$__FOR_END_909102529__=$send['count'];for($i=$__FOR_START_909102529__;$i < $__FOR_END_909102529__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($send["email"][$i]["members_id_b"]); ?>"><img src="<?php echo ($send["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -231,7 +229,7 @@
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12"> 
-<?php $__FOR_START_1991485807__=0;$__FOR_END_1991485807__=$read['count'];for($i=$__FOR_START_1991485807__;$i < $__FOR_END_1991485807__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1195349954__=0;$__FOR_END_1195349954__=$read['count'];for($i=$__FOR_START_1195349954__;$i < $__FOR_END_1195349954__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($read["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($read["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -301,17 +299,17 @@
 
 </div>
 </div>
-</td>
+<!--</td>
 </tr>
-</table>
+</table>-->
 </div>
 </div>
 </div>
 <div class="col-md-1"></div>
 </div>
-</td>
+<!--</td>
 </tr>
-</table>
+</table>-->
 </div>
 </div>
 

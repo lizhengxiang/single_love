@@ -19,11 +19,9 @@ class ReademailController extends Controller {
 				//实例化数据对象
 				$think_email = M('email');
 				$email['state'] = 1;
-				$email['time_b'] = date('Y-m-d h:i:sa');
+				$email['time_b'] = date('Y-m-d H:i:s');
 				$think_email->where($map)->field('time_b,state')->data($email)->save();
-				$email = $think_email->field('members_id_a,time_a,content')->where($map)->select();
-				$this->assign('email', $email);
-				$this->display();
+				$this->redirect('/Home/Email/Lookemail/index');	
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

@@ -1,8 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
  <head>
+
+ 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  </head>
-
  <body>
   <div id="header"><h1>我的相册</h1></div>
 

@@ -37,8 +37,7 @@ class LoginController extends Controller {
 				$login_time = $logintime->where($map)->find();
 				$data['logintime1'] = $login_time['logintime'];
 				$logintime->where($map)->data($data)->save();
-
-				$this->success('登录成功', '/single_love/index.php/Home/Home/Home/index', 0);
+				$this->redirect('Home/Home/Home/index');
 			}else{
 				$this->error("密码错误");
 			}

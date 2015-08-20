@@ -7,6 +7,7 @@ require_once 'EmailController.class.php';
 require_once 'LookController.class.php';
 require_once 'FollowersController.class.php';
 require_once 'GiftController.class.php';
+require_once 'AboutController.class.php';
 
 class HomeController extends Controller {
 
@@ -58,6 +59,8 @@ class HomeController extends Controller {
 		$gift = new GiftController();
 		$giftcount = $gift->index();
 		$this->assign('giftcount', $giftcount);
+		
+		//		
 
 		$this->display('Personal/Personal/mode/home');
     }
