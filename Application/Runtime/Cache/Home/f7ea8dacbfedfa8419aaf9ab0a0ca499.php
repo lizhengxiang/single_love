@@ -2,7 +2,14 @@
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
-    
+	<script language="javascript" type="text/javascript">
+		 function chg (){
+  			if(document.getElementById("mydiv").style.display=="none"){
+         	document.getElementById("mydiv").style.display="";
+		} 
+ 	}
+</script>
+ 	   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
@@ -60,20 +67,130 @@
 <tr class = "success">
 <td>
 <div class = "row">
-<div class="col-md-3">
+	<div class="col-md-3">
+		<div class = "row">
+			<div class="col-md-12">
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about[0]['members_id']); ?>"><img src="<?php echo ($head['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="col-md-1"></div>
+			<div class="col-md-11">
+				ID:<?php echo ($about[0]['members_id']); ?>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class = "row">
+			<div class="col-md-12">
+				<blockquote>
+  					<p><?php echo ($about[0]['content']); ?></p>
+  					<footer>发表时间<cite title="Source Title"><?php echo ($about[0]['time']); ?></cite></footer>
+				</blockquote>
+			<div>
+		</div>
+	</div>
+</div>
 <div class = "row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about[0]['members_id']); ?>"><img src="<?php echo ($head['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
+<div class = "row">
+
+
+
+<?php if($about[0]['pic1']): ?><div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div><?php endif; ?>
+<?php if($about[0]['pic2']): ?><div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic2']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div><?php endif; ?>
+<?php if($about[0]['pic3']): ?><div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic3']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div><?php endif; ?>
 </div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">相册</h4>
+		<div class="modal-footer">
+
+
+
+<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	<?php if($about[0]['pic1']): ?><div class="item active">
+      <img src="<?php echo ($about[0]['pic1']); ?>" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div><?php endif; ?>
+	<?php if($about[0]['pic2']): ?><div class="item">
+      <img src="<?php echo ($about[0]['pic2']); ?>" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div><?php endif; ?>
+	<?php if($about[0]['pic3']): ?><div class="item">
+		<img src="<?php echo ($about[0]['pic3']); ?>" alt="...">
+		<div class="carousel-caption">
+       	</div>
+	</div><?php endif; ?>	
+	</div>
+<!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
+<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class = "row">
+<div class="col-md-8"></div>
+<div class="col-md-4"><button type="button" class="btn btn-info" onclick="chg()">评论</button></div>
+</div>
+
+<div id="mydiv" style="display:none;">
+
+<form id="myform" action = "/single_love/index.php/Home/Commit/Commit/index"method = "post">
 <div class = "row">
 <div class="col-md-1"></div>
-<div class="col-md-11">
-ID:<?php echo ($about[0]['members_id']); ?>
+<div class="col-md-10">
+<textarea class ="form-control" rows = "3" id = "pinlun" name = "name">
+</textarea>
+<input type = "text" name = "id" value = "<?php echo ($about[0]['id']); ?>" style="display:none">
+<input type = "text" name = "contentid" value = "0" style="display:none">
 </div>
 </div>
+<div class = "row">
+<div class="col-md-8"></div>
+<div class="col-md-4">
+<button type = "submit" id = "sbmt" class = "btn btn-info">评论</button>
 </div>
-<div>
+</div>
+
+</form>
+</div>
+
+
+</div>
 </td>
 </tr>
 </table>
@@ -87,15 +204,12 @@ ID:<?php echo ($about[0]['members_id']); ?>
 
 
 
-
 				</td>
 			</tr>
 		</table>
 	</div>
 </div>
 
-	
-	
 </div>
  </body>
 </html>

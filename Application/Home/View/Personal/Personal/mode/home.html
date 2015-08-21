@@ -421,7 +421,14 @@
 </div>
 <div class = "row">
 <div class="col-md-12">
-<a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/{$about['about'][$i]['id']}"><span class = "badge">42</span>{$about['about'][$i]['content']}</a>
+<a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/{$about['about'][$i]['id']}">
+
+<blockquote>
+  <p><span class = "badge">42</span>{$about['about'][$i]['content']}</p></a>
+  <footer>发贴时间:<cite title="Source Title">{$about['about'][$i]['time']}</cite></footer>
+</blockquote>
+
+<!--<span class = "badge">42</span>{$about['about'][$i]['content']}-->
 </div>
 </div>
 
@@ -429,7 +436,7 @@
 
 <if condition = "$about['about'][$i]['pic1']">
 <div class="col-md-3">
-<button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo"><img src="{$about['about'][$i]['pic1']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo"><img src="{$about['about'][$i]['pic1']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
 </div>
 </if>
 <if condition ="$about['about'][$i]['pic2']">

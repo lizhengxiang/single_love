@@ -400,7 +400,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1355850924__=0;$__FOR_END_1355850924__=$about['num'];for($i=$__FOR_START_1355850924__;$i < $__FOR_END_1355850924__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_1692441977__=0;$__FOR_END_1692441977__=$about['num'];for($i=$__FOR_START_1692441977__;$i < $__FOR_END_1692441977__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
@@ -420,14 +420,21 @@
 </div>
 <div class = "row">
 <div class="col-md-12">
-<a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>"><span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?></a>
+<a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
+
+<blockquote>
+  <p><span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?></p></a>
+  <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?></cite></footer>
+</blockquote>
+
+<!--<span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?>-->
 </div>
 </div>
 
 <div class = "row">
 
 <?php if($about['about'][$i]['pic1']): ?><div class="col-md-3">
-<button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
 </div><?php endif; ?>
 <?php if($about['about'][$i]['pic2']): ?><div class="col-md-3">
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic2']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>

@@ -23,9 +23,7 @@ class  CommentsController extends Controller {
 				$map_head['members_id'] = $about[0]['members_id'];
  				$head = $photo1->field('head_ptoto')->where($map_head)->find();
  				//给模板变量赋
- 				$this->assign('head', $head);
-		
-				dump($about);		
+ 				$this->assign('head', $head);	
 				$this->assign('about',$about);
 				$this->display('Personal/Personal/mode/comments');
 			}
