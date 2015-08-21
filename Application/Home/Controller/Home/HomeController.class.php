@@ -67,7 +67,6 @@ class HomeController extends Controller {
 			$tag['members_id'] = $about['about'][$i]['members_id'];
 			$about['head'][$i] = $photo1->field('head_ptoto')->where($tag)->find();
 		}		
-		dump($about);
 		$this->assign('about', $about);
 		$this->display('Personal/Personal/mode/home');
     }

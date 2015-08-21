@@ -29,9 +29,21 @@ class AboutController extends Controller {
 				}else{// 上传成功
 					//獲取id
 					//获取六张照片的路勁
-					$dataa['pic1'] = 'https://localhost/single_love/Uploads/'.$info[0]['savepath'].$info[0]["savename"];
-					$dataa['pic2'] = 'https://localhost/single_love/Uploads/'.$info[1]['savepath'].$info[1]["savename"];
-					$dataa['pic3'] = 'https://localhost/single_love/Uploads/'.$info[2]['savepath'].$info[2]["savename"];
+					if($info[0]["savename"]){
+						$dataa['pic1'] = 'https://localhost/single_love/Uploads/'.$info[0]['savepath'].$info[0]["savename"];
+					}else{
+						$dataa['pic1'] = '0';
+					}
+					if($info[1]["savename"]){
+						$dataa['pic2'] = 'https://localhost/single_love/Uploads/'.$info[1]['savepath'].$info[1]["savename"];
+					}else{
+						$dataa['pic2'] = '0';
+					}
+					if($info[2]["savename"]){
+						$dataa['pic3'] = 'https://localhost/single_love/Uploads/'.$info[2]['savepath'].$info[2]["savename"];
+					}else{
+						$dataa['pic3'] = '0';
+					}
 				}
 				$dataa['members_id'] = cookie('user');
 				$dataa['public'] = I('public');
