@@ -7,7 +7,7 @@
 		$smtpusermail = "m15308003217@163.com";//SMTP服务器的用户邮箱
 		$smtpemailto = $smtpemailto_1;//trim($_POST['toemail']);//发送给谁
 		$smtpuser = "m15308003217@163.com";//SMTP服务器的用户帐号
-		$smtppass = "qrrzgfogvttgtjua";//SMTP服务器的用户密码
+		$smtppass = "aqrrzgfbogvttgtjuac";//SMTP服务器的用户密码
 		$mailtitle = "重庆单身情缘";//邮件主题
 		$mailcontent = "<h1>".$content."</h1>";//邮件内容
 		$mailtype = "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件
