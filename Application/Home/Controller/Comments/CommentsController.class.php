@@ -2,7 +2,7 @@
 
 namespace Home\Controller\Comments;
 use Think\Controller;
-use Think\Upload;
+require_once 'AboutCommitController.class.php';
 class  CommentsController extends Controller {
 	public function index($aboutid){
 		if($map_id['members_id'] = cookie('user')){
@@ -25,6 +25,13 @@ class  CommentsController extends Controller {
  				//给模板变量赋
  				$this->assign('head', $head);	
 				$this->assign('about',$about);
+
+				//实例化帖子的内容
+				$AboutCommit  = new AboutCommitController();
+				$commit = $AboutCommit->index($aboutid);
+				dump($commit);
+				$this->assign('commit',$commit);
+
 				$this->display('Personal/Personal/mode/comments');
 			}
 		}else{

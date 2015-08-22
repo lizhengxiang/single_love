@@ -2,14 +2,35 @@
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
-	<script language="javascript" type="text/javascript">
-		 function chg (){
-  			if(document.getElementById("mydiv").style.display=="none"){
-         	document.getElementById("mydiv").style.display="";
-		} 
- 	}
-</script>
  	   
+	<script>
+    function ok() {
+        $("#tra").val("");
+        $("pp").show("slow");
+     
+    }
+    function save() {
+        var cont = $("#tra").val();
+        alert(cont);
+    }
+    document.onclick = function (event) {
+        var e = event || window.event;
+        var elem = e.srcElement || e.target;
+        while (elem) {
+            if (elem != document) {
+                if (elem.id == "a" || elem.id == "tra") {
+                    $("#pp").show("slow");
+                    return;
+                }
+                elem = elem.parentNode;
+            } else {
+                $("#pp").hide("slow");
+                return;
+            }
+        }
+    }  
+	</script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
@@ -96,8 +117,9 @@
 
 
 
-<?php if($about[0]['pic1']): ?><div class="col-md-3">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+<?php if($about[0]['pic1']): ?><div class="col-md-1"></div>
+<div class="col-md-3">
+<button type="button"  class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
 </div><?php endif; ?>
 <?php if($about[0]['pic2']): ?><div class="col-md-3">
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic2']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
@@ -164,28 +186,32 @@
 
 <div class = "row">
 <div class="col-md-8"></div>
-<div class="col-md-4"><button type="button" class="btn btn-info" onclick="chg()">评论</button></div>
+<div class="col-md-4"><button type="button" onclick="ok()" id = "a"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
 </div>
-
-<div id="mydiv" style="display:none;">
+<div id="cont">
+</div>
+<div id="pp" style="display:none;">
 
 <form id="myform" action = "/single_love/index.php/Home/Commit/Commit/index"method = "post">
 <div class = "row">
 <div class="col-md-1"></div>
-<div class="col-md-10">
-<textarea class ="form-control" rows = "3" id = "pinlun" name = "name">
+<div class="col-md-9">
+<textarea class ="form-control" rows = "3" id = "tra" name = "name">
 </textarea>
 <input type = "text" name = "id" value = "<?php echo ($about[0]['id']); ?>" style="display:none">
 <input type = "text" name = "contentid" value = "0" style="display:none">
 </div>
-</div>
-<div class = "row">
-<div class="col-md-8"></div>
-<div class="col-md-4">
-<button type = "submit" id = "sbmt" class = "btn btn-info">评论</button>
-</div>
-</div>
 
+<!--
+<div class = "row">
+<div class="col-md-8"></div>-->
+<div class="col-md-2">
+<div class = "row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+<button type = "submit" id = "sbmt"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="...    " class="img-rounded"  width="25" height="25"></button>
+</div>
+</div>
 </form>
 </div>
 
