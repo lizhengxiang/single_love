@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+<div class="container">
+
+<script>
+    function ok() {
+        $("#tra").val("");
+        $("pp").show("slow");
+     
+    }
+ 
+    function save() {
+        var cont = $("#tra").val();
+        alert(cont);
+    }
+    document.onclick = function (event) {
+        var e = event || window.event;
+        var elem = e.srcElement || e.target;
+ 
+        while (elem) {
+            if (elem != document) {
+                if (elem.id == "a" || elem.id == "tra") {
+                    $("#pp").show("slow");
+                    return;
+                }
+                elem = elem.parentNode;
+            } else {
+                $("#pp").hide("slow");
+                return;
+            }
+        }
+    }  
+</script>
+<a href="#" onclick="ok()" id="a">靠</a>
+<div id="cont">
+</div> 
+<div id="pp" style="width:200px;height:50px;display:none;">
+    <textarea id="tra"></textarea>
+    <input  type="button" value="靠" onclick="save()"/>||<input  type="button" value="靠"/>
+</div>
+
+
+
+</body>
+</html>

@@ -29,10 +29,11 @@ class  CommentsController extends Controller {
 				//实例化帖子的内容
 				$AboutCommit  = new AboutCommitController();
 				$commit = $AboutCommit->index($aboutid);
-				dump($commit);
+				//dump($commit);
 				$this->assign('commit',$commit);
-
+				//dump($commit);
 				$this->display('Personal/Personal/mode/comments');
+				//$this->display('Personal/Personal/mode/iii');
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

@@ -2,34 +2,35 @@
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
- 	   
+   
 	<script>
-    function ok() {
-        $("#tra").val("");
-        $("pp").show("slow");
+    function ok(a) {
+        $("#tra"+a).val("");
+        $("pp"+a).show("slow");
      
-    }
+    
     function save() {
-        var cont = $("#tra").val();
-        alert(cont);
+        //var cont = $("#tra").val();
+        //alert(cont);
     }
     document.onclick = function (event) {
         var e = event || window.event;
         var elem = e.srcElement || e.target;
         while (elem) {
             if (elem != document) {
-                if (elem.id == "a" || elem.id == "tra") {
-                    $("#pp").show("slow");
+                if (elem.id == "a"+a || elem.id == "tra"+a) {
+                    $("#pp"+a).show("slow");
                     return;
                 }
                 elem = elem.parentNode;
             } else {
-                $("#pp").hide("slow");
+                $("#pp"+a).hide("slow");
                 return;
             }
         }
-    }  
+    } } 
 	</script>
+
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,10 +109,11 @@
   					<p>{$about[0]['content']}</p>
   					<footer>发表时间<cite title="Source Title">{$about[0]['time']}</cite></footer>
 				</blockquote>
-			<div>
+			</div>
 		</div>
-	</div>
-</div>
+	
+
+
 <div class = "row">
 <div class = "row">
 
@@ -198,17 +200,17 @@
 
 <div class = "row">
 <div class="col-md-8"></div>
-<div class="col-md-4"><button type="button" onclick="ok()" id = "a"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+<div class="col-md-4"><button type="button" onclick="ok('a')" id = "aa"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
 </div>
 <div id="cont">
 </div>
-<div id="pp" style="display:none;">
+<div id="ppa" style="display:none;">
 
 <form id="myform" action = "__ROOT__/index.php/Home/Commit/Commit/index"method = "post">
 <div class = "row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<textarea class ="form-control" rows = "3" id = "tra" name = "name">
+<textarea class ="form-control" rows = "3" id = "traa" name = "name">
 </textarea>
 <input type = "text" name = "id" value = "{$about[0]['id']}" style="display:none">
 <input type = "text" name = "contentid" value = "0" style="display:none">
@@ -226,17 +228,91 @@
 </div>
 </form>
 </div>
-
+</div>
+</div>
+</div>
 
 </div>
 </td>
 </tr>
 </table>
+
+<div class="row">
+<div class="col-md-12">
+<table class="table table-bordered">
+<tr class = "info">
+<td>
+
+<for tart = "0" end = "$commit['count']">
+<div class = "row">
+<div class="col-md-3">
+<div class = "row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$commit['about'][$i]['members_id']}"><img src="{$head['head_ptoto']}" alt="..." class="img-rounded"  width="100%" height="85"></a>
 </div>
+</div>
+
+<div class = "row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+ID:{$commit['about'][$i]['members_id']}
+</div>
+</div>
+</div>
+
+<div class="col-md-9">
+        <div class = "row">
+             <div class="col-md-12">
+                 <blockquote> 
+                   <p>{$commit['about'][$i]['content']}</p>
+                     <footer>评论时间<cite title="Source Title">{$commit['about'][$i]['time']}</cite></footer>
+                 </blockquote>
+             </div>
+         </div>
+     
+
+
+<div class = "row">
+<div class="col-md-8"></div>
+<div class="col-md-4"><button type="button" onclick="ok('{$i}')" id = "a{$i}"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+</div>
+<div id="cont">
+</div>
+<div id="pp{$i}" style="display:none;">
+
+<form id="myform" action = "__ROOT__/index.php/Home/Commit/Commit/index"method = "post">
+<div class = "row">
+<div class="col-md-1"></div>
+<div class="col-md-9">
+<textarea class ="form-control" rows = "3" id = "tra{$i}" name = "name">
+</textarea>
+<input type = "text" name = "id" value = "{$commit[$i]['id']}" style="display:none">
+<input type = "text" name = "contentid" value = "0" style="display:none">
+</div>
+<div class="col-md-2">
+<div class = "row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+<button type = "submit" id = "sbmt1"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="...    " class="img-rounded"  width    ="25" height="25"></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</for>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 <div class="col-md-4">
-<!-- 还没想好放什么-->
+还没想好放什么
 </div>
 </div>
 

@@ -1,16 +1,43 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
-   
+ 	   
 	<script>
-    function ok(a) {
-        $("#tra"+a).val("");
-        $("pp"+a).show("slow");
+    function ok() {
+        $("#tra").val("");
+        $("pp").show("slow");
      
     
     function save() {
-        //var cont = $("#tra").val();
+        var cont = $("#tra").val();
+        alert(cont);
+    }
+    document.onclick = function (event) {
+        var e = event || window.event;
+        var elem = e.srcElement || e.target;
+        while (elem) {
+            if (elem != document) {
+                if (elem.id == "a" || elem.id == "tra") {
+                    $("#pp").show("slow");
+                    return;
+                }
+                elem = elem.parentNode;
+            } else {
+                $("#pp").hide("slow");
+                return;
+            }
+        }
+    } } 
+	</script>
+
+<script>
+    function ok1(a) {
+        $("#tra1"+a).val("");
+        $("pp1"+a).show("slow");
+    
+    function save() {
+        //var cont = $("#tra1").val();
         //alert(cont);
     }
     document.onclick = function (event) {
@@ -18,18 +45,19 @@
         var elem = e.srcElement || e.target;
         while (elem) {
             if (elem != document) {
-                if (elem.id == "a"+a || elem.id == "tra"+a) {
-                    $("#pp"+a).show("slow");
+                if (elem.id == "a1"+a || elem.id == "tra1"+a) {
+                    $("#pp1"+a).show("slow");
                     return;
                 }
                 elem = elem.parentNode;
             } else {
-                $("#pp"+a).hide("slow");
+                $("#pp1"+a).hide("slow");
                 return;
             }
         }
     } } 
 	</script>
+
 
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +66,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/single_love/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ROOT__/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -50,9 +78,9 @@
 		</table>
 	</div>
 	<div class="row">
-		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
-		<div class="col-md-6"><img src="/single_love/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
-		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-6"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
 	</div>
 	
 	<div class="row">
@@ -92,13 +120,13 @@
 	<div class="col-md-3">
 		<div class = "row">
 			<div class="col-md-12">
-				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about[0]['members_id']); ?>"><img src="<?php echo ($head['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
+				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$about[0]['members_id']}"><img src="{$head['head_ptoto']}" alt="..." class="img-rounded"  width="100%" height="85"></a>
 			</div>
 		</div>
 		<div class = "row">
 			<div class="col-md-1"></div>
 			<div class="col-md-11">
-				ID:<?php echo ($about[0]['members_id']); ?>
+				ID:{$about[0]['members_id']}
 			</div>
 		</div>
 	</div>
@@ -106,29 +134,34 @@
 		<div class = "row">
 			<div class="col-md-12">
 				<blockquote>
-  					<p><?php echo ($about[0]['content']); ?></p>
-  					<footer>发表时间<cite title="Source Title"><?php echo ($about[0]['time']); ?></cite></footer>
+  					<p>{$about[0]['content']}</p>
+  					<footer>发表时间<cite title="Source Title">{$about[0]['time']}</cite></footer>
 				</blockquote>
-			</div>
+			<div>
 		</div>
-	
-
-
+	</div>
+</div>
 <div class = "row">
 <div class = "row">
 
 
 
-<?php if($about[0]['pic1']): ?><div class="col-md-1"></div>
+<if condition = "$about[0]['pic1']">
+<div class="col-md-1"></div>
 <div class="col-md-3">
-<button type="button"  class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
-</div><?php endif; ?>
-<?php if($about[0]['pic2']): ?><div class="col-md-3">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic2']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
-</div><?php endif; ?>
-<?php if($about[0]['pic3']): ?><div class="col-md-3">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="<?php echo ($about[0]['pic3']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
-</div><?php endif; ?>
+<button type="button"  class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="{$about[0]['pic1']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div>
+</if>
+<if condition ="$about[0]['pic2']">
+<div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="{$about[0]['pic2']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div>
+</if>
+<if condition ="$about[0]['pic3']">
+<div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo"><img src="{$about[0]['pic3']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div>
+</if>
 </div>
 
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -152,22 +185,28 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-	<?php if($about[0]['pic1']): ?><div class="item active">
-      <img src="<?php echo ($about[0]['pic1']); ?>" alt="...">
+	<if condition ="$about[0]['pic1']">
+    <div class="item active">
+      <img src="{$about[0]['pic1']}" alt="...">
       <div class="carousel-caption">
       </div>
-    </div><?php endif; ?>
-	<?php if($about[0]['pic2']): ?><div class="item">
-      <img src="<?php echo ($about[0]['pic2']); ?>" alt="...">
+    </div>
+	</if>
+	<if condition ="$about[0]['pic2']">
+    <div class="item">
+      <img src="{$about[0]['pic2']}" alt="...">
       <div class="carousel-caption">
 
       </div>
-    </div><?php endif; ?>
-	<?php if($about[0]['pic3']): ?><div class="item">
-		<img src="<?php echo ($about[0]['pic3']); ?>" alt="...">
+    </div>
+	</if>
+	<if condition ="$about[0]['pic3']">
+	<div class="item">
+		<img src="{$about[0]['pic3']}" alt="...">
 		<div class="carousel-caption">
        	</div>
-	</div><?php endif; ?>	
+	</div>
+	</if>	
 	</div>
 <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
@@ -188,19 +227,19 @@
 
 <div class = "row">
 <div class="col-md-8"></div>
-<div class="col-md-4"><button type="button" onclick="ok('a')" id = "aa"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+<div class="col-md-4"><button type="button" onclick="ok()" id = "a"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
 </div>
 <div id="cont">
 </div>
-<div id="ppa" style="display:none;">
+<div id="pp" style="display:none;">
 
-<form id="myform" action = "/single_love/index.php/Home/Commit/Commit/index"method = "post">
+<form id="myform" action = "__ROOT__/index.php/Home/Commit/Commit/index"method = "post">
 <div class = "row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<textarea class ="form-control" rows = "3" id = "traa" name = "name">
+<textarea class ="form-control" rows = "3" id = "tra" name = "name">
 </textarea>
-<input type = "text" name = "id" value = "<?php echo ($about[0]['id']); ?>" style="display:none">
+<input type = "text" name = "id" value = "{$about[0]['id']}" style="display:none">
 <input type = "text" name = "contentid" value = "0" style="display:none">
 </div>
 
@@ -211,12 +250,10 @@
 <div class = "row">
 <div class="col-md-12">&nbsp;</div>
 </div>
-<button type = "submit" id = "sbmt"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="...    " class="img-rounded"  width="25" height="25"></button>
+<button type = "submit" id = "sbmt"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="...    " class="img-rounded"  width="25" height="25"></button>
 </div>
 </div>
 </form>
-</div>
-</div>
 </div>
 </div>
 
@@ -231,18 +268,19 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_1233227671__=0;$__FOR_END_1233227671__=$commit['count'];for($i=$__FOR_START_1233227671__;$i < $__FOR_END_1233227671__;$i+=1){ ?><div class = "row">
+<for tart = "0" end = "1">
+<div class = "row">
 <div class="col-md-3">
 <div class = "row">
 <div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['members_id']); ?>"><img src="<?php echo ($head['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$commit['about'][$i]['members_id']}"><img src="{$head['head_ptoto']}" alt="..." class="img-rounded"  width="100%" height="85"></a>
 </div>
 </div>
 
 <div class = "row">
 <div class="col-md-1"></div>
 <div class="col-md-11">
-ID:<?php echo ($commit['about'][$i]['members_id']); ?>
+ID:{$commit['about'][$i]['members_id']}
 </div>
 </div>
 </div>
@@ -251,42 +289,46 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
         <div class = "row">
              <div class="col-md-12">
                  <blockquote> 
-                   <p><?php echo ($commit['about'][$i]['content']); ?></p>
-                     <footer>评论时间<cite title="Source Title"><?php echo ($commit['about'][$i]['time']); ?></cite></footer>
+                   <p>{$commit['about'][$i]['content']}</p>
+                     <footer>发表时间<cite title="Source Title">{$commit['about'][$i]['time']}</cite></footer>
                  </blockquote>
-             </div>
+             <div>
          </div>
-     
+     </div>
+</div>
+
 
 
 <div class = "row">
 <div class="col-md-8"></div>
-<div class="col-md-4"><button type="button" onclick="ok('<?php echo ($i); ?>')" id = "a<?php echo ($i); ?>"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+<div class="col-md-4"><button type="button" onclick="ok1('$i')" id = "a1".$i><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
 </div>
 <div id="cont">
 </div>
-<div id="pp<?php echo ($i); ?>" style="display:none;">
+<div id="pp1" style="display:none;">
 
-<form id="myform" action = "/single_love/index.php/Home/Commit/Commit/index"method = "post">
+<form id="myform.i" action = "__ROOT__/index.php/Home/Commit/Commit/index"method = "post">
 <div class = "row">
 <div class="col-md-1"></div>
 <div class="col-md-9">
-<textarea class ="form-control" rows = "3" id = "tra<?php echo ($i); ?>" name = "name">
+<textarea class ="form-control" rows = "3" id = "tra1".$i name = "name">
 </textarea>
-<input type = "text" name = "id" value = "<?php echo ($commit[$i]['id']); ?>" style="display:none">
+<input type = "text" name = "id" value = "{$about[0]['id']}" style="display:none">
 <input type = "text" name = "contentid" value = "0" style="display:none">
 </div>
 <div class="col-md-2">
 <div class = "row">
 <div class="col-md-12">&nbsp;</div>
 </div>
-<button type = "submit" id = "sbmt1"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="...    " class="img-rounded"  width    ="25" height="25"></button>
+<button type = "submit" id = "sbmt"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width    ="25" height="25"></button>
 </div>
 </div>
 </form>
 </div>
 </div>
-</div><?php } ?>
+
+</for>
+
 </td>
 </tr>
 </table>

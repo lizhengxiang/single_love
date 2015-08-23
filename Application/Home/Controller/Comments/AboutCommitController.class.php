@@ -13,7 +13,7 @@ class  AboutCommitController extends Controller {
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
 				$think_comments = M('comments');
-				echo $tag['aboutid'] = $aboutid;
+				$tag['aboutid'] = $aboutid;
 				//根据帖子的id取出帖子评论
 				$commit['about'] = $think_comments->order('time desc')->where($tag)->select();
 				$commit['count'] = $think_comments->where($tag)->count();
