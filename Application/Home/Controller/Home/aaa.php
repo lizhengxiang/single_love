@@ -93,8 +93,11 @@ class AbbController extends Controller {
             	unset( $list[$key]);
        		}
 		}
+		echo count($list);
+		echo "####";
 		dump($list);
 		echo count($list);
+		echo "####";
 		$stack = new stack(20);	
 		$i = count($list[0]['child']);
 		echo $list[0]['title'];
