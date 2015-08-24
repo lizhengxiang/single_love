@@ -85,8 +85,24 @@ class AbbController extends Controller {
 		}
 		dump($list);
 		$stack = new stack(20);	
+		$i = count($list[0]['child']);
+		echo $list[0]['title'];
+		while(--$i >= 0){
+			$stack->Push_Stack($list[0]['child'][$i]);
+		}
+		$list = $stack->Top_Stack();
+		$stack->Pop_Stack();
 		while(1){
-			
+			++$jj;
+			$i = count($list['child']);
+			echo $list['title'];
+			while(--$i >= 0){
+				$stack->Push_Stack($list['child'][$i]);
+			}
+			$list = $stack->Top_Stack();
+			if(!$list)
+				break;
+			$stack->Pop_Stack();
 		}
 	}
 }
