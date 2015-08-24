@@ -13,7 +13,7 @@ class PhotoController extends Controller {
     }
 	public function upload(){
 		if($map_id['members_id'] = cookie('user')){
-			//根据用户名获取psssword再和cookie的password做比较
+			//根据用户名获取psssword再和cookie的password做比
 			$password = M('registered');
 			$data = $password->where($map_id)->find();
 			//根据密码判断是不是自己

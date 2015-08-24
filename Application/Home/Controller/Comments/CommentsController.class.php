@@ -29,7 +29,7 @@ class  CommentsController extends Controller {
 				//实例化帖子的内容
 				$AboutCommit  = new AboutCommitController();
 				$commit = $AboutCommit->index($aboutid);
-				//dump($commit);
+				dump($commit);
 				$this->assign('commit',$commit);
 				//dump($commit);
 				$this->display('Personal/Personal/mode/comments');

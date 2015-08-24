@@ -231,7 +231,7 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_1233227671__=0;$__FOR_END_1233227671__=$commit['count'];for($i=$__FOR_START_1233227671__;$i < $__FOR_END_1233227671__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_1497988925__=0;$__FOR_END_1497988925__=$commit['count'];for($i=$__FOR_START_1497988925__;$i < $__FOR_END_1497988925__;$i+=1){ ?><div class = "row">
 <div class="col-md-3">
 <div class = "row">
 <div class="col-md-12">
@@ -273,8 +273,8 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 <div class="col-md-9">
 <textarea class ="form-control" rows = "3" id = "tra<?php echo ($i); ?>" name = "name">
 </textarea>
-<input type = "text" name = "id" value = "<?php echo ($commit[$i]['id']); ?>" style="display:none">
-<input type = "text" name = "contentid" value = "0" style="display:none">
+<input type = "text" name = "id" value = "<?php echo ($commit['about'][$i]['aboutid']); ?>" style="display:none">
+<input type = "text" name = "contentid" value = "<?php echo ($commit['about'][$i]['id']); ?>" style="display:none">
 </div>
 <div class="col-md-2">
 <div class = "row">
