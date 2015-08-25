@@ -18,7 +18,7 @@ class  CommitController extends Controller {
 				$data['aboutid'] = I('id');
 				$data['contentid'] = I('contentid');
 				$data['time'] = date('Y-m-d H:m:s');
-				$data['tag'] = 0;
+				$data['tag'] = I('tag');
 				$data['members_id'] = cookie('user');
 				$comments = M('comments');
 				$comments->add($data);

@@ -17,6 +17,7 @@ class  CommentsController extends Controller {
 				$map['id'] = $aboutid;
 				$think_about = M('about');
 				$about = $think_about->where($map)->select();
+				//dump($about);
 				//获取用户头像及照片
 				$photo1 = M('photo');
  				//根据id取出照片
@@ -29,10 +30,10 @@ class  CommentsController extends Controller {
 				//实例化帖子的内容
 				$AboutCommit  = new AboutCommitController();
 				$commit = $AboutCommit->index($aboutid);
-				dump($commit);
+				//dump($commit);
 				$this->assign('commit',$commit);
 				//dump($commit);
-				$this->display('Personal/Personal/mode/comments');
+				//$this->display('Personal/Personal/mode/comments');
 				//$this->display('Personal/Personal/mode/iii');
 			}
 		}else{
