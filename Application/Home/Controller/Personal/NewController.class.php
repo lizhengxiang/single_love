@@ -49,7 +49,7 @@ class NewController extends Controller {
 					$think_look = M('look');
 					$dataa['members_id_a'] = cookie('user');
 					$dataa['members_id_b'] = $user_id;
-					$dataa['browse'] = date('Y-m-d h:i:sa');
+					$dataa['browse'] = date('Y-m-d H:i:s');
 					$mapp['members_id_a'] = $dataa['members_id_a'];
 					$mapp['members_id_b'] = $user_id;
 					//查看是不是已经在数据库里面有着两个人的资料

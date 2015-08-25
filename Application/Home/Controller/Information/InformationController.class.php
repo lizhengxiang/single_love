@@ -38,13 +38,13 @@ class InformationController extends Controller {
 				$data['schooling'] = I('schooling');
 				$data['type'] = I('type');
 				$data['work'] = I('place');
-				$data['modeify'] = date("y-m-d");
+				$data['modeify'] = date("Y-m-d H:i:s");
 				//实例化data对象
 				$information = M('data');
 				//根据主键查找会员资料在不在会员基本信息表,更具条件更新记录
 				$information->where($map)->data($data)->save();
 				//重定向到photo页面
-				$this->redirect('/Home/Photo/Photo/index', 5, 'lizhengxiang');
+				$this->redirect('/Home/Photo/Photo/index');
 			}
 		}else{
 			$this->success('请您登录后再访问','/single_love/index.php/Home/Login/Login/index', 5);

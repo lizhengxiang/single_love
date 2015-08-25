@@ -22,7 +22,7 @@ class FollowersController extends Controller {
 					$think_look = M('followers');
 					$dataa['members_id_a'] = cookie('user');
 					$dataa['members_id_b'] = $user_id;
-					$dataa['time'] = date('Y-m-d h:i:sa');
+					$dataa['time'] = date('Y-m-d H:i:s');
 					$mapp['members_id_a'] = $dataa['members_id_a'];
 					$mapp['members_id_b'] = $dataa['members_id_b'];
 					//查看是不是已经在数据库里面有着两个人的资料
@@ -34,7 +34,7 @@ class FollowersController extends Controller {
 						$think_look->add($dataa);
 					}
 				}
-				$this->redirect('/Home/Look/Look/index', 0, '');
+				$this->redirect('/Home/Look/Look/index');
 			}
 		
 		}else{

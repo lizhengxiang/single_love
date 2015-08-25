@@ -20,7 +20,7 @@ class FollowersaController extends Controller {
 				$think_look = M('followers');
 				$mapp['members_id_b'] = cookie('user');
 				//获取关注我的人
-				$user['user'] = $think_look->where($mapp)->select();
+				$user['user'] = $think_look->where($mapp)->order('time desc')->select();
 				$user['count'] = $think_look->where($mapp)->count();
 				return $user;
 			}
