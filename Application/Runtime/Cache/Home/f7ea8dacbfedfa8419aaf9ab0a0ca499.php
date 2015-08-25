@@ -231,11 +231,11 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_645994363__=0;$__FOR_END_645994363__=$commit['count'];for($i=$__FOR_START_645994363__;$i < $__FOR_END_645994363__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_1759550735__=0;$__FOR_END_1759550735__=$commit['count'];for($i=$__FOR_START_1759550735__;$i < $__FOR_END_1759550735__;$i+=1){ ?><div class = "row">
 <div class="col-md-3">
 <div class = "row">
 <div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['members_id']); ?>"><img src="<?php echo ($head['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['members_id']); ?>"><img src="<?php echo ($commit['head_a'][$i]['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
 </div>
 </div>
 
