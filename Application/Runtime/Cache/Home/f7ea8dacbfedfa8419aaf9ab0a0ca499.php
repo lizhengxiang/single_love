@@ -231,7 +231,7 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_2047544669__=0;$__FOR_END_2047544669__=$commit['count'];for($i=$__FOR_START_2047544669__;$i < $__FOR_END_2047544669__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
+<?php $__FOR_START_1612117516__=0;$__FOR_END_1612117516__=$commit['count'];for($i=$__FOR_START_1612117516__;$i < $__FOR_END_1612117516__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
 <div class="col-md-2">
 <div class = "row">
 <div class="col-md-12">
@@ -288,6 +288,7 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 </div>
 </div>
 </div>
+
 <?php else: ?>
 
 <div class = "row">
@@ -311,7 +312,7 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
         <div class = "row">
              <div class="col-md-12">
                  <blockquote> 
-                   <p><?php echo ($commit['about'][$i]['members_id']); ?>回复<?php echo ($commit['about'][$i]['tag']); ?>:<?php echo ($commit['about'][$i]['content']); ?></p>
+                   <p><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['members_id']); ?>"><?php echo ($commit['about'][$i]['members_id']); ?></a>回复<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['tag']); ?>"><?php echo ($commit['about'][$i]['tag']); ?></a>:<?php echo ($commit['about'][$i]['content']); ?></p>
                      <footer>评论时间<cite title="Source Title"><?php echo ($commit['about'][$i]['time']); ?></cite></footer>
                  </blockquote>
              </div>
@@ -320,8 +321,8 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 
 
 <div class = "row">
-<div class="col-md-8"></div>
-<div class="col-md-4"><button type="button" onclick="ok('<?php echo ($i); ?>')" id = "a<?php echo ($i); ?>"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+<div class="col-md-7"></div>
+<div class="col-md-5"><button type="button" onclick="ok('<?php echo ($i); ?>')" id = "a<?php echo ($i); ?>"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
 </div>
 <div id="cont">
 </div>
@@ -346,6 +347,16 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 </div>
 </form>
 </div>
+</div>
+</div><?php endif; ?>
+<?php if($commit['about'][$i+1]['tag'] == 0): ?><div class = "row">
+<div class="col-md-12">
+<table class="table table-bordered">
+<tr class = "primary">
+<td>
+</td>
+</tr>
+</table>
 </div>
 </div><?php endif; } ?>
 </td>

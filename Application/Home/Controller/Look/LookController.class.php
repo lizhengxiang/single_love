@@ -87,8 +87,8 @@ class LookController extends Controller {
                	}
 
 				
-
-				$this->display();
+				$this->display('Personal/Personal/mode/look');
+				//$this->display();
 			}
 		
 		}else{

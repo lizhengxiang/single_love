@@ -302,6 +302,7 @@ ID:{$commit['about'][$i]['members_id']}
 </div>
 </div>
 </div>
+
 <else/>
 
 <div class = "row">
@@ -325,7 +326,7 @@ ID:{$commit['about'][$i]['members_id']}
         <div class = "row">
              <div class="col-md-12">
                  <blockquote> 
-                   <p>{$commit['about'][$i]['members_id']}回复{$commit['about'][$i]['tag']}:{$commit['about'][$i]['content']}</p>
+                   <p><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$commit['about'][$i]['members_id']}">{$commit['about'][$i]['members_id']}</a>回复<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$commit['about'][$i]['tag']}">{$commit['about'][$i]['tag']}</a>:{$commit['about'][$i]['content']}</p>
                      <footer>评论时间<cite title="Source Title">{$commit['about'][$i]['time']}</cite></footer>
                  </blockquote>
              </div>
@@ -334,8 +335,8 @@ ID:{$commit['about'][$i]['members_id']}
 
 
 <div class = "row">
-<div class="col-md-8"></div>
-<div class="col-md-4"><button type="button" onclick="ok('{$i}')" id = "a{$i}"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+<div class="col-md-7"></div>
+<div class="col-md-5"><button type="button" onclick="ok('{$i}')" id = "a{$i}"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
 </div>
 <div id="cont">
 </div>
@@ -363,6 +364,18 @@ ID:{$commit['about'][$i]['members_id']}
 </div>
 </div>
 
+</if>
+<if condition = "$commit['about'][$i+1]['tag'] eq 0">
+<div class = "row">
+<div class="col-md-12">
+<table class="table table-bordered">
+<tr class = "primary">
+<td>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </if>
 </for>
 </td>
