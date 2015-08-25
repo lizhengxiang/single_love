@@ -82,14 +82,14 @@
 				<td>
 
 <div class = "row">
-<div class="col-md-8">
+<div class="col-md-9">
 <div class="row">
 <div class="col-md-12">
 <table class="table table-bordered">
 <tr class = "success">
 <td>
 <div class = "row">
-	<div class="col-md-3">
+	<div class="col-md-2">
 		<div class = "row">
 			<div class="col-md-12">
 				<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about[0]['members_id']); ?>"><img src="<?php echo ($head['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
@@ -102,7 +102,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-9">
+	<div class="col-md-10">
 		<div class = "row">
 			<div class="col-md-12">
 				<blockquote>
@@ -231,8 +231,8 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_1759550735__=0;$__FOR_END_1759550735__=$commit['count'];for($i=$__FOR_START_1759550735__;$i < $__FOR_END_1759550735__;$i+=1){ ?><div class = "row">
-<div class="col-md-3">
+<?php $__FOR_START_2047544669__=0;$__FOR_END_2047544669__=$commit['count'];for($i=$__FOR_START_2047544669__;$i < $__FOR_END_2047544669__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
+<div class="col-md-2">
 <div class = "row">
 <div class="col-md-12">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['members_id']); ?>"><img src="<?php echo ($commit['head_a'][$i]['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="85"></a>
@@ -247,7 +247,7 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 </div>
 </div>
 
-<div class="col-md-9">
+<div class="col-md-10">
         <div class = "row">
              <div class="col-md-12">
                  <blockquote> 
@@ -287,7 +287,67 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 </form>
 </div>
 </div>
-</div><?php } ?>
+</div>
+<?php else: ?>
+
+<div class = "row">
+<div class="col-md-3"></div>
+<div class="col-md-1">
+<div class = "row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($commit['about'][$i]['members_id']); ?>"><img src="<?php echo ($commit['head_a'][$i]['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="40"></a>
+</div>
+</div>
+
+<div class = "row">
+<div class="col-md-1"></div>
+<div class="col-md-11">
+<!--ID:<?php echo ($commit['about'][$i]['members_id']); ?>-->
+</div>
+</div>
+</div>
+
+<div class="col-md-8">
+        <div class = "row">
+             <div class="col-md-12">
+                 <blockquote> 
+                   <p><?php echo ($commit['about'][$i]['members_id']); ?>回复<?php echo ($commit['about'][$i]['tag']); ?>:<?php echo ($commit['about'][$i]['content']); ?></p>
+                     <footer>评论时间<cite title="Source Title"><?php echo ($commit['about'][$i]['time']); ?></cite></footer>
+                 </blockquote>
+             </div>
+         </div>
+     
+
+
+<div class = "row">
+<div class="col-md-8"></div>
+<div class="col-md-4"><button type="button" onclick="ok('<?php echo ($i); ?>')" id = "a<?php echo ($i); ?>"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="..." class="img-rounded"  width="25" height="25"></div>
+</div>
+<div id="cont">
+</div>
+<div id="pp<?php echo ($i); ?>" style="display:none;">
+
+<form id="myform" action = "/single_love/index.php/Home/Commit/Commit/index"method = "post">
+<div class = "row">
+<div class="col-md-1"></div>
+<div class="col-md-9">
+<textarea class ="form-control" rows = "3" id = "tra<?php echo ($i); ?>" name = "name">
+</textarea>
+<input type = "text" name = "id" value = "<?php echo ($commit['about'][$i]['aboutid']); ?>" style="display:none">
+<input type = "text" name = "tag" value = "<?php echo ($commit['about'][$i]['members_id']); ?>" style="display:none">
+<input type = "text" name = "contentid" value = "<?php echo ($commit['about'][$i]['id']); ?>" style="display:none">
+</div>
+<div class="col-md-2">
+<div class = "row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+<button type = "submit" id = "sbmt1"><img src="/single_love/Application/Home/View/Personal/Personal/mode/f.jpg" alt="...    " class="img-rounded"  width    ="25" height="25"></button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div><?php endif; } ?>
 </td>
 </tr>
 </table>
@@ -298,7 +358,7 @@ ID:<?php echo ($commit['about'][$i]['members_id']); ?>
 
 </div>
 </div>
-<div class="col-md-4">
+<div class="col-md-3">
 还没想好放什么
 </div>
 </div>
