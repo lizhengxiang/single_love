@@ -63,7 +63,7 @@ class AbbController extends Controller {
  		//根据帖子的id取出帖子评论
  		$commit['about'] = $think_comments->order('time desc')->where($tag)->select();
  		$commit['count'] = $think_comments->where($tag)->count();
-		//dump($commit['about']);
+		dump($commit['about']);
 
 		//获取自己的帐号
 		/*
@@ -98,16 +98,15 @@ class AbbController extends Controller {
 		$stack = new stack(20);
 		$sum = count($list);
 		foreach(array_keys($list) as $h){
-		//ecaho "$$$";	
-		//echo $h;
+		echo "<br>";
 		$listt = $list[$h];
-		//dump($listt);
 	
-		//$stack = new stack(20);	
 		$i = count($listt['child']);
 		echo $listt['title'];
-		if($i == 0)
+		if($i == 0){
+			//echo $listt['title'];
 			continue;
+		}
 		while(--$i >= 0){
 			$stack->Push_Stack($listt['child'][$i]);
 		}
@@ -115,18 +114,29 @@ class AbbController extends Controller {
 		$stack->Pop_Stack();
 	
 		while(1){
+			//$listt = $stack->Top_Stack();
+			//if(!$listt)
+			//	break;
+			//$stack->Pop_Stack();
 			$i = count($listt['child']);
 			echo $listt['title'];
-			if($i == 0)
-				break;
+			if($i == 0){
+				$listt = $stack->Top_Stack();
+				if(!$listt)
+					break;
+				$stack->Pop_Stack();
+				//echo $listt['title'];
+				continue;
+			}
 			while(--$i >= 0){
 				$stack->Push_Stack($listt['child'][$i]);
 			}
 			$listt = $stack->Top_Stack();
-			if(!$list)
+			if(!$listt)
 				break;
 			$stack->Pop_Stack();
 		}
+
 		}
 	}
 }
