@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_1120138609__=0;$__FOR_END_1120138609__=$count['count'];for($i=$__FOR_START_1120138609__;$i < $__FOR_END_1120138609__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1971502648__=0;$__FOR_END_1971502648__=$count['count'];for($i=$__FOR_START_1971502648__;$i < $__FOR_END_1971502648__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($count["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($count["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -154,7 +154,7 @@
 <div class="row">
 <div class="col-md-12"> 
 
-<?php $__FOR_START_707434553__=0;$__FOR_END_707434553__=$send['count'];for($i=$__FOR_START_707434553__;$i < $__FOR_END_707434553__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_60640375__=0;$__FOR_END_60640375__=$send['count'];for($i=$__FOR_START_60640375__;$i < $__FOR_END_60640375__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($send["email"][$i]["members_id_b"]); ?>"><img src="<?php echo ($send["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -229,7 +229,7 @@
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12"> 
-<?php $__FOR_START_987711396__=0;$__FOR_END_987711396__=$read['count'];for($i=$__FOR_START_987711396__;$i < $__FOR_END_987711396__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_282131286__=0;$__FOR_END_282131286__=$read['count'];for($i=$__FOR_START_282131286__;$i < $__FOR_END_282131286__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($read["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($read["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>

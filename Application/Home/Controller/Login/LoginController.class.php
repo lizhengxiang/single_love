@@ -7,12 +7,35 @@ class LoginController extends Controller {
     public function index(){
 		//登录页面调用
 		//echo T();
-		$this->display();
+		$this->display('Personal/Personal/mode/login');
     }
+	/*
+	public function verify_c(){
+		//登录页面调用
+		//echo T();
+		echo 
+		$config = array(
+			'useCurve' => false,
+			'fontSize' => 20,
+			'length' => 4,
+			'useNoise' => false,
+		);
+		$verify = new \Think\Verify();
+		$verify -> entry();
+    }
+	function check_verify($code, $id = ""){  
+    	$verify = new \Think\Verify();  
+    	return $verify->check($code, $id);  
+	}*/
 	public function login(){
 		//获取网页表单
 		$username = trim(I('username'));
 		$password = trim(I('password'));
+		$verify = trim(I('verify'));
+		// 检查验证码  
+		//if(!$this->check_verify($verify)){  
+    	//	$this->error("亲，验证码输错了哦！");  
+		//}
 		//判断用户名是不是为空
 		if($username == NULL){
 			$this->error('用户名为空');

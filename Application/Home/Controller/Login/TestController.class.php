@@ -9,7 +9,7 @@ class TestController extends Controller {
 		//登录页面调用
 		//echo T();
 		$config = array(
-			'fontSize' => 30,
+			'fontSize' => 10,
 			'length' => 4,
 			'useNoise' => false
 		);
