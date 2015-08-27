@@ -33,7 +33,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱">
+<input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -42,7 +42,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="verif" id="inputEmail3" placeholder="验证码">
+<input type="text" class="form-control input-lg" name="verif" id="inputEmail3" placeholder="验证码" required>
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -51,7 +51,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="pass_1" id="inputEmail3" placeholder="密码">
+<input id = "pwd" type="text" class="form-control input-lg" name="pass_1" id="inputEmail3" placeholder="密码" required onchange = "checkPasswords()">
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -60,7 +60,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="pass_2" id="inputEmail3" placeholder="确认密码">
+<input id = "pwd1" type="text" class="form-control input-lg" name="pass_2" id="inputEmail3" placeholder="确认密码" required onchange = "checkPasswords()">
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -77,6 +77,20 @@
 </form>
 </div>
 </div>
+
+<script>
+	function checkPasswords(){
+		var passl = document.getElementById("pwd");
+		var pass2 = document.getElementById("pwd1");
+		if (passl.value != pass2.value)
+			passl.setCustomValidity("两次密码必须输入一致！");
+		else
+			passl.setCustomValidity('');
+		}
+        function check(){
+            document.getElementById('ok').disabled = 'disabled';
+        }
+</script>
 </div>
  </body>
 </html>

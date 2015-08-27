@@ -63,14 +63,14 @@
 	<div class="col-md-1"></div>
     <label for="inputEmail3" class="col-md-1 control-label"></label>
     <div class="col-md-8">
-      <input type="text" class="form-control" name="username" id="inputEmail3" placeholder="用户名">
+      <input type="text" class="form-control" name="username" id="inputEmail3" placeholder="用户名" class = "inupt-xlarge" required>
     </div>
   </div>
   <div class="form-group">
 	<div class="col-md-1"></div>
     <label for="inputPassword3" class="col-md-1 control-label"></label>
     <div class="col-md-8">
-      <input type="text" class="form-control" name="password" id="inputPassword3" placeholder="密码">
+      <input type="text" class="form-control" name="password" id="inputPassword3" placeholder="密码" class = "inupt-xlarge" required>
     </div>
   </div>
 <!--
@@ -101,7 +101,10 @@
 <div class = "col-md-3">
  <a href = "https://localhost/single_love/index.php/Home/Forgot/Forgot/index.html">忘记密码</a>
 </div>
-<div class = "col-md-4">注册新帐号</div>
+<div class = "col-md-4">
+<a href = "https://localhost/single_love/index.php/Home/Registered/Registered/index">
+注册新帐号</a>
+</div>
 </div>
 
 </div>

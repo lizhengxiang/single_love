@@ -33,7 +33,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱">
+<input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱" class = "inupt-xlarge" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
 </div>
 <div class = "col-md-4"></div>
 </div>

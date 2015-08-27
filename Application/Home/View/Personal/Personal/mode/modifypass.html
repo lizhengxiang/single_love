@@ -64,7 +64,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="password" id="inputEmail3" placeholder="旧密码">
+<input type="password" class="form-control input-lg" name="password" id="inputEmail3" placeholder="旧密码" required>
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -73,7 +73,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="pass_1" id="inputEmail3" placeholder="新密码">
+<input id = "pwd" type="password" class="form-control input-lg" name="pass_1" id="inputEmail3" placeholder="新密码"  required onchange = "checkPasswords()">
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -81,7 +81,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<input type="text" class="form-control input-lg" name="pass_2" id="inputEmail3" placeholder="确认密码">
+<input id = "pwd1" type="password" class="form-control input-lg" name="pass_2" id="inputEmail3" placeholder="确认密码"  required onchange = "checkPasswords()">
 </div>
 <div class = "col-md-4"></div>
 </div>
@@ -99,10 +99,25 @@
 
 
 
+</div>
+</div>
 
-</div>
-</div>
-	
+<script>
+        function checkPasswords() {
+            var passl = document.getElementById("pwd");
+            var pass2 = document.getElementById("pwd1");
+            if (passl.value != pass2.value)
+                passl.setCustomValidity("两次密码必须输入一致！");
+            else
+                passl.setCustomValidity('');
+        }
+
+        function check() {
+            document.getElementById('ok').disabled = 'disabled';
+        }
+</script>
+
+
 </div>
  </body>
 </html>

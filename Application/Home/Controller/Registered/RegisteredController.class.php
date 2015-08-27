@@ -1,5 +1,5 @@
 <?php
-namespace Admin\Controller\Registered;
+namespace Home\Controller\Registered;
 use Think\Controller;
 class RegisteredController extends Controller {
 	public function index(){    	
