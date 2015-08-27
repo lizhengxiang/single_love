@@ -165,7 +165,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_1709625974__=0;$__FOR_END_1709625974__=$countGift;for($i=$__FOR_START_1709625974__;$i < $__FOR_END_1709625974__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1204856857__=0;$__FOR_END_1204856857__=$countGift;for($i=$__FOR_START_1204856857__;$i < $__FOR_END_1204856857__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -450,7 +450,7 @@
 										<div class="col-md-8"><h4>最新加入的会员</h4></div>
 										<div class="col-md-2"></div>
 									</div>
-										<?php $__FOR_START_2085431857__=0;$__FOR_END_2085431857__=$usercount;for($i=$__FOR_START_2085431857__;$i < $__FOR_END_2085431857__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_414398813__=0;$__FOR_END_414398813__=$usercount;for($i=$__FOR_START_414398813__;$i < $__FOR_END_414398813__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-7"><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user1[$i]['id']); ?>"><img src="<?php echo ($user1[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-4">

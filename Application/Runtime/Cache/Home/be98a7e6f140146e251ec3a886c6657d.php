@@ -41,7 +41,7 @@
 <div class = "row">
 <div class = "col-md-4"></div>
 <div class = "col-md-4">
-<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">下一步</button></p>
+<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">获取验证码</button></p>
 </div>
 <div class = "col-md-4"></div>
 </div>
