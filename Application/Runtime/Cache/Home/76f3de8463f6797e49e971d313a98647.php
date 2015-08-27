@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
@@ -9,7 +9,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="__ROOT__/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/single_love/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -98,23 +98,17 @@
 <div class = "row">
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "year">
-<for start = "1980" end = "2013">
-  <option>{$i}</option>
-</for>
+<?php $__FOR_START_1503657159__=1980;$__FOR_END_1503657159__=2013;for($i=$__FOR_START_1503657159__;$i < $__FOR_END_1503657159__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "mouth">
-<for start = "1" end = "13">
-  <option>{$i}</option>
-</for>
+<?php $__FOR_START_403073115__=1;$__FOR_END_403073115__=13;for($i=$__FOR_START_403073115__;$i < $__FOR_END_403073115__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "day">
-<for start = "1" end = "32">
- <option>{$i}</option>
-</for>
+<?php $__FOR_START_548236138__=1;$__FOR_END_548236138__=32;for($i=$__FOR_START_548236138__;$i < $__FOR_END_548236138__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>

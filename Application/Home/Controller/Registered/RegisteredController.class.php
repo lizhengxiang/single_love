@@ -4,20 +4,28 @@ use Think\Controller;
 class RegisteredController extends Controller {
 	public function index(){    	
 	//调用登录界面
-		$this->display('Registered/Registered/registered');
+		$this->display('Personal/Personal/mode/registered');
 	}
 	public function registered(){
+
 		require_once'make_password.php';
 		require_once'sendmail.php';
 		require_once'members_id.php';
 		//实例化registered模型
 		$registered = D('registered');
-		$data['email'] = I('email');;
+		echo $data['email'] = trim(I('email'));
 		$data['members_id'] = members_id();
-		$data['weChat'] = I('wechat');
-		$data['type'] = I('type_name');
+		echo $data['weChat'] = trim(I('wechat'));
+		$data['type'] = make_password(8);
+
+		echo I('school');
+		echo trim(I('nickname'));
+		echo I('gender');
+		echo I('year');
+		echo I('mouth');
+		echo I('day');
 		//获取加密前的密码
-		$password_before = make_password(8);
+		$password_before = make_password(8);/*
 		//对密码进行加密
 		$data['password'] = md5($password_before);
 		$data['join_time'] = date("Y-m-d");
@@ -116,5 +124,6 @@ class RegisteredController extends Controller {
 		}else{
 			$this->error('新增失敗,亲您重新注册');
 		}
+*/
 	}
 }
