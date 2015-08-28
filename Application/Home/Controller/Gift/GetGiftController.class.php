@@ -38,6 +38,7 @@ class GetGiftController extends Controller {
 				$usergift1 = new SendGiftController();
 				$gift1 = $usergift1->index();
 				$this->assign('gift1', $gift1);
+				//dump($gift1);
 				//获取我发送礼物好友的基本信息函数
 				$newuser1 = new NewuserController();;
 				//我发送礼物的数量
@@ -51,9 +52,11 @@ class GetGiftController extends Controller {
 					$giftroat1[$i] = $think_gift1->field('road,name')->where($map1)->find();
 				}
 				$this->assign('giftroat1', $giftroat1);
+				//dump($giftroat1);
 				$this->assign('user1', $user1);
-
-				$this->display();
+				//dump($user1);
+				$this->display('Personal/Personal/mode/gift');
+				//$this->display();
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

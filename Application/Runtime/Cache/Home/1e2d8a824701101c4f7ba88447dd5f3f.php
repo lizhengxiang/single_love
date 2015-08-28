@@ -93,7 +93,7 @@
 					<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/d.png" alt="..." class="img-rounded"  width="100%" height="150"></div>
 				</div>
 				<div class="row">
-					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2" data-    whatever="@mdo">相册</button></div>
+					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">相册</button></div>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">发信</button></div>
 					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Followers/index/user_id/<?php echo ($photo['members_id']); ?>">加关注</a></div>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">送礼物</button></div>
@@ -165,7 +165,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_1378340502__=0;$__FOR_END_1378340502__=$countGift;for($i=$__FOR_START_1378340502__;$i < $__FOR_END_1378340502__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_215167824__=0;$__FOR_END_215167824__=$countGift;for($i=$__FOR_START_215167824__;$i < $__FOR_END_215167824__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -450,7 +450,7 @@
 										<div class="col-md-8"><h4>最新加入的会员</h4></div>
 										<div class="col-md-2"></div>
 									</div>
-										<?php $__FOR_START_1412867263__=0;$__FOR_END_1412867263__=$usercount;for($i=$__FOR_START_1412867263__;$i < $__FOR_END_1412867263__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_481722519__=0;$__FOR_END_481722519__=$usercount;for($i=$__FOR_START_481722519__;$i < $__FOR_END_481722519__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-7"><a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user1[$i]['id']); ?>"><img src="<?php echo ($user1[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-4">

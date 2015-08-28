@@ -51,11 +51,13 @@ class GiftController extends Controller {
 				if($dataa['giftid']){
 					$sendgift = M('sendgift');
 					$dataa['members_id_a'] = cookie('user');
-					echo $dataa['members_id_b'] = $userid;
-					$dataa['time'] = date('Y-m-d h:i:sa');
+					$dataa['members_id_b'] = $userid;
+					$dataa['time'] = date('Y-m-d H:i:s');
 					$dataa['state'] = 0;
 					$dataa['way'] = I('way');
 					$sendgift->data($dataa)->add();
+					$this->redirect('/Home/Gift/GetGift/index');
+					//$this->display('Personal/Personal/mode/gift');
 				}
 			}
 		}else{
