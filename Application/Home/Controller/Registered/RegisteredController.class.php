@@ -12,20 +12,14 @@ class RegisteredController extends Controller {
 		require_once'sendmail.php';
 		require_once'members_id.php';
 		//实例化registered模型
-		$registered = D('registered');
-		echo $data['email'] = trim(I('email'));
+		$registered = M('registered');
+		$data['email'] = trim(I('email'));
 		$data['members_id'] = members_id();
-		echo $data['weChat'] = trim(I('wechat'));
+		$data['weChat'] = trim(I('wechat'));
 		$data['type'] = make_password(8);
 
-		echo I('school');
-		echo trim(I('nickname'));
-		echo I('gender');
-		echo I('year');
-		echo I('mouth');
-		echo I('day');
 		//获取加密前的密码
-		$password_before = make_password(8);/*
+		$password_before = make_password(8);
 		//对密码进行加密
 		$data['password'] = md5($password_before);
 		$data['join_time'] = date("Y-m-d");
@@ -47,6 +41,10 @@ class RegisteredController extends Controller {
 		$think_data = M('data');
 		$information['members_id'] = $data['members_id'];
 		$information['modify'] = date("Y-m-d");
+		$information['nickname'] = trim(I('nickname'));
+		$information['gender'] = I('gender');
+		$information['schooling'] = I('school');
+		$information['birth'] = (I('year').'-'.I('mouth').'-'.I('day'));
 		//创建会员基本信息数据对象
 		$think_data->create($information);
 		//添加会员id到会员基本表中
@@ -73,7 +71,7 @@ class RegisteredController extends Controller {
 		//添加数据到表中
 		$think_contact->add();
 		
-
+		/*
 		//創建外貌特征
 		//实例化appearance对象
 		$think_appearance = M('appearance');
@@ -109,7 +107,7 @@ class RegisteredController extends Controller {
 		//添加數據到列表		
 		$think_choose->add();
 		//创建登录数据表
-
+		*/
 		$think_logintime = M('logintime');
 		$login['members_id'] = $data['members_id'];
 		$think_logintime->create($login);
@@ -124,6 +122,6 @@ class RegisteredController extends Controller {
 		}else{
 			$this->error('新增失敗,亲您重新注册');
 		}
-*/
+
 	}
 }
