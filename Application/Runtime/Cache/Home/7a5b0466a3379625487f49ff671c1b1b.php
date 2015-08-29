@@ -396,11 +396,11 @@
 								</form>
 
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-9">
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1035471007__=0;$__FOR_END_1035471007__=$about['num'];for($i=$__FOR_START_1035471007__;$i < $__FOR_END_1035471007__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_692312743__=0;$__FOR_END_692312743__=$about['num'];for($i=$__FOR_START_692312743__;$i < $__FOR_END_692312743__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
@@ -408,12 +408,12 @@
 <div class="col-md-10">
 <div class = "row">
 <div class="col-md-12">
-<?php echo ($about['about'][$i]['members_id']); ?>()
+<?php echo ($about['about'][$i]['members_id']); ?>
 </div>
 </div>
 <div class = "row">
 <div class="col-md-12">
-<?php echo ($about['about'][$i]['time']); ?>
+<?php echo ($about['nickname'][$i]); ?>
 </div>
 </div>
 </div>
@@ -423,7 +423,7 @@
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 
 <blockquote>
-  <p><span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?></p></a>
+  <p><span class = "badge"><?php echo ($about['count'][$i]); ?></span><?php echo ($about['about'][$i]['content']); ?></p></a>
   <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?></cite></footer>
 </blockquote>
 
@@ -513,7 +513,7 @@
 </tr>
 </table>
 </div>
-<div class="col-md-4">
+<div class="col-md-3">
 <!---->
 
 </div>

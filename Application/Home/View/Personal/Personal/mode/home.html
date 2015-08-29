@@ -396,7 +396,7 @@
 								</form>
 
 <div class="row">
-<div class="col-md-8">
+<div class="col-md-9">
 <table class="table table-bordered">
 <tr class = "success">
 <td>
@@ -409,12 +409,12 @@
 <div class="col-md-10">
 <div class = "row">
 <div class="col-md-12">
-{$about['about'][$i]['members_id']}()
+{$about['about'][$i]['members_id']}
 </div>
 </div>
 <div class = "row">
 <div class="col-md-12">
-{$about['about'][$i]['time']}
+{$about['nickname'][$i]}
 </div>
 </div>
 </div>
@@ -424,7 +424,7 @@
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/{$about['about'][$i]['id']}">
 
 <blockquote>
-  <p><span class = "badge">42</span>{$about['about'][$i]['content']}</p></a>
+  <p><span class = "badge">{$about['count'][$i]}</span>{$about['about'][$i]['content']}</p></a>
   <footer>发贴时间:<cite title="Source Title">{$about['about'][$i]['time']}</cite></footer>
 </blockquote>
 
@@ -527,7 +527,7 @@
 </tr>
 </table>
 </div>
-<div class="col-md-4">
+<div class="col-md-3">
 <!---->
 
 </div>

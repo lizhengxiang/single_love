@@ -44,8 +44,16 @@
 <div class = "col-md-12">&nbsp;</div>
 
 <div class = "row">
-<div class = "col-md-12">
 
+<div class = "col-md-5">
+<select class="form-control input-lg" name = "provinces">
+<option>四川</option>
+</select>
+</div>
+
+
+
+<div class = "col-md-7">
 <select class="form-control input-lg" name = "school">
   <option>西南民族大学</option>
   <option>成都信息工程大学</option>
@@ -53,9 +61,8 @@
   <option>电子科技大学</option>
   <option>西南财经大学</option>
 </select>
-
-
 </div>
+
 </div>
 <div class = "col-md-12">&nbsp;</div>
 
@@ -94,17 +101,17 @@
 <div class = "row">
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "year">
-<?php $__FOR_START_367964466__=1980;$__FOR_END_367964466__=2013;for($i=$__FOR_START_367964466__;$i < $__FOR_END_367964466__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1161780295__=1980;$__FOR_END_1161780295__=2013;for($i=$__FOR_START_1161780295__;$i < $__FOR_END_1161780295__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "mouth">
-<?php $__FOR_START_1303115369__=1;$__FOR_END_1303115369__=13;for($i=$__FOR_START_1303115369__;$i < $__FOR_END_1303115369__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1427326900__=1;$__FOR_END_1427326900__=13;for($i=$__FOR_START_1427326900__;$i < $__FOR_END_1427326900__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "day">
-<?php $__FOR_START_1127019740__=1;$__FOR_END_1127019740__=32;for($i=$__FOR_START_1127019740__;$i < $__FOR_END_1127019740__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1903257393__=1;$__FOR_END_1903257393__=32;for($i=$__FOR_START_1903257393__;$i < $__FOR_END_1903257393__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
