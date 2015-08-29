@@ -21,29 +21,30 @@
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12"><h1><strong><p class = "text-center">欢迎注册社交520</p></strong></h1></div>
 <div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12">
+
+<div class = "row">
+<div class = "col-md-8">
+<div class = "col-md-12">&nbsp;</div>
+<img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="300">
+</div>
+<div class = "col-md-4">
 <form class="form-horizontal" action="registered" method = "post">
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 <input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
 </div>
-<div class = "col-md-4"></div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
 
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 <input type="text" class="form-control input-lg" name="wechat" id="inputEmail3" placeholder="微信号" required>
 </div>
-<div class = "col-md-4"></div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
 
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 
 <select class="form-control input-lg" name = "school">
   <option>西南民族大学</option>
@@ -51,27 +52,24 @@
   <option>四川大学</option>
   <option>电子科技大学</option>
   <option>西南财经大学</option>
-</select
+</select>
 
 
 </div>
-<div class = "col-md-4"></div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
 
 
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 <input type="text" class="form-control input-lg" name="nickname" id="inputEmail3" placeholder="昵称" required>
 </div>
-<div class = "col-md-4"></div>
 </div>
+
 <div class = "col-md-12">&nbsp;</div>
 
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 
 <div class = "row">
 <div class = "col-md-3"></div>
@@ -88,44 +86,41 @@
 </div>
 </div>
 </div>
-<div class = "col-md-4"></div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
 
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 <div class = "row">
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "year">
-<?php $__FOR_START_394249126__=1980;$__FOR_END_394249126__=2013;for($i=$__FOR_START_394249126__;$i < $__FOR_END_394249126__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_367964466__=1980;$__FOR_END_367964466__=2013;for($i=$__FOR_START_367964466__;$i < $__FOR_END_367964466__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "mouth">
-<?php $__FOR_START_1747522080__=1;$__FOR_END_1747522080__=13;for($i=$__FOR_START_1747522080__;$i < $__FOR_END_1747522080__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1303115369__=1;$__FOR_END_1303115369__=13;for($i=$__FOR_START_1303115369__;$i < $__FOR_END_1303115369__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "day">
-<?php $__FOR_START_1058096583__=1;$__FOR_END_1058096583__=32;for($i=$__FOR_START_1058096583__;$i < $__FOR_END_1058096583__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1127019740__=1;$__FOR_END_1127019740__=32;for($i=$__FOR_START_1127019740__;$i < $__FOR_END_1127019740__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
 </div>
-<div class = "col-md-4"></div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
 
 
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
 </div>
-<div class = "col-md-4"></div>
 </div>
 </form>
+</div>
+
  <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>

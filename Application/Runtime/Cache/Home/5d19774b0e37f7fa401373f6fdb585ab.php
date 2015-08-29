@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_2115637155__=0;$__FOR_END_2115637155__=$count['count'];for($i=$__FOR_START_2115637155__;$i < $__FOR_END_2115637155__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1699348103__=0;$__FOR_END_1699348103__=$count['count'];for($i=$__FOR_START_1699348103__;$i < $__FOR_END_1699348103__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($count["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($count["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -154,7 +154,7 @@
 <div class="row">
 <div class="col-md-12"> 
 
-<?php $__FOR_START_721325574__=0;$__FOR_END_721325574__=$send['count'];for($i=$__FOR_START_721325574__;$i < $__FOR_END_721325574__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1607084990__=0;$__FOR_END_1607084990__=$send['count'];for($i=$__FOR_START_1607084990__;$i < $__FOR_END_1607084990__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($send["email"][$i]["members_id_b"]); ?>"><img src="<?php echo ($send["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -229,7 +229,7 @@
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12"> 
-<?php $__FOR_START_448314592__=0;$__FOR_END_448314592__=$read['count'];for($i=$__FOR_START_448314592__;$i < $__FOR_END_448314592__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1809238546__=0;$__FOR_END_1809238546__=$read['count'];for($i=$__FOR_START_1809238546__;$i < $__FOR_END_1809238546__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($read["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($read["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>

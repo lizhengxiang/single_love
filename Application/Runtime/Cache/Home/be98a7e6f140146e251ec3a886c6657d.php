@@ -22,28 +22,32 @@
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12"><h1><strong><p class = "text-center">she jiao 520</p></strong></h1></div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">
 <form class="form-horizontal" action="forgot" method = "post">
 <div class = "row">
-<div class = "col-md-4"></div>
+<div class = "col-md-6">
+<img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="300">
+</div>
+
 <div class = "col-md-4">
+<div class = "row">
+<div class = "col-md-12">&nbsp;</div>
+<div class = "col-md-12">&nbsp;</div>
+<div class = "col-md-12">&nbsp;</div>
+<div class = "col-md-12">&nbsp;</div>
+<div class = "col-md-12">
 <input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱" autocomplete = "off" class = "inupt-xlarge" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
 </div>
-<div class = "col-md-4"></div>
-</div>
+<div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "row">
-<div class = "col-md-4"></div>
-<div class = "col-md-4">
+<div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">获取验证码</button></p>
 </div>
-<div class = "col-md-4"></div>
+</div>
+</div>
 </div>
 </form>
 </div>
