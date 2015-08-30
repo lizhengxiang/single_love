@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
@@ -9,7 +9,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/single_love/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ROOT__/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -21,9 +21,9 @@
 		</table>
 	</div>
 	<div class="row">
-		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
-		<div class="col-md-6"><img src="/single_love/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
-		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-6"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
 	</div>
 	
 	<div class="row">
@@ -33,8 +33,8 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>" role="button">我的主页</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$id}" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -58,13 +58,13 @@
 									<td>
 										<div class = "row">
 											<div class="col-md-11">
-												<img src="<?php echo ($head['head_ptoto']); ?>" alt="没有上传头像" class="img-rounded"  width="100%" height="150">
+												<img src="{$head['head_ptoto']}" alt="没有上传头像" class="img-rounded"  width="100%" height="150">
 											</div>
 											<div class="col-md-1"></div>
 										</div>
 										<div class = "roe">
 												<div class="col-md-1"><h3>ID:</h3></div>
-												<div class="col-md-10"><h3><?php echo ($id); ?></h3></div>
+												<div class="col-md-10"><h3>{$id}</h3></div>
 										</div>
 										<div class = "row">
 											<div class="col-md-0.5"></div>
@@ -75,7 +75,7 @@
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>"><button type="button" class="btn btn-default btn-lg btn-block">我的资料</button></a>
+												<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$id}"><button type="button" class="btn btn-default btn-lg btn-block">我的资料</button></a>
 											</div>
 										</div>
 
@@ -83,7 +83,7 @@
  										 	<div class="col-md-0.5"></div>
 										 	<div class="col-md-11">
  												<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index">
-													<button class="btn btn-default btn-lg btn-block" type="button">收件箱 <span class="badge"><?php echo ($count); ?></span></button>
+													<button class="btn btn-default btn-lg btn-block" type="button">收件箱 <span class="badge">{$count}</span></button>
 												</a>
       	              </div>
  		                </div>
@@ -91,7 +91,7 @@
  											<div class="col-md-0.5"></div>
  												<div class="col-md-11">
  													<a href="https://localhost/single_love/index.php/Home/Look/Look/index">
- 														<button class="btn btn-default btn-lg btn-block" type="button">谁看过我<span class="badge"><?php echo ($look_count); ?></span></button>
+ 														<button class="btn btn-default btn-lg btn-block" type="button">谁看过我<span class="badge">{$look_count}</span></button>
  												</a>
  											</div>
 										</div>
@@ -120,7 +120,7 @@
  						                  <div class="col-md-0.5"></div>
  								              <div class="col-md-11">
  									            	<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index">
- 										            	<button class="btn btn-default btn-lg btn-block" type="button">我的收件箱 <span class="badge"><?php echo ($count); ?></span></button>
+ 										            	<button class="btn btn-default btn-lg btn-block" type="button">我的收件箱 <span class="badge">{$count}</span></button>
  														 	</a>
         	                	</div>
 	     		                 </div>
@@ -159,7 +159,7 @@
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
 							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">谁看过我<span class="badge"><?php echo ($look_count); ?></span></button>
+																<button class="btn btn-default btn-lg btn-block" type="button">谁看过我<span class="badge">{$look_count}</span></button>
 															</a>
 														</div>
 													</div>
@@ -175,7 +175,7 @@
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
 							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">谁关注我<span class="badge"><?php echo ($followers); ?></span></button>
+																<button class="btn btn-default btn-lg btn-block" type="button">谁关注我<span class="badge">{$followers}</span></button>
 															</a>
 														</div>
 													</div>
@@ -211,7 +211,7 @@
 									<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index"><button type="button" class="btn btn-default btn-lg btn-block">我收到的礼物<span class="badge"><?php echo ($giftcount); ?></span></button></a>
+												<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index"><button type="button" class="btn btn-default btn-lg btn-block">我收到的礼物<span class="badge">{$giftcount}</span></button></a>
 											</div>
 										</div>
 
@@ -321,7 +321,7 @@
 
   					<div class="col-md-9">
 							
-							<form action="/single_love/index.php/Home/About/About/index" enctype = "multipart/form-data" method="POST">
+							<form action="__ROOT__/index.php/Home/About/About/index" enctype = "multipart/form-data" method="POST">
 							<div class="row">
 						   <div class="col-md-12">
  								<table class="table table-bordered">
@@ -400,51 +400,58 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_910533248__=0;$__FOR_END_910533248__=$about['num'];for($i=$__FOR_START_910533248__;$i < $__FOR_END_910533248__;$i+=1){ ?><div class = "row"> 
+<for start = "0" end = "$about['num']">
+<div class = "row"> 
 <div class="col-md-2">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$about['about'][$i]['members_id']}"><img src="{$about['head'][$i]    ['head_ptoto']}" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
 
 <div class="col-md-10">
 <div class = "row">
 <div class="col-md-12">
-<?php echo ($about['about'][$i]['members_id']); ?>
+{$about['about'][$i]['members_id']}
 </div>
 </div>
 <div class = "row">
 <div class="col-md-12">
-<?php echo ($about['nickname'][$i]); ?>
+{$about['nickname'][$i]}
 </div>
 </div>
 </div>
 </div>
 <div class = "row">
 <div class="col-md-12">
-<a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
+<a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/{$about['about'][$i]['id']}">
 
 <blockquote>
-  <p><span class = "badge"><?php echo ($about['count'][$i]); ?></span><?php echo ($about['about'][$i]['content']); ?></p></a>
-  <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?></cite></footer>
+  <p><span class = "badge">{$about['count'][$i]}</span>{$about['about'][$i]['content']}</p></a>
+  <footer>发贴时间:<cite title="Source Title">{$about['about'][$i]['time']}</cite></footer>
 </blockquote>
 
-<!--<span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?>-->
+<!--<span class = "badge">42</span>{$about['about'][$i]['content']}-->
 </div>
 </div>
 
 <div class = "row">
 
-<?php if($about['about'][$i]['pic1']): ?><div class="col-md-3">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
-</div><?php endif; ?>
-<?php if($about['about'][$i]['pic2']): ?><div class="col-md-3">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic2']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
-</div><?php endif; ?>
-<?php if($about['about'][$i]['pic3']): ?><div class="col-md-3">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic3']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
-</div><?php endif; ?>
+<if condition = "$about['about'][$i]['pic1']">
+<div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo"><img src="{$about['about'][$i]['pic1']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div>
+</if>
+<if condition ="$about['about'][$i]['pic2']">
+<div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo"><img src="{$about['about'][$i]['pic2']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div>
+</if>
+<if condition ="$about['about'][$i]['pic3']">
+<div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo"><img src="{$about['about'][$i]['pic3']}" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div>
+</if>
 </div>
 
-<div class="modal fade" id="exampleModal1<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="exampleModal1{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -452,7 +459,7 @@
         <h4 class="modal-title" id="exampleModalLabel">相册</h4>
 		<div class="modal-footer">
 
-<div id="carousel-example-generic1<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic1{$i}" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -462,29 +469,35 @@
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-	<?php if($about['about'][$i]['pic1']): ?><div class="item active">
-      <img src="<?php echo ($about['about'][$i]['pic1']); ?>" alt="...">
+	<if condition ="$about['about'][$i]['pic1']">
+    <div class="item active">
+      <img src="{$about['about'][$i]['pic1']}" alt="...">
       <div class="carousel-caption">
       </div>
-    </div><?php endif; ?>
-	<?php if($about['about'][$i]['pic2']): ?><div class="item">
-      <img src="<?php echo ($about['about'][$i]['pic2']); ?>" alt="...">
+    </div>
+	</if>
+	<if condition ="$about['about'][$i]['pic2']">
+    <div class="item">
+      <img src="{$about['about'][$i]['pic2']}" alt="...">
       <div class="carousel-caption">
 
       </div>
-    </div><?php endif; ?>
-	<?php if($about['about'][$i]['pic3']): ?><div class="item">
-		<img src="<?php echo ($about['about'][$i]['pic3']); ?>" alt="...">
+    </div>
+	</if>
+	<if condition ="$about['about'][$i]['pic3']">
+	<div class="item">
+		<img src="{$about['about'][$i]['pic3']}" alt="...">
 		<div class="carousel-caption">
        	</div>
-	</div><?php endif; ?>	
+	</div>
+	</if>	
 	</div>
 <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -507,7 +520,8 @@
 </tr>
 </table>
 </div>
-</div><?php } ?>
+</div>
+</for>
 
 </td>
 </tr>
