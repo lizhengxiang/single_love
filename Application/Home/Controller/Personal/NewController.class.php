@@ -2,6 +2,7 @@
 namespace Home\Controller\Personal;
 use Think\Controller;
 require_once 'NewuserController.class.php';
+require_once 'AboutController.class.php';
 
 class NewController extends Controller {
    public function index($user_id){
@@ -86,6 +87,12 @@ class NewController extends Controller {
 				$think_lnner = M('lnner');
 				$lnner = $think_lnner->where($map)->find();
 				$this->assign('lnner', $lnner);*/
+				
+				//获取帖子和评论次数
+				$about_t = new AboutController();
+				$about = $about_t->index($user_id);
+				$this->assign('about', $about);
+				
 		
 				$this->display('Personal/Personal/mode/index');
 			}

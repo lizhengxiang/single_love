@@ -141,7 +141,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_1609899069__=0;$__FOR_END_1609899069__=$countGift;for($i=$__FOR_START_1609899069__;$i < $__FOR_END_1609899069__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_2045107577__=0;$__FOR_END_2045107577__=$countGift;for($i=$__FOR_START_2045107577__;$i < $__FOR_END_2045107577__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -250,15 +250,94 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1046988876__=0;$__FOR_END_1046988876__=8;for($i=$__FOR_START_1046988876__;$i < $__FOR_END_1046988876__;$i+=1){ ?><div class = "row">
+
+<?php $__FOR_START_1741209170__=0;$__FOR_END_1741209170__=$about['num'];for($i=$__FOR_START_1741209170__;$i < $__FOR_END_1741209170__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
-  <p><span class = "badge"><?php echo ($about['count'][$i]); ?>45</span><?php echo ($about['about'][$i]['content']); ?>lizhengxiang</p></a>
-  <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?>lizhengxiang</cite></footer>
+  <p><span class = "badge"><?php echo ($about['count'][$i]); ?></span><?php echo ($about['about'][$i]['content']); ?></p></a>
+  <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?></cite></footer>
 </blockquote>
+<!--<span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?>-->
+</div>
+</div>
+
+<div class = "row">
+<?php if($about['about'][$i]['pic1']): ?><div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic1']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div><?php endif; ?>
+<?php if($about['about'][$i]['pic2']): ?><div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic2']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div><?php endif; ?>
+<?php if($about['about'][$i]['pic3']): ?><div class="col-md-3">
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo"><img src="<?php echo ($about['about'][$i]['pic3']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></button>
+</div><?php endif; ?>
+</div>
+<div class="modal fade" id="exampleModal1<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">相册</h4>
+		<div class="modal-footer">
+<div id="carousel-example-generic1<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	<?php if($about['about'][$i]['pic1']): ?><div class="item active">
+      <img src="<?php echo ($about['about'][$i]['pic1']); ?>" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div><?php endif; ?>
+	<?php if($about['about'][$i]['pic2']): ?><div class="item">
+      <img src="<?php echo ($about['about'][$i]['pic2']); ?>" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div><?php endif; ?>
+	<?php if($about['about'][$i]['pic3']): ?><div class="item">
+		<img src="<?php echo ($about['about'][$i]['pic3']); ?>" alt="...">
+		<div class="carousel-caption">
+       	</div>
+	</div><?php endif; ?>	
+	</div>
+<!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+			<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class = "row">
+<div class="col-md-12">
+
+<table class="table table-bordered">
+<tr class = "primary">
+<td>
+</td>
+</tr>
+</table>
 </div>
 </div><?php } ?>
+
+
+
+
+
 </td>
 </tr>
 </table>
@@ -272,7 +351,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_819401846__=0;$__FOR_END_819401846__=$usercount;for($i=$__FOR_START_819401846__;$i < $__FOR_END_819401846__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_345860555__=0;$__FOR_END_345860555__=$usercount;for($i=$__FOR_START_345860555__;$i < $__FOR_END_345860555__;$i+=1){ ?><div class="row">
 											<div class="col-md-6">
 											<div class="row">
  				                   				<div class="col-md-12">
