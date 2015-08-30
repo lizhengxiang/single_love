@@ -62,8 +62,8 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -231,7 +231,7 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_1151562285__=0;$__FOR_END_1151562285__=$commit['count'];for($i=$__FOR_START_1151562285__;$i < $__FOR_END_1151562285__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
+<?php $__FOR_START_456141397__=0;$__FOR_END_456141397__=$commit['count'];for($i=$__FOR_START_456141397__;$i < $__FOR_END_456141397__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
 <div class="col-md-2">
 <div class = "row">
 <div class="col-md-12">

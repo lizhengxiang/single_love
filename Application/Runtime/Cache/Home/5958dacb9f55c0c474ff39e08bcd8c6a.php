@@ -34,7 +34,7 @@
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>" role="button">我的主页</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">社交主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -360,7 +360,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1132430758__=0;$__FOR_END_1132430758__=$about['num'];for($i=$__FOR_START_1132430758__;$i < $__FOR_END_1132430758__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_1135745669__=0;$__FOR_END_1135745669__=$about['num'];for($i=$__FOR_START_1135745669__;$i < $__FOR_END_1135745669__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
