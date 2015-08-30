@@ -62,7 +62,17 @@ class HomeController extends Controller {
 		
 		//实例化说说并且更具说说取出头像
 		$think_about = new AboutController();
-		$about = $think_about->index();
+
+		$school = I('school');
+		if($school == NULL){
+			$dataa['members_id'] = cookie('user');
+ 			$school_1 = M('data');
+ 			$school_2 = $school_1->field('schooling')->where($dataa)->find();
+ 			$school = $school_2['schooling'];
+			$about = $think_about->index($school);
+		}else{
+			$about = $think_about->index($school);
+		}
 		for($i = 0; $i < $about['num']; $i++){
 			$tag['members_id'] = $about['about'][$i]['members_id'];
 			$about['head'][$i] = $photo1->field('head_ptoto')->where($tag)->find();

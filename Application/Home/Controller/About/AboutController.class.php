@@ -46,6 +46,9 @@ class AboutController extends Controller {
 					}
 				}
 				$dataa['members_id'] = cookie('user');
+				$school_1 = M('data');
+				$school = $school_1->field('schooling')->where($dataa)->find();
+				$dataa['school'] = $school['schooling'];
 				$dataa['public'] = I('public');
  				$dataa['content'] = I('name');
 				$dataa['time'] = date('Y-m-d H:i:s');

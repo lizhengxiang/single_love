@@ -321,73 +321,33 @@
 
   					<div class="col-md-9">
 							
-							<form action="/single_love/index.php/Home/About/About/index" enctype = "multipart/form-data" method="POST">
+							<form action="/single_love/index.php/Home/Social/Home/index" enctype = "multipart/form-data" method="POST">
 							<div class="row">
-						   <div class="col-md-12">
+						   <div class="col-md-8">
  								<table class="table table-bordered">
  									<tr class = "success">
  									<td>
-											<div class="row">
-												<div class="col-md-12">
-												<div class="col-md-7"><textarea class ="form-control" rows = "3" id = "name" name = "name"></textarea></div>
-												<div class="col-md-3">
-													<div class = "row">
-														<div class="col-md-12">
-															公开:<input type = "radio", name = "public" value = "1" checked = "checked">
-															对关注我的可见<input type = "radio", name = "public" value = "2">
-														</div>
-													</div>
-												
-													<div class="panel-group" id="accordion6" role="tablist" aria-multiselectable="true">
-  													<div class="panel panel-default">
-    												<div class="panel-heading" role="tab" id="headingOne6">
-      												<h4 class="panel-title">
-        											<a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapseOne6" aria-expanded="true" aria-controls="collapseOne"><button type="button" class="btn btn-default btn-lg btn-block">上传照片</button></a>
-      												</h4>
-    												</div>
-    												<div id="collapseOne6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      												<div class="panel-body">
-													<div id="content">
-
-													<fieldset>
- 	 												<label for="user_pic">照片一:</label>
- 	 												<input type="file" name="user_pic[]" size="30" /><br />
- 													</fieldset>
- 													<br />
-
-													<fieldset>
-        											<label for="user_pic">照片二:</label> 
-        											<input type="file" name="user_pic[]" size="30" /><br />
-      												</fieldset>
-      												<br />
-													<fieldset>
-        											<label for="user_pic">照片三:</label> 
-        											<input type="file" name="user_pic[]" size="30" /><br />
-      												</fieldset>
-
-													</div>
-      												</div>
-    												</div>
-  													</div>
-													</div>
-													</div>
-													<div class="col-md-2">
-													<div class="col-md-12">
-													<div class = "row">
-													<div class="col-md-12">&nbsp;</div>
-													<div class="col-md-12">&nbsp;</div>
-													<div class="col-md-12">
-													<button type = "submit" class = "btn btn-info">发贴</button>
-													<div>
-
-													</div>
-													
-													</div>
-													</div>
-													
-												</div>
-												</div>
+										<div class="row">
+											<div class = "col-md-3">
+											<select class="form-control input-lg" name = "provinces">
+												<option>四川</option>
+											</select>
 											</div>
+
+											<div class = "col-md-6">
+											<select class="form-control input-lg" name = "school">
+												<option></option>
+  												<option>西南民族大学</option>
+  												<option>成都信息工程大学</option>
+  												<option>四川大学</option>
+  												<option>电子科技大学</option>
+  												<option>西南财经大学</option>
+											</select>
+											</div>
+											<div class = "col-md-3">
+												<button type = "submit" class = "btn btn-info input-lg">查找</button>
+											</div>
+										</div>
 									</td>
 									</tr>
 								</table>
@@ -396,11 +356,11 @@
 								</form>
 
 <div class="row">
-<div class="col-md-9">
+<div class="col-md-8">
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_733003192__=0;$__FOR_END_733003192__=$about['num'];for($i=$__FOR_START_733003192__;$i < $__FOR_END_733003192__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_1132430758__=0;$__FOR_END_1132430758__=$about['num'];for($i=$__FOR_START_1132430758__;$i < $__FOR_END_1132430758__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
@@ -424,7 +384,7 @@
 
 <blockquote>
   <p><span class = "badge"><?php echo ($about['count'][$i]); ?></span><?php echo ($about['about'][$i]['content']); ?></p></a>
-  <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?></cite></footer>
+  <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?>(<?php echo ($about['about'][$i]['school']); ?>)</cite></footer>
 </blockquote>
 
 <!--<span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?>-->

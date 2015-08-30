@@ -4,7 +4,7 @@ namespace Home\Controller\Social;
 use Think\Controller;
 class AboutController extends Controller {
 
-   public function index(){
+   public function index($school){
 		//获取自己的帐号
 		$mapa['members_id'] = cookie('user');
 
@@ -16,26 +16,10 @@ class AboutController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-				//获取我自己和关注我的人的帖子
-				//我關注的人
-				$think_look = M('followers');
-				$map['members_id_a'] = cookie('user');
-				$tag = $think_look->field('members_id_b')->where($map)->select();
-				$num = $think_look->field('members_id_b')->where($map)->count();
-				//取出我关注人的id号然后查找他们的说说
-				if($num){
-					for($i = 0; $i < $num; $i++){
-						if($i != 0){
-							$li .= ' OR ';
-						}
-						$li .= 'members_id = ';
-						$li .= $tag[$i]['members_id_b'];
-					}
-					$li .= ' OR '.'members_id = '.cookie('user');
-				}
-				//若我没有关注任何人则显示自己的说说
-				if($num == 0)
-					$li = 'members_id = '.cookie('user');
+
+				//更具學校取出說說
+				//$li['members_id'] = cookie('user');
+				$li['school'] = $school;	
 				$think_about = M('about');
 				$about['about'] = $think_about->where($li)->limit(50)->order('time desc')->select();
 				$number = $think_about->where($li)->count();
