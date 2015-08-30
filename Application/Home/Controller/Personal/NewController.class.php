@@ -80,32 +80,12 @@ class NewController extends Controller {
 				//计算年龄
 				$data['age'] = date("Y-m-d") - $data['birth'];
 				$this->assign('data', $data);
-		
+				
+				/*
 				//取出内心独白
 				$think_lnner = M('lnner');
 				$lnner = $think_lnner->where($map)->find();
-				$this->assign('lnner', $lnner);
-		
-				//取出外貌性格
-				$think_appearance = M('appearance');
-				$appearance = $think_appearance->where($map)->find();
-				$this->assign('appearance', $appearance);
-
-				//取出工作学习
-				$think_unit = M('unit');
-				$unit = $think_unit->where($map)->find();
-				$this->assign('unit', $unit);
-
-				//取出生活方式
-				$think_life = M('life');
-				$life = $think_life->where($map)->find();
-				$this->assign('life', $life);		
-				//取出兴趣爱好
-
-				//取出择偶条件
-				$think_choose = M('choose');
-				$choose = $think_choose->where($map)->find();
-				$this->assign('choose', $choose);
+				$this->assign('lnner', $lnner);*/
 		
 				$this->display('Personal/Personal/mode/index');
 			}
