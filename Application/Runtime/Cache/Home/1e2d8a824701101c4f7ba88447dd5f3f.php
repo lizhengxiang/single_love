@@ -142,7 +142,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_1534099495__=0;$__FOR_END_1534099495__=$countGift;for($i=$__FOR_START_1534099495__;$i < $__FOR_END_1534099495__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_155045338__=0;$__FOR_END_155045338__=$countGift;for($i=$__FOR_START_155045338__;$i < $__FOR_END_155045338__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -252,7 +252,7 @@
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_772259751__=0;$__FOR_END_772259751__=$about['num'];for($i=$__FOR_START_772259751__;$i < $__FOR_END_772259751__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_724157822__=0;$__FOR_END_724157822__=$about['num'];for($i=$__FOR_START_724157822__;$i < $__FOR_END_724157822__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -368,7 +368,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_1796321361__=0;$__FOR_END_1796321361__=$usercount;for($i=$__FOR_START_1796321361__;$i < $__FOR_END_1796321361__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1794335451__=0;$__FOR_END_1794335451__=$usercount;for($i=$__FOR_START_1794335451__;$i < $__FOR_END_1794335451__;$i+=1){ ?><div class="row">
 											<div class="col-md-6">
 											<div class="row">
  				                   				<div class="col-md-12">

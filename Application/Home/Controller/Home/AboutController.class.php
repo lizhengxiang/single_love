@@ -36,6 +36,7 @@ class AboutController extends Controller {
 				//若我没有关注任何人则显示自己的说说
 				if($num == 0)
 					$li = 'members_id = '.cookie('user');
+				//$li['tag'] = 0;
 				$think_about = M('about');
 				$about['about'] = $think_about->where($li)->limit(50)->order('time desc')->select();
 				$number = $think_about->where($li)->count();
@@ -45,15 +46,22 @@ class AboutController extends Controller {
 				//根据id统计出评论数量
 				$nickname = M('data');
 				$comments = M('comments');
+				$number = 0;
 				for($i = 0; $i < $about['num']; $i++){
-					$aboutcount['aboutid'] = $about['about'][$i]['id'];
-					$about['count'][$i] = $comments->where($aboutcount)->count();
+					//取出主人没有删除的说说
+					if($about['about'][$i]['tag'] == 0){	
+						$abou['about'][$number] = $about['about'][$i];
+						$aboutcount['aboutid'] = $about['about'][$i]['id'];
+						$abou['count'][$number] = $comments->where($aboutcount)->count();
 					
-					$aboutnick['members_id'] = $about['about'][$i]['members_id'];
-					$name_nickname = $nickname->field('nickname')->where($aboutnick)->find();
-					$about['nickname'][$i] = $name_nickname['nickname'];
+						$aboutnick['members_id'] = $about['about'][$i]['members_id'];
+						$name_nickname = $nickname->field('nickname')->where($aboutnick)->find();
+						$abou['nickname'][$number] = $name_nickname['nickname'];
+						$number++;
+					}
 				}
-				return $about;
+				$abou['num'] = $number;
+				return $abou;
 			}
 		
 		}else{
