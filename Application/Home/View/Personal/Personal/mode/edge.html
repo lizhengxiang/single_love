@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="__ROOT__/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+<div class="container">
+	<div class="row">
+		<table class="table">
+		</table>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-6"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+	</div>
+	
+	<div class="row">
+		<table class="table">
+		</table>
+	</div>
+	<nav class="navbar navbar-inverse container-fluid">
+		<div class="row">
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Information/Information/index" role="button">修改资料</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">使用帮助</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
+		</div>
+	</nav>
+
+<div class="row">
+<div class="col-md-12">
+<!--<table class="table table-bordered">
+<tr class = "default">
+<td>!-->
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<div class="row">
+<div class="col-md-12">
+<!--<table class="table table-bordered">
+<tr class = "default">
+<td>-->
+<div class="row">
+<div class="col-md-3"></div>
+<div>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">谁看过我</a></li>
+<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我看过谁</a></li>
+<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">谁关注我</a></li>
+<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我关注谁</a></li>
+<li role="presentation"><a href="#blacklist" aria-controls="blacklist" role="tab" data-toggle="tab">黑名单</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home">
+
+<for tart = "0" end = "3">
+<div class="row">
+<div class="col-md-12">
+&nbsp;
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user['user'][$i]['schooling']}
+</div>
+</div>
+</div>
+<div class="col-md-1"></div>
+<if condition = "$user['user'][++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user['user'][$i]['schooling']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-2"></div>
+<if condition = "$user['user'][++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user['user'][$i]['schooling']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-1"></div>
+<if condition = "$user['user'][++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user['user'][$i]['schooling']}
+</div>
+</div>
+</div>
+</if>
+</div>
+</for>
+
+</div>
+<div role="tabpanel" class="tab-pane" id="messages">
+<for tart = "0" end = "$Follower['count']">
+<div class="row">
+<div class="col-md-12">
+&nbsp;
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Follower[$i]['id']}"><img src="{$Follower[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Follower[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Follower[$i]['time']}
+</div>
+</div>
+</div>
+<div class="col-md-1"></div>
+<if condition = "$Follower[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Follower[$i]['id']}"><img src="{$Follower[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Follower[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Follower[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-2"></div>
+<if condition = "$Follower[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Follower[$i]['id']}"><img src="{$Follower[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Follower[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Follower[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-1"></div>
+<if condition = "$Follower[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Follower[$i]['id']}"><img src="{$Follower[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Follower[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Follower[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+</div>
+</for>
+
+</div>
+
+<div role="tabpanel" class="tab-pane" id="profile">
+
+<for tart = "0" end = "$Seenuser">
+<div class="row">
+<div class="col-md-12">
+&nbsp;
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$seen[$i]['id']}"><img src="{$seen[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$seen[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$seen[$i]['time']}
+</div>
+</div>
+</div>
+<div class="col-md-1"></div>
+<if condition = "$seen[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$seen[$i]['id']}"><img src="{$seen[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$seen[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$seen[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-2"></div>
+<if condition = "$seen[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$seen[$i]['id']}"><img src="{$seen[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$seen[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$seen[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-1"></div>
+<if condition = "$seen[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$seen[$i]['id']}"><img src="{$seen[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$seen[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$seen[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+</div>
+</for>
+
+</div>
+
+<div role="tabpanel" class="tab-pane" id="settings">
+
+
+<for tart = "0" end = "$Following['count']">
+<div class="row">
+<div class="col-md-12">
+&nbsp;
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Following[$i]['id']}"><img src="{$Following[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Following[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Following[$i]['time']}
+</div>
+</div>
+</div>
+<div class="col-md-1"></div>
+<if condition = "$Following[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Following[$i]['id']}"><img src="{$Following[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Following[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Following[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-2"></div>
+<if condition = "$Following[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Following[$i]['id']}"><img src="{$Following[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Following[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Following[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-1"></div>
+<if condition = "$Following[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$Following[$i]['id']}"><img src="{$Following[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$Following[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$Following[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+</div>
+</for>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="blacklist">
+<for tart = "0" end = "0">
+<div class="row">
+<div class="col-md-12">
+&nbsp;
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user[$i]['time']}
+</div>
+</div>
+</div>
+<div class="col-md-1"></div>
+<if condition = "$user[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-2"></div>
+<if condition = "$user[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+<div class="col-md-1"></div>
+<if condition = "$user[++$i]['id'] neq 0">
+<div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user[$i]['id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center">{$user[$i]['nickname']}</p>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+{$user[$i]['time']}
+</div>
+</div>
+</div>
+</if>
+</div>
+</for>
+
+
+</div>
+</div>
+</div>
+<!--</td>
+</tr>
+</table>-->
+</div>
+</div>
+</div>
+<div class="col-md-1"></div>
+</div>
+<!--</td>
+</tr>
+</table>-->
+</div>
+</div>
+
+	
+</div>
+ </body>
+</html>

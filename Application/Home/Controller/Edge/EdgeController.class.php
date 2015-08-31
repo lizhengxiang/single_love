@@ -52,7 +52,9 @@ class EdgeController extends Controller {
 		
 				}
 				dump($user_a);
-				$this->assign('user', $user);
+				echo $user_a['user'][0]['nickname'];
+				$this->assign('user', $user_a);
+				$this->display('Personal/Personal/mode/look');
 
 			}
 		}else{
