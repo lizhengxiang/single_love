@@ -360,7 +360,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1194896560__=0;$__FOR_END_1194896560__=$about['num'];for($i=$__FOR_START_1194896560__;$i < $__FOR_END_1194896560__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_1579748798__=0;$__FOR_END_1579748798__=$about['num'];for($i=$__FOR_START_1579748798__;$i < $__FOR_END_1579748798__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>

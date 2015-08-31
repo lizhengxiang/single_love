@@ -29,15 +29,6 @@ class AboutController extends Controller {
 				//根据id统计出评论数量
 				$nickname = M('data');
 				$comments = M('comments');
-				/*
-				for($i = 0; $i < $about['num']; $i++){
-					$aboutcount['aboutid'] = $about['about'][$i]['id'];
-					$about['count'][$i] = $comments->where($aboutcount)->count();
-					
-					$aboutnick['members_id'] = $about['about'][$i]['members_id'];
-					$name_nickname = $nickname->field('nickname')->where($aboutnick)->find();
-					$about['nickname'][$i] = $name_nickname['nickname'];
-				}*/
 
 				$number = 0;
 				for($i = 0; $i < $about['num']; $i++){
