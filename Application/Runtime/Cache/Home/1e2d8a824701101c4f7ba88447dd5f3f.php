@@ -142,7 +142,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_1382010360__=0;$__FOR_END_1382010360__=$countGift;for($i=$__FOR_START_1382010360__;$i < $__FOR_END_1382010360__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1534099495__=0;$__FOR_END_1534099495__=$countGift;for($i=$__FOR_START_1534099495__;$i < $__FOR_END_1534099495__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -252,14 +252,13 @@
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_795338334__=0;$__FOR_END_795338334__=$about['num'];for($i=$__FOR_START_795338334__;$i < $__FOR_END_795338334__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_772259751__=0;$__FOR_END_772259751__=$about['num'];for($i=$__FOR_START_772259751__;$i < $__FOR_END_772259751__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
   <p><span class = "badge"><?php echo ($about['count'][$i]); ?></span><?php echo ($about['about'][$i]['content']); ?></p></a>
   <footer>发贴时间:<cite title="Source Title"><?php echo ($about['about'][$i]['time']); ?></cite></footer>
 </blockquote>
-<!--<span class = "badge">42</span><?php echo ($about['about'][$i]['content']); ?>-->
 </div>
 </div>
 
@@ -323,9 +322,23 @@
   </div>
 </div>
 
+
+<div class = "row">
+<form action="/single_love/index.php/Home/Personal/DeleteAbout/index" enctype = "multipart/form-data" method="POST">
+<div class="row">
+<div class="col-md-8">
+<input type="text" name="aboutid" value = <?php echo ($about['about'][$i]['id']); ?> style = "display:none;">
+<input type="text" name="userid" value = <?php echo ($about['about'][$i]['members_id']); ?> style = "display:none;">
+</div>
+<div class = "col-md-3">
+<button type = "submit" class = "btn btn-info btn-sm">删除</button>
+</div>
+</div>
+</form>
+
+
 <div class = "row">
 <div class="col-md-12">
-
 <table class="table table-bordered">
 <tr class = "primary">
 <td>
@@ -333,6 +346,9 @@
 </tr>
 </table>
 </div>
+</div>
+
+
 </div><?php } ?>
 
 
@@ -352,7 +368,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_734011969__=0;$__FOR_END_734011969__=$usercount;for($i=$__FOR_START_734011969__;$i < $__FOR_END_734011969__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1796321361__=0;$__FOR_END_1796321361__=$usercount;for($i=$__FOR_START_1796321361__;$i < $__FOR_END_1796321361__;$i+=1){ ?><div class="row">
 											<div class="col-md-6">
 											<div class="row">
  				                   				<div class="col-md-12">

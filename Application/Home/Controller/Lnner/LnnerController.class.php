@@ -29,7 +29,6 @@ class LnnerController extends Controller {
 				$lnner = M('lnner');
 				//根据条件修改数据
 				$lnner->where($map)->data($data)->save();
-				//跳转到联系方式页面
 				$this->redirect('/Home/Contact/Contact/index', 0, '');
 			}
 		}else{

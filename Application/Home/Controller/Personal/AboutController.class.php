@@ -15,6 +15,7 @@ class AboutController extends Controller {
 			}else{
 				//获取id帐号
 				$mapp['members_id'] = $user_id;
+				$mapp['tag'] = 0;
 				//更具id取出该好友的前50条说说记录
 				$think_about = M('about');
 				$about['about'] = $think_about->where($mapp)->limit(50)->order('time desc')->select();

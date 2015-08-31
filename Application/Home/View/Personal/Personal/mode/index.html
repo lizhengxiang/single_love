@@ -262,7 +262,6 @@
   <p><span class = "badge">{$about['count'][$i]}</span>{$about['about'][$i]['content']}</p></a>
   <footer>发贴时间:<cite title="Source Title">{$about['about'][$i]['time']}</cite></footer>
 </blockquote>
-<!--<span class = "badge">42</span>{$about['about'][$i]['content']}-->
 </div>
 </div>
 
@@ -338,9 +337,23 @@
   </div>
 </div>
 
+
+<div class = "row">
+<form action="__ROOT__/index.php/Home/Personal/DeleteAbout/index" enctype = "multipart/form-data" method="POST">
+<div class="row">
+<div class="col-md-8">
+<input type="text" name="aboutid" value = {$about['about'][$i]['id']} style = "display:none;">
+<input type="text" name="userid" value = {$about['about'][$i]['members_id']} style = "display:none;">
+</div>
+<div class = "col-md-3">
+<button type = "submit" class = "btn btn-info btn-sm">删除</button>
+</div>
+</div>
+</form>
+
+
 <div class = "row">
 <div class="col-md-12">
-
 <table class="table table-bordered">
 <tr class = "primary">
 <td>
@@ -349,6 +362,10 @@
 </table>
 </div>
 </div>
+
+
+</div>
+
 </for>
 
 
