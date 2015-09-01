@@ -18,8 +18,8 @@ class SeeController extends Controller {
 			}else{
 
 				$think_data = M('data');
-				echo $mapp['schooling'] = $school;
-				echo $mapp['gender'] = $gender;
+				$mapp['schooling'] = $school;
+				$mapp['gender'] = $gender;
 
 				$user['user'] = $think_data->where($mapp)->limit(48)->order('modeify desc')->select();
 				$user['sum'] = $think_data->where($mapp)->count();

@@ -72,7 +72,11 @@
 				<div class="row">
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">相册</button></div>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">发信</button></div>
+					<if condition = "$guanzhu eq 0">
 					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Followers/index/user_id/{$photo['members_id']}">加关注</a></div>
+					<else/>
+					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Unfollowers/index/user_id/{$photo['members_id']}">取消关注</a></div>
+					</if>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">送礼物</button></div>
 					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">举报</a></div>
 					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">加黑名单</a></div>

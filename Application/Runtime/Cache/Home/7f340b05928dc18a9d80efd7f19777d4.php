@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-CN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <head>
@@ -9,7 +9,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="__ROOT__/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/single_love/Application/Home/View/Personal/Personal/mode/css/bootstrap.min.css" rel="stylesheet">
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -21,9 +21,9 @@
 		</table>
 	</div>
 	<div class="row">
-		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
-		<div class="col-md-6"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
-		<div class="col-md-3"><img src="__ROOT__/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-6"><img src="/single_love/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
 	</div>
 	
 	<div class="row">
@@ -57,7 +57,7 @@
 <div class="col-md-10">
 <div class="row">-->
 
-<form action="__ROOT__/index.php/Home/Edge/Edge/index" enctype = "multipart/form-data" method="POST">
+<form action="/single_love/index.php/Home/Edge/Edge/index" enctype = "multipart/form-data" method="POST">
 <div class="row">
 <div class="col-md-12">
 <table class="table table-bordered">
@@ -128,8 +128,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<for tart = "0" end = "$count">
-<div class="row">
+<?php $__FOR_START_1865747917__=0;$__FOR_END_1865747917__=$count;for($i=$__FOR_START_1865747917__;$i < $__FOR_END_1865747917__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -139,84 +138,76 @@
 <div class="col-md-3">
 <div class="row">
 <div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user['user'][$i]['members_id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user['user'][$i]['members_id']); ?>"><img src="<?php echo ($user[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+<p class = "text-center"><?php echo ($user['user'][$i]['nickname']); ?></p>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['schooling']}</p>
+<p class = "text-center"><?php echo ($user['user'][$i]['schooling']); ?></p>
 </div>
 </div>
 </div>
-<if condition = "$user['user'][++$i]['id'] neq 0">
-<div class="col-md-3">
+<?php if($user['user'][++$i]['id'] != 0): ?><div class="col-md-3">
 <div class="row">
 <div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user['user'][$i]['members_id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user['user'][$i]['members_id']); ?>"><img src="<?php echo ($user[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['schooling']}</p>
-</div>
-</div>
-</div>
-</if>
-<if condition = "$user['user'][++$i]['id'] neq 0">
-<div class="col-md-3">
-<div class="row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user['user'][$i]['members_id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<p class = "text-center"><?php echo ($user['user'][$i]['nickname']); ?></p>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+<p class = "text-center"><?php echo ($user['user'][$i]['schooling']); ?></p>
+</div>
+</div>
+</div><?php endif; ?>
+<?php if($user['user'][++$i]['id'] != 0): ?><div class="col-md-3">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user['user'][$i]['members_id']); ?>"><img src="<?php echo ($user[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['schooling']}</p>
-</div>
-</div>
-</div>
-</if>
-<if condition = "$user['user'][++$i]['id'] neq 0">
-<div class="col-md-3">
-<div class="row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user['user'][$i]['members_id']}"><img src="{$user[$i]['head_photo']}" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<p class = "text-center"><?php echo ($user['user'][$i]['nickname']); ?></p>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['nickname']}</p>
+<p class = "text-center"><?php echo ($user['user'][$i]['schooling']); ?></p>
+</div>
+</div>
+</div><?php endif; ?>
+<?php if($user['user'][++$i]['id'] != 0): ?><div class="col-md-3">
+<div class="row">
+<div class="col-md-12">
+<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user['user'][$i]['members_id']); ?>"><img src="<?php echo ($user[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
 </div>
 </div>
 <div class="row">
 <div class="col-md-12">
-<p class = "text-center">{$user['user'][$i]['schooling']}</p>
+<p class = "text-center"><?php echo ($user['user'][$i]['nickname']); ?></p>
 </div>
 </div>
+<div class="row">
+<div class="col-md-12">
+<p class = "text-center"><?php echo ($user['user'][$i]['schooling']); ?></p>
 </div>
-</if>
+</div>
+</div><?php endif; ?>
 </div>
 
 <ul class="nav nav-tabs" role="tablist">
 <li role="presentation" class="active"></li>
-</ul
-
-</for>
+</ul<?php } ?>
 
 </div>
 

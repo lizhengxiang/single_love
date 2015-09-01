@@ -82,11 +82,13 @@ class NewController extends Controller {
 				$data['age'] = date("Y-m-d") - $data['birth'];
 				$this->assign('data', $data);
 				
-				/*
-				//取出内心独白
-				$think_lnner = M('lnner');
-				$lnner = $think_lnner->where($map)->find();
-				$this->assign('lnner', $lnner);*/
+				
+				//關注
+				$map_guanzhu['members_id_a'] = cookie('user');
+				$map_guanzhu['members_id_b'] = $user_id;
+				$think_guanzhu = M('followers');
+				echo $guanzhu = $think_guanzhu->where($map_guanzhu)->count();
+				$this->assign('guanzhu', $guanzhu);
 				
 				//获取帖子和评论次数
 				$about_t = new AboutController();

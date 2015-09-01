@@ -14,6 +14,16 @@ class EdgeController extends Controller {
 			}else{
 				$school = I('school');
 				$gender = I('gender');
+				$user_id = I('username');
+				if($user_id){
+					$user_map['members_id'] = I('username');
+					$data = $password->where($user_map)->find();
+					if($data){
+					$this->redirect('Home/Personal/New/index/user_id/'.$user_id);	
+					}else{
+						$this->error('没有找到,该好有,请您重新输入');
+					}
+				}
 				
 				$data_a = M('data');
 				if($school == NULL AND $gender == NULL){
@@ -22,7 +32,7 @@ class EdgeController extends Controller {
 					$school = $schooling['schooling'];
 					$gender_a = $data_a->where($user)->field('gender')->find();
 					if($gender_a['gender'] == '男')
-						$gender = '男';
+						$gender = '女';
 					else
 						$gender = '男';
 					
@@ -51,10 +61,9 @@ class EdgeController extends Controller {
 					$user_a[$i]['head_photo'] = $photo['head_ptoto'];
 		
 				}
-				dump($user_a);
-				echo $user_a['user'][0]['nickname'];
+				$user_a['user'][0]['nickname'];
 				$this->assign('user', $user_a);
-				$this->display('Personal/Personal/mode/look');
+				$this->display('Personal/Personal/mode/edge');
 
 			}
 		}else{

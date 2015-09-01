@@ -400,7 +400,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1874222811__=0;$__FOR_END_1874222811__=$about['num'];for($i=$__FOR_START_1874222811__;$i < $__FOR_END_1874222811__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_1035509447__=0;$__FOR_END_1035509447__=$about['num'];for($i=$__FOR_START_1035509447__;$i < $__FOR_END_1035509447__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
@@ -495,8 +495,6 @@
     </div>
   </div>
 </div>
-
-
 
 <div class = "row">
 <div class="col-md-12">

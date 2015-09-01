@@ -72,7 +72,9 @@
 				<div class="row">
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">相册</button></div>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">发信</button></div>
-					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Followers/index/user_id/<?php echo ($photo['members_id']); ?>">加关注</a></div>
+					<?php if($guanzhu == 0): ?><div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Followers/index/user_id/<?php echo ($photo['members_id']); ?>">加关注</a></div>
+					<?php else: ?>
+					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Unfollowers/index/user_id/<?php echo ($photo['members_id']); ?>">取消关注</a></div><?php endif; ?>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">送礼物</button></div>
 					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">举报</a></div>
 					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">加黑名单</a></div>
@@ -142,7 +144,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_987952138__=0;$__FOR_END_987952138__=$countGift;for($i=$__FOR_START_987952138__;$i < $__FOR_END_987952138__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_141603612__=0;$__FOR_END_141603612__=$countGift;for($i=$__FOR_START_141603612__;$i < $__FOR_END_141603612__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -252,7 +254,7 @@
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_821139223__=0;$__FOR_END_821139223__=$about['num'];for($i=$__FOR_START_821139223__;$i < $__FOR_END_821139223__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_467524472__=0;$__FOR_END_467524472__=$about['num'];for($i=$__FOR_START_467524472__;$i < $__FOR_END_467524472__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -368,7 +370,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_47860296__=0;$__FOR_END_47860296__=$usercount;for($i=$__FOR_START_47860296__;$i < $__FOR_END_47860296__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1934116742__=0;$__FOR_END_1934116742__=$usercount;for($i=$__FOR_START_1934116742__;$i < $__FOR_END_1934116742__;$i+=1){ ?><div class="row">
 											<div class="col-md-6">
 											<div class="row">
  				                   				<div class="col-md-12">
