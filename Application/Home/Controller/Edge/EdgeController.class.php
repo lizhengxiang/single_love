@@ -63,6 +63,7 @@ class EdgeController extends Controller {
 				}
 				$user_a['user'][0]['nickname'];
 				$this->assign('user', $user_a);
+				$this->assign('user_id', $user['members_id']);
 				$this->display('Personal/Personal/mode/edge');
 
 			}

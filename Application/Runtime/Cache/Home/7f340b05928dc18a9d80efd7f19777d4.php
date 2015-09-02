@@ -33,16 +33,16 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">个人中心</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Information/Information/index" role="button">修改资料</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">使用帮助</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">緣分搜索</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市場</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -128,7 +128,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_1635777944__=0;$__FOR_END_1635777944__=$count;for($i=$__FOR_START_1635777944__;$i < $__FOR_END_1635777944__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_12023590__=0;$__FOR_END_12023590__=$count;for($i=$__FOR_START_12023590__;$i < $__FOR_END_12023590__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
