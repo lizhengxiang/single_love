@@ -15,15 +15,44 @@
 
   </head>
   <body>
-<div class = "container">
+<div class="container">
+	<div class="row">
+		<table class="table">
+		</table>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-6"><img src="/single_love/Application/Home/View/Personal/Personal/mode/b.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+		<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/c.jpg" alt="..." class="img-rounded"  width="100%" height="100"></div>
+	</div>
+	
+	<div class="row">
+		<table class="table">
+		</table>
+	</div>
+	<nav class="navbar navbar-inverse container-fluid">
+		<div class="row">
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Information/Information/index" role="button">修改资料</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">使用帮助</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
+		</div>
+	</nav>
+
+<div class="row">
 <div class = "row">
-<div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "col-md-12"><h1><strong><p class = "text-center">欢迎注册社交520</p></strong></h1></div>
-<div class = "col-md-12">&nbsp;</div>
+<div class = "col-md-12"><h4><strong><p class = "text-center">修改资料</p></strong></h4></div>
 
 <div class = "row">
-<div class = "col-md-8">
+<div class = "col-md-7">
 <div class = "col-md-12">&nbsp;</div>
 <img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="300">
 </div>
@@ -31,28 +60,16 @@
 <form class="form-horizontal" action="registered" method = "post">
 <div class = "row">
 <div class = "col-md-12">
-<input type="text" class="form-control input-lg" name="email" id="inputEmail3" placeholder="邮箱" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-
-<div class = "row">
-<div class = "col-md-12">
 <input type="text" class="form-control input-lg" name="wechat" id="inputEmail3" placeholder="微信号" required>
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
 <div class = "row">
-
 <div class = "col-md-5">
 <select class="form-control input-lg" name = "provinces">
 <option>四川</option>
 </select>
 </div>
-
-
-
 <div class = "col-md-7">
 <select class="form-control input-lg" name = "school">
   <option>西南民族大学</option>
@@ -62,22 +79,16 @@
   <option>西南财经大学</option>
 </select>
 </div>
-
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
-
 <div class = "row">
 <div class = "col-md-12">
 <input type="text" class="form-control input-lg" name="nickname" id="inputEmail3" placeholder="昵称" required>
 </div>
 </div>
-
 <div class = "col-md-12">&nbsp;</div>
-
 <div class = "row">
 <div class = "col-md-12">
-
 <div class = "row">
 <div class = "col-md-3"></div>
 <div class = "col-md-2">
@@ -101,40 +112,39 @@
 <div class = "row">
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "year">
-<?php $__FOR_START_24326168__=1980;$__FOR_END_24326168__=2013;for($i=$__FOR_START_24326168__;$i < $__FOR_END_24326168__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_325157627__=1980;$__FOR_END_325157627__=2013;for($i=$__FOR_START_325157627__;$i < $__FOR_END_325157627__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "mouth">
-<?php $__FOR_START_637449799__=1;$__FOR_END_637449799__=13;for($i=$__FOR_START_637449799__;$i < $__FOR_END_637449799__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1215611296__=1;$__FOR_END_1215611296__=13;for($i=$__FOR_START_1215611296__;$i < $__FOR_END_1215611296__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "day">
-<?php $__FOR_START_1024367__=1;$__FOR_END_1024367__=32;for($i=$__FOR_START_1024367__;$i < $__FOR_END_1024367__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1462560067__=1;$__FOR_END_1462560067__=32;for($i=$__FOR_START_1462560067__;$i < $__FOR_END_1462560067__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
-
 <div class = "row">
 <div class = "col-md-12">
-<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
+<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">保存并继续</button></p>
 </div>
 </div>
 </form>
 </div>
-
- <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>
- <div class = "col-md-12"><p class = "text-center">注册完成后登录用户名和密码到邮箱查收</p></div>
+ <div class = "col-md-12"><p class = "text-center">版权所有:西南民族大学 李正祥</p></div>
 </div>
+</div>
+
+
 </div>
 </div>
  </body>

@@ -87,7 +87,7 @@ class NewController extends Controller {
 				$map_guanzhu['members_id_a'] = cookie('user');
 				$map_guanzhu['members_id_b'] = $user_id;
 				$think_guanzhu = M('followers');
-				echo $guanzhu = $think_guanzhu->where($map_guanzhu)->count();
+				$guanzhu = $think_guanzhu->where($map_guanzhu)->count();
 				$this->assign('guanzhu', $guanzhu);
 				
 				//获取帖子和评论次数

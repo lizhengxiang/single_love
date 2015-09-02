@@ -6,7 +6,7 @@ class InformationController extends Controller {
 		//调用修改资料页面
 		$user_id['id'] = cookie('user');
 		$this->assign('user_id', $user_id);
-		$this->display('Information/Information/index');
+		$this->display('Personal/Personal/mode/modifyData');
     }
 
 	public function information(){

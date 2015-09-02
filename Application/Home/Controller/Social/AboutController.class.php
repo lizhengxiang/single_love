@@ -20,6 +20,7 @@ class AboutController extends Controller {
 				//更具學校取出說說
 				//$li['members_id'] = cookie('user');
 				$li['school'] = $school;	
+				$li['public'] = 1;
 				$think_about = M('about');
 				$about['about'] = $think_about->where($li)->limit(50)->order('time desc')->select();
 				$number = $think_about->where($li)->count();
