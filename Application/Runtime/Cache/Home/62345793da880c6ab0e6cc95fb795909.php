@@ -112,17 +112,17 @@
 <div class = "row">
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "year">
-<?php $__FOR_START_200844360__=1980;$__FOR_END_200844360__=2013;for($i=$__FOR_START_200844360__;$i < $__FOR_END_200844360__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_509229830__=1980;$__FOR_END_509229830__=2013;for($i=$__FOR_START_509229830__;$i < $__FOR_END_509229830__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "mouth">
-<?php $__FOR_START_1916021168__=1;$__FOR_END_1916021168__=13;for($i=$__FOR_START_1916021168__;$i < $__FOR_END_1916021168__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1233837417__=1;$__FOR_END_1233837417__=13;for($i=$__FOR_START_1233837417__;$i < $__FOR_END_1233837417__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "day">
-<?php $__FOR_START_862569985__=1;$__FOR_END_862569985__=32;for($i=$__FOR_START_862569985__;$i < $__FOR_END_862569985__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1708050925__=1;$__FOR_END_1708050925__=32;for($i=$__FOR_START_1708050925__;$i < $__FOR_END_1708050925__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
@@ -130,8 +130,13 @@
 </div>
 <div class = "col-md-12">&nbsp;</div>
 <div class = "row">
-<div class = "col-md-12">
+<div class = "col-md-6">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">保存并继续</button></p>
+</div>
+<div class = "row">
+<div class = "col-md-6">
+<p class = "text-center"><a href="https://localhost/single_love/index.php/Home/Photo/Photo/index"><button type="button" class = "btn btn-primary btn-lg">跳过此页</button></a></p>
+</div>
 </div>
 </div>
 </form>

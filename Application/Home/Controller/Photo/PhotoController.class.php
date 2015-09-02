@@ -87,7 +87,7 @@ class PhotoController extends Controller {
 					$information->where($map)->field('modify')->data($data)->save();
 					$this->success('图片上传成功');
 					//跳转到内心独白
-					$this->redirect('/Home/Lnner/Lnner/index', 0, '');
+					$this->redirect('Home/Personal/New/index/user_id/'.cookie('user'));
 				}
 
 			}
