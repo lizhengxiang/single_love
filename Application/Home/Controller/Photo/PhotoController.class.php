@@ -8,8 +8,7 @@ class PhotoController extends Controller {
 
     public function index(){
 		//调用修改资料页面
-		//echo T();
-		$this->display('Photo/Photo/index');
+		$this->display('Personal/Personal/mode/photo');
     }
 	public function upload(){
 		if($map_id['members_id'] = cookie('user')){

@@ -57,83 +57,67 @@
 <img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="300">
 </div>
 <div class = "col-md-4">
-<form class="form-horizontal" action="information" method = "post">
-<div class = "row">
-<div class = "col-md-12">
-&nbsp;
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "row">
-<div class = "col-md-5">
-<select class="form-control input-lg" name = "provinces">
-<option>四川</option>
-</select>
-</div>
-<div class = "col-md-7">
-<select class="form-control input-lg" name = "school">
-  <option>西南民族大学</option>
-  <option>成都信息工程大学</option>
-  <option>四川大学</option>
-  <option>电子科技大学</option>
-  <option>西南财经大学</option>
-</select>
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "row">
-<div class = "col-md-12">
-<input type="text" class="form-control input-lg" name="nickname" id="inputEmail3" placeholder="昵称" required>
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "row">
-<div class = "col-md-12">
-<div class = "row">
-<div class = "col-md-3"></div>
-<div class = "col-md-2">
-<label class="radio-inline">
-  <input type="radio" name="gender" id="inlineRadio1" value="男" checked>男
-</label>
-</div>
-<div class = "col-md-3"></div>
-<div class = "col-md-4">
-<label class="radio-inline">
-  <input type="radio" name="gender" id="inlineRadio1" value="女">女
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
 
-<div class = "row">
+<form class = "form-horizontal" action="./upload" enctype = "multipart/form-data" method="POST" enctype="multipart/form-data">
+
+<div class = "form-group">
+<label for = "inputphoto6" class = "col-md-3 control-label">头&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;像</label>
+<div class = "col-md-8">
+	<input type="file" class = "form-control" id = "inputphoto3" name="user_pic[]" size="30"/>
+</div>
+</div>
+
+<div class = "form-group">
+<label for = "inputphoto6" class = "col-md-3 control-label">生活照一</label>
+<div class = "col-md-8">
+ <input type="file" class = "form-control" id = "inpautphoto5" name="user_pic[]" size="30"/>
+</div>
+</div>
+
+<div class = "form-group">
+ <label for = "inputphoto6" class = "col-md-3 control-label">生活照二</label>
+ <div class = "col-md-8">
+    <input type="file" class = "form-control" id = "inputaphoton" name="user_pic[]" size="30"/>
+ </div>
+ </div>
+
+
+<div class = "form-group">
+ <label for = "inputphoto6" class = "col-md-3 control-label">生活照三</label>
+  <div class = "col-md-8">
+     <input type="file" class = "form-control" id = "inputphoatos3" name="user_pic[]" size="30"/>
+ </div>
+ </div>
+
+
+<div class = "form-group">
+  <label for = "inputphoto6" class = "col-md-3 control-label">生活照四</label>
+  <div class = "col-md-8">
+      <input type="file" class = "form-control" id = "inputphsaoto3" name="user_pic[]" size="30"/>
+ </div>
+ </div>
+
+
+<div class = "form-group">
+  <label for = "inputphoto6" class = "col-md-3 control-label">生活照五</label>
+  <div class = "col-md-8">
+      <input type="file" class = "form-control" id = "inputphadoto3" name="user_pic[]" size="30"/>
+  </div>
+  </div>
+
+
+<div class = "form-group">
+ <label for = "inputphoto6" class = "col-md-3 control-label">生活照六</label>
+  <div class = "col-md-8">
+      <input type="file" class = "form-control" id = "inputphotfoa3" name="user_pic[]" size="30"/>
+  </div>
+ </div>
+
+
 <div class = "col-md-12">
-<div class = "row">
- <div class = "col-md-4">
-<select class="form-control input-lg" name = "year">
-<?php $__FOR_START_200844360__=1980;$__FOR_END_200844360__=2013;for($i=$__FOR_START_200844360__;$i < $__FOR_END_200844360__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
-</select>
+	<p class = "text-center"><button type = "submit" class = "btn btn-primary">保存并预览</button></p>
 </div>
- <div class = "col-md-4">
-<select class="form-control input-lg" name = "mouth">
-<?php $__FOR_START_1916021168__=1;$__FOR_END_1916021168__=13;for($i=$__FOR_START_1916021168__;$i < $__FOR_END_1916021168__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
-</select>
-</div>
- <div class = "col-md-4">
-<select class="form-control input-lg" name = "day">
-<?php $__FOR_START_862569985__=1;$__FOR_END_862569985__=32;for($i=$__FOR_START_862569985__;$i < $__FOR_END_862569985__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
-</select>
-</div>
-</div>
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "row">
-<div class = "col-md-12">
-<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">保存并继续</button></p>
-</div>
-</div>
+
 </form>
 </div>
 <div class = "col-md-12">&nbsp;</div>

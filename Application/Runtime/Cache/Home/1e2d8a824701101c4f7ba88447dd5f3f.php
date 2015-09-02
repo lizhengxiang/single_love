@@ -64,7 +64,7 @@
 							<div class="col-md-12">信息是会员自愿提供，目前暂无法确保100%真实，请理性对待</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12"><?php echo ($data['age']); ?>岁,<?php echo ($data['gender']); ?>,<?php echo ($data['schooling']); ?>学历,来自<?php echo ($data[home]); ?>,原籍<?php echo ($data['place']); ?></div>
+							<div class="col-md-12"><?php echo ($data['age']); ?>岁&nbsp;&nbsp;<?php echo ($data['gender']); ?>&nbsp;&nbsp;<?php echo ($data['schooling']); ?></div>
 						</div>
 					</div>
 					<div class="col-md-3"><img src="/single_love/Application/Home/View/Personal/Personal/mode/d.png" alt="..." class="img-rounded"  width="100%" height="150"></div>
@@ -98,7 +98,7 @@
             <label for="recipient-name" class="control-label"><?php echo ($photo['members_id']); ?></label>
           </div>
 			<div class="form-group">
-             <label for="recipient-name" class="control-label"><?php echo ($data['age']); ?>岁,<?php echo ($data['gender']); ?>,<?php echo ($data['schooling']); ?>学历,来自<?php echo ($data[home]); ?>,原籍<?php echo ($data['place']); ?></label>
+             <label for="recipient-name" class="control-label"><?php echo ($data['age']); ?>岁&nbsp;&nbsp;<?php echo ($data['gender']); ?>&nbsp;&nbsp;<?php echo ($data['schooling']); ?></label>
 		   </div>
 
           <div class="form-group">
@@ -144,7 +144,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_960628461__=0;$__FOR_END_960628461__=$countGift;for($i=$__FOR_START_960628461__;$i < $__FOR_END_960628461__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_821702474__=0;$__FOR_END_821702474__=$countGift;for($i=$__FOR_START_821702474__;$i < $__FOR_END_821702474__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -254,7 +254,7 @@
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_807671892__=0;$__FOR_END_807671892__=$about['num'];for($i=$__FOR_START_807671892__;$i < $__FOR_END_807671892__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_1358250470__=0;$__FOR_END_1358250470__=$about['num'];for($i=$__FOR_START_1358250470__;$i < $__FOR_END_1358250470__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -370,7 +370,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_2091009045__=0;$__FOR_END_2091009045__=$usercount;for($i=$__FOR_START_2091009045__;$i < $__FOR_END_2091009045__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_263542619__=0;$__FOR_END_263542619__=$usercount;for($i=$__FOR_START_263542619__;$i < $__FOR_END_263542619__;$i+=1){ ?><div class="row">
 											<div class="col-md-6">
 											<div class="row">
  				                   				<div class="col-md-12">

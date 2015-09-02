@@ -20,29 +20,18 @@ class InformationController extends Controller {
 			}else{
 				$map['members_id'] = $map_id['members_id'];
 				//获取会员提交的基本信息
-				$data['members_id'] = $map_id['members_id'];
-				//$map['members_id']=I('members_id');
-				$data['birth'] = I('birth');
-				$data['car'] = I('car');
-				$data['children'] = I('childern');
-				$data['constellation'] = I('constellation');
-				$data['gender'] = I('gender');
-				$data['height'] = I('height');
-				$data['home'] = I('home');
-				$data['income'] = I('income');
-				$data['live'] = I('live');
-				$data['marriage'] = I('marriage');
-				$data['modify'] = I('modify');
-				$data['nickname'] = I('nickname');
-				$data['place'] = I('place');
-				$data['schooling'] = I('schooling');
-				$data['type'] = I('type');
-				$data['work'] = I('place');
-				$data['modeify'] = date("Y-m-d H:i:s");
+
+				$think_data = M('data');
+				$information['members_id'] = $map_id['members_id'];
+				$information['modify'] = date("Y-m-d H:i:s");
+				$information['nickname'] = trim(I('nickname'));
+				$information['gender'] = I('gender');
+				$information['schooling'] = I('school');
+				$information['birth'] = (I('year').'-'.I('mouth').'-'.I('day'));
 				//实例化data对象
-				$information = M('data');
+				$information_data = M('data');
 				//根据主键查找会员资料在不在会员基本信息表,更具条件更新记录
-				$information->where($map)->data($data)->save();
+				$information_data->where($map)->data($information)->save();
 				//重定向到photo页面
 				$this->redirect('/Home/Photo/Photo/index');
 			}
