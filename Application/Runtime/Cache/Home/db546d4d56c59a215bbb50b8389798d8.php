@@ -32,17 +32,17 @@
 	</div>
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($photo['memb    ers_id']); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Information/Information/index" role="button">修改资料</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">使用帮助</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -73,7 +73,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_1761801158__=0;$__FOR_END_1761801158__=$count;for($i=$__FOR_START_1761801158__;$i < $__FOR_END_1761801158__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_445106253__=0;$__FOR_END_445106253__=$count;for($i=$__FOR_START_445106253__;$i < $__FOR_END_445106253__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -281,7 +281,7 @@
 
 </div>
 <div role="tabpanel" class="tab-pane" id="messages">
-<?php $__FOR_START_759961326__=0;$__FOR_END_759961326__=$count1;for($i=$__FOR_START_759961326__;$i < $__FOR_END_759961326__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1205842389__=0;$__FOR_END_1205842389__=$count1;for($i=$__FOR_START_1205842389__;$i < $__FOR_END_1205842389__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
