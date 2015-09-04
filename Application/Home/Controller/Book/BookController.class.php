@@ -20,6 +20,7 @@ class BookController extends Controller {
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 		}					
 	}
+
 	public function book(){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
@@ -30,14 +31,14 @@ class BookController extends Controller {
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
 				//获取商品基本信息
-				echo $dataa['school'] = I('school');
-				echo $dataa['type'] = I('type');
-				echo $dataa['bookname'] = I('bookname');
-				echo $dataa['author'] = I('author');
+				$dataa['school'] = I('school');
+				$dataa['type'] = I('type');
+				$dataa['bookname'] = I('bookname');
+				$dataa['author'] = I('author');
 				echo $dataa['press'] = I('press');
-				echo $dataa['number'] = I('number');
-				echo $dataa['price'] = I('price');
-				
+				$dataa['number'] = I('number');
+				$dataa['price'] = I('price');
+				$dataa['members_id'] = cookie('user');			
 				import('ORG.Net.UploadFile');
 				$upload = new \Think\Upload();// 实例化上传类
 				$upload->maxSize = 3145728 ;// 设置附件上传大小
@@ -68,10 +69,8 @@ class BookController extends Controller {
 					}
 				}
 				$dataa['time'] = date('Y-m-d H:i:s');
-
-				if($dataa['content']){
-					
-				}
+				$think_book = M('book');
+				$think_book->data($dataa)->add();
 			//$this->redirect('Home/Home/Home/index');
 			}
 		}else{
