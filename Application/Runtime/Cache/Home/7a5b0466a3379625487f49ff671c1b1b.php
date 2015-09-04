@@ -242,8 +242,8 @@
 												<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">基本资料</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Book/index">
+																<button class="btn btn-default btn-lg btn-block" type="button">上传图书商品</button>
 															</a>
 														</div>
 													</div>
@@ -251,7 +251,7 @@
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
 							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">我的相册</button>
+																<button class="btn btn-default btn-lg btn-block" type="button">上传其它商品</button>
 															</a>
 														</div>
 													</div>
@@ -400,7 +400,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_918490681__=0;$__FOR_END_918490681__=$about['num'];for($i=$__FOR_START_918490681__;$i < $__FOR_END_918490681__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_17391588__=0;$__FOR_END_17391588__=$about['num'];for($i=$__FOR_START_17391588__;$i < $__FOR_END_17391588__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
