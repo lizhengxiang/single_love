@@ -5,7 +5,7 @@ namespace Home\Controller\Book;
 use Think\Controller;
 use Think\Upload;
 class BookController extends Controller {
-	public function lnner(){
+	public function index(){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
 			$password = M('registered');
@@ -20,7 +20,7 @@ class BookController extends Controller {
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 		}					
 	}
-	public function index(){
+	public function book(){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
 			$password = M('registered');
@@ -29,6 +29,15 @@ class BookController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
+				//获取商品基本信息
+				echo $dataa['school'] = I('school');
+				echo $dataa['type'] = I('type');
+				echo $dataa['bookname'] = I('bookname');
+				echo $dataa['author'] = I('author');
+				echo $dataa['press'] = I('press');
+				echo $dataa['number'] = I('number');
+				echo $dataa['price'] = I('price');
+				
 				import('ORG.Net.UploadFile');
 				$upload = new \Think\Upload();// 实例化上传类
 				$upload->maxSize = 3145728 ;// 设置附件上传大小
@@ -43,33 +52,27 @@ class BookController extends Controller {
 				}else{// 上传成功
 					//获取六张照片的路勁
 					if($info[0]["savename"]){
-						$dataa['pic1'] = 'https://localhost/single_love/Uploads/'.$info[0]['savepath'].$info[0]["savename"];
+						echo $dataa['pic1'] = 'https://localhost/single_love/Uploads/'.$info[0]['savepath'].$info[0]["savename"];
 					}else{
-						$dataa['pic1'] = '0';
+						$dataa['pic_1'] = '0';
 					}
 					if($info[1]["savename"]){
-						$dataa['pic2'] = 'https://localhost/single_love/Uploads/'.$info[1]['savepath'].$info[1]["savename"];
+						echo $dataa['pic2'] = 'https://localhost/single_love/Uploads/'.$info[1]['savepath'].$info[1]["savename"];
 					}else{
-						$dataa['pic2'] = '0';
+						echo $dataa['pic_2'] = '0';
 					}
 					if($info[2]["savename"]){
-						$dataa['pic3'] = 'https://localhost/single_love/Uploads/'.$info[2]['savepath'].$info[2]["savename"];
+						echo $dataa['pic3'] = 'https://localhost/single_love/Uploads/'.$info[2]['savepath'].$info[2]["savename"];
 					}else{
-						$dataa['pic3'] = '0';
+						$dataa['pic_3'] = '0';
 					}
 				}
-				$dataa['members_id'] = cookie('user');
-				$school_1 = M('data');
-				$school = $school_1->field('schooling')->where($dataa)->find();
-				$dataa['school'] = $school['schooling'];
-				$dataa['public'] = I('public');
- 				$dataa['content'] = I('name');
 				$dataa['time'] = date('Y-m-d H:i:s');
+
 				if($dataa['content']){
-					$think_about = M('about');
-					$think_about->add($dataa);
+					
 				}
-			$this->redirect('Home/Home/Home/index');
+			//$this->redirect('Home/Home/Home/index');
 			}
 		}else{
 			//如果没有登录访问就提示这句话

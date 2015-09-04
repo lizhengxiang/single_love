@@ -56,7 +56,7 @@
 		</div>
   					<div class="col-md-5">
 							
-							<form class = "form-horizontal" action="/single_love/index.php/Home/About/About/index" enctype = "multipart/form-data" method="POST">
+<form class = "form-horizontal" action="book" enctype = "multipart/form-data" method="POST">
 <div class = "form-group">
 <label for = "inputphoto6" class = "col-md-3 control-label">学校</label>
 <div class = "col-md-8">
@@ -125,7 +125,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">數量</label>
 <div class = "col-md-8">
 <select class="form-control" name = "number">
-<?php $__FOR_START_1189068670__=1;$__FOR_END_1189068670__=5;for($i=$__FOR_START_1189068670__;$i < $__FOR_END_1189068670__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_554941133__=1;$__FOR_END_554941133__=5;for($i=$__FOR_START_554941133__;$i < $__FOR_END_554941133__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
@@ -134,7 +134,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">价格</label>
 <div class = "col-md-8">
 <select class="form-control " name = "price">
-<?php $__FOR_START_1757663125__=1;$__FOR_END_1757663125__=50;for($i=$__FOR_START_1757663125__;$i < $__FOR_END_1757663125__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_2013876381__=1;$__FOR_END_2013876381__=50;for($i=$__FOR_START_2013876381__;$i < $__FOR_END_2013876381__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
@@ -153,7 +153,7 @@
   													<div class="panel panel-default">
     												<div class="panel-heading" role="tab" id="headingOne6">
       												<h4 class="panel-title">
-        											<a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapseOne6" aria-expanded="true" aria-controls="collapseOne"><button type="button" class="btn btn-default btn-block">上传照片</button></a>
+       											<a role="button" data-toggle="collapse" data-parent="#accordion6" href="#collapseOne6" aria-expanded="true" aria-controls="collapseOne"><button type="button" class="btn btn-default btn-block">上传图片</button></a>
       												</h4>
     												</div>
     												<div id="collapseOne6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -161,18 +161,18 @@
 													<div id="content">
 
 													<fieldset>
- 	 												<label for="user_pic">照片一:</label>
+ 	 												<label for="user_pic">图片一:</label>
  	 												<input type="file" name="user_pic[]" size="30" /><br />
  													</fieldset>
  													<br />
 
 													<fieldset>
-        											<label for="user_pic">照片二:</label> 
+        											<label for="user_pic">图片二:</label> 
         											<input type="file" name="user_pic[]" size="30" /><br />
       												</fieldset>
       												<br />
 													<fieldset>
-        											<label for="user_pic">照片三:</label> 
+        											<label for="user_pic">图片三:</label> 
         											<input type="file" name="user_pic[]" size="30" /><br />
       												</fieldset>
 
