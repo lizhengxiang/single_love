@@ -61,7 +61,7 @@
 <div class="row">
 <div class="col-md-12">
 <table class="table table-bordered">
-<tr class ="success">
+<tr class ="info">
 <td>
 <div class="row">
 <div class = "col-md-2">
@@ -103,7 +103,7 @@
 </form>
 
 <table class="table table-bordered">
-<tr class ="success">
+<tr class ="info">
 <td>
 
 <div class="col-md-1"></div>
@@ -117,18 +117,12 @@
 <tr class = "default">
 <td>-->
 <div class="row">
-<div class="col-md-3"></div>
-<div>
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"></li>
-</ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_1478734852__=0;$__FOR_END_1478734852__=$count;for($i=$__FOR_START_1478734852__;$i < $__FOR_END_1478734852__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1109311699__=0;$__FOR_END_1109311699__=$count;for($i=$__FOR_START_1109311699__;$i < $__FOR_END_1109311699__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
