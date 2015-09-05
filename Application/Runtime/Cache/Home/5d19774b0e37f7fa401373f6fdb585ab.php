@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_1291687995__=0;$__FOR_END_1291687995__=$count['count'];for($i=$__FOR_START_1291687995__;$i < $__FOR_END_1291687995__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_664015522__=0;$__FOR_END_664015522__=$count['count'];for($i=$__FOR_START_664015522__;$i < $__FOR_END_664015522__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($count["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($count["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -154,7 +154,7 @@
 <div class="row">
 <div class="col-md-12"> 
 
-<?php $__FOR_START_1996629085__=0;$__FOR_END_1996629085__=$send['count'];for($i=$__FOR_START_1996629085__;$i < $__FOR_END_1996629085__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_884237930__=0;$__FOR_END_884237930__=$send['count'];for($i=$__FOR_START_884237930__;$i < $__FOR_END_884237930__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($send["email"][$i]["members_id_b"]); ?>"><img src="<?php echo ($send["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -229,7 +229,7 @@
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12"> 
-<?php $__FOR_START_925840507__=0;$__FOR_END_925840507__=$read['count'];for($i=$__FOR_START_925840507__;$i < $__FOR_END_925840507__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_430078847__=0;$__FOR_END_430078847__=$read['count'];for($i=$__FOR_START_430078847__;$i < $__FOR_END_430078847__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($read["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($read["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
