@@ -73,7 +73,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_982033837__=0;$__FOR_END_982033837__=$count;for($i=$__FOR_START_982033837__;$i < $__FOR_END_982033837__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1203790801__=0;$__FOR_END_1203790801__=$count;for($i=$__FOR_START_1203790801__;$i < $__FOR_END_1203790801__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -281,7 +281,7 @@
 
 </div>
 <div role="tabpanel" class="tab-pane" id="messages">
-<?php $__FOR_START_280920862__=0;$__FOR_END_280920862__=$count1;for($i=$__FOR_START_280920862__;$i < $__FOR_END_280920862__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_70842729__=0;$__FOR_END_70842729__=$count1;for($i=$__FOR_START_70842729__;$i < $__FOR_END_70842729__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

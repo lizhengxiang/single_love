@@ -37,16 +37,22 @@ class ShowBookController extends Controller {
 				}else if($type != NULL AND $username == NULL){
 					$map['school'] = $school;
 					$map['type'] = $type;
-                    dump($showbook = $think_book->where($map)->select());
+                    $goods['var'] = $think_book->where($map)->select();
+					$goods['count'] = $think_book->where($map)->count();
+					$this->assign('goods', $goods);
 				}else if($type == NULL AND $username != NULL){
 					$map['bookname'] = array('like', '%'.$username.'%');
 					$map['school'] = $school;
-                   	dump($showbook = $think_book->where($map)->select());
+                   	$goods['var'] = $think_book->where($map)->select();
+					$goods['count'] = $think_book->where($map)->count();
+					$this->assign('goods', $goods);
 				}else if($type != NULL AND $username != NULL){
 					$map['school'] = $school;
 					$map['type'] = $type;
 					$map['bookname'] = array('like', '%'.$username.'%');
-					dump($showbook = $think_book->where($map)->select());
+					$goods['var'] = $think_book->where($map)->select();
+					$goods['count'] = $think_book->where($map)->count();
+					$this->assign('goods', $goods);
 				}
 				$this->display('Personal/Personal/mode/showbook');
 			}
