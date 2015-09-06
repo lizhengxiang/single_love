@@ -105,7 +105,7 @@
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">处理</button>
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">接收订单</button>
 </div>
 <div class="col-md-6">
 
@@ -201,7 +201,7 @@
 
  </div></div></div>
 	<div class="modal-footer">
-		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Book/Showorder/book/bookid/{$count["var"][$i]["id"]}" role="button">确认处理</a>
+		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Book/Showorder/book/bookid/{$count["var"][$i]["id"]}" role="button">确认接收</a>
       </div>
     </div>
   </div>
@@ -229,26 +229,24 @@
 <div class="row">
 <div class="col-md-12"> 
 
-<for tart = "0" end = "$send['count']">
+
+<for start = "0" end = "$count1['count']">
 <div class="row">
 <div class="col-md-3">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$send["email"][$i]["members_id_b"]}"><img src="{$send["photo"][$i]["head_ptoto"]}" alt="..." class="img-rounded"  width="100%" height="100"></a>
+<img src="{$count1["book"][$i][0]["pic1"]}" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
 <div class="col-md-1"></div>
 <div class="col-md-4">
 <div class = "row">
 	<div class="col-md-12">&nbsp;</div>
 	<div class="col-md-12">
-		ID:{$send["email"][$i]["members_id_b"]}
+		商品名:{$count1["book"][$i][0]["bookname"]}
 	</div>
 	<div class="col-md-12">
-		发送时间:{$send["email"][$i]["time_a"]}
+		处理时间:{$count1["var"][$i]["time_b"]}
 	</div>
 	<div class="col-md-12">
-		对方:
-		<if condition = "$send['email'][$i]['state']"> 已读
-		<else/>未读
-		</if>
+		已处理
 	</div>
 </div>
 </div>
@@ -257,90 +255,13 @@
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo">看信</button>
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal3{$i}" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
 <a class="btn btn-warning" href="#" role="button">删除</a>
 </div>
 </div>
-<div class="modal fade" id="exampleModal1{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">查看信件</h4>
-      </div>
-		<div class = "row">
-			<div class="col-md-12">&nbsp;</div>
-			<div class="col-md-12">ID:{$send["email"][$i]["members_id_b"]}</div>
-			<div class="col-md-12">发送时间:{$send["email"][$i]["time_a"]}</div>
-			<div class="col-md-12">正文:</div>
-			<div class="col-md-12">
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$send["email"][$i]["content"]}</p>
-			</div>
-		</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-&nbsp;
-</div>
-</div>
-</for>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-<div role="tabpanel" class="tab-pane" id="profile">
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-10">
-<div class="row">
-<div class="col-md-12"> 
-
-
-<for start = "0" end = "$count['count']">
-<div class="row">
-<div class="col-md-3">
-<img src="{$count["book"][$i][0]["pic1"]}" alt="..." class="img-rounded"  width="100%" height="100">
-</div>
-<div class="col-md-1"></div>
-<div class="col-md-4">
-<div class = "row">
-	<div class="col-md-12">&nbsp;</div>
-	<div class="col-md-12">
-		商品名:{$count["book"][$i][0]["bookname"]}
-	</div>
-	<div class="col-md-12">
-		订单时间:{$count["var"][$i]["time_a"]}
-	</div>
-	<div class="col-md-12">
-		未处理
-	</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class = "row">
-<div class="col-md-12">&nbsp;</div>
-<div class="col-md-12">&nbsp;</div>
-<div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">处理</button>
-</div>
-<div class="col-md-6">
-
-</div>
-</div>
-<div class="modal fade" id="exampleModal2{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="exampleModal3{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -356,23 +277,23 @@
   </ol>
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-	<if condition ="$count['book'][$i][0]['pic1']">
+	<if condition ="$count1['book'][$i][0]['pic1']">
     <div class="item active">
-      <img src="{$count['book'][$i][0]['pic1']}" alt="...">
+      <img src="{$count1['book'][$i][0]['pic1']}" alt="...">
       <div class="carousel-caption">
       </div>
     </div>
 	</if>
-	<if condition ="$count['book'][$i][0]['pic2']">
+	<if condition ="$count1['book'][$i][0]['pic2']">
     <div class="item">
-      <img src="{$count['book'][$i][0]['pic2']}" alt="...">
+      <img src="{$count1['book'][$i][0]['pic2']}" alt="...">
       <div class="carousel-caption">
       </div>
     </div>
 	</if>
-	<if condition ="$count['book'][$i][0]['pic3']">
+	<if condition ="$count1['book'][$i][0]['pic3']">
 	<div class="item">
-		<img src="{$count['book'][$i][0]['pic3']}" alt="...">
+		<img src="{$count1['book'][$i][0]['pic3']}" alt="...">
 		<div class="carousel-caption">
        	</div>
 	</div>
@@ -391,47 +312,199 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-商品名:{$count["book"][$i][0]["bookname"]}
+商品名:{$count1["book"][$i][0]["bookname"]}
 </div>
 <div class="col-md-4 text-center">
-作者:{$count["book"][$i][0]["author"]}
+作者:{$count1["book"][$i][0]["author"]}
 </div>
 <div class="col-md-2 text-center">
-剩余量:{$count["book"][$i][0]["number"]}
+剩余量:{$count1["book"][$i][0]["number"]}
 </div>
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$count["book"][$i][0]["press"]}
+出版社:{$count1["book"][$i][0]["press"]}
 </div>
 <div class="col-md-4 text-center">
-分类:{$count["book"][$i][0]["type"]}
+分类:{$count1["book"][$i][0]["type"]}
 </div>
 <div class="col-md-2 text-center">
-价格:&yen;{$count["book"][$i][0]["price"]}
+价格:&yen;{$count1["book"][$i][0]["price"]}
 </div>
 <div class="row">
 <div class="col-md-12">
-学校:{$count["var"][$i]["school"]}
+学校:{$count1["var"][$i]["school"]}
 </div>
 </div>
 
 <div class="row">
 <div class="col-md-12">
-地址:{$count["var"][$i]["home"]}
+地址:{$count1["var"][$i]["home"]}
 </div>
 </div>
 
 <div class="row">
 <div class="col-md-12">
-电话:{$count["var"][$i]["tel"]}
+电话:{$count1["var"][$i]["tel"]}
 </div>
 </div>
 
  </div></div></div>
 	<div class="modal-footer">
-		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Book/Showorder/book/bookid/{$count["var"][$i]["id"]}" role="button">确认处理</a>
+    	<button type="button" class="btn btn-info" data-dismiss="modal">关闭</button> 
+	 </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+&nbsp;
+</div>
+</div>
+</for>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div role="tabpanel" class="tab-pane" id="profile">
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<div class="row">
+<div class="col-md-12"> 
+
+
+<for start = "0" end = "$count1['count']">
+<div class="row">
+<div class="col-md-3">
+<img src="{$count1["book"][$i][0]["pic1"]}" alt="..." class="img-rounded"  width="100%" height="100">
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-4">
+<div class = "row">
+	<div class="col-md-12">&nbsp;</div>
+	<div class="col-md-12">
+		商品名:{$count1["book"][$i][0]["bookname"]}
+	</div>
+	<div class="col-md-12">
+		处理时间:{$count1["var"][$i]["time_b"]}
+	</div>
+	<div class="col-md-12">
+		已处理
+	</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class = "row">
+<div class="col-md-12">&nbsp;</div>
+<div class="col-md-12">&nbsp;</div>
+<div class="col-md-6">
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal3{$i}" data-whatever="@mdo">查看</button>
+</div>
+<div class="col-md-6">
+<a class="btn btn-warning" href="#" role="button">删除</a>
+</div>
+</div>
+<div class="modal fade" id="exampleModal3{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">订单信息</h4>
+		<div class="modal-footer">
+<div id="carousel-example-generic1{$i}" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	<if condition ="$count1['book'][$i][0]['pic1']">
+    <div class="item active">
+      <img src="{$count1['book'][$i][0]['pic1']}" alt="...">
+      <div class="carousel-caption">
       </div>
+    </div>
+	</if>
+	<if condition ="$count1['book'][$i][0]['pic2']">
+    <div class="item">
+      <img src="{$count1['book'][$i][0]['pic2']}" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div>
+	</if>
+	<if condition ="$count1['book'][$i][0]['pic3']">
+	<div class="item">
+		<img src="{$count1['book'][$i][0]['pic3']}" alt="...">
+		<div class="carousel-caption">
+       	</div>
+	</div>
+	</if>	
+	</div>
+<!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="prev">
+
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="row">
+<div class="col-md-6 text-center">
+商品名:{$count1["book"][$i][0]["bookname"]}
+</div>
+<div class="col-md-4 text-center">
+作者:{$count1["book"][$i][0]["author"]}
+</div>
+<div class="col-md-2 text-center">
+剩余量:{$count1["book"][$i][0]["number"]}
+</div>
+</div>
+<div class="row">
+<div class="col-md-6 text-center">
+出版社:{$count1["book"][$i][0]["press"]}
+</div>
+<div class="col-md-4 text-center">
+分类:{$count1["book"][$i][0]["type"]}
+</div>
+<div class="col-md-2 text-center">
+价格:&yen;{$count1["book"][$i][0]["price"]}
+</div>
+<div class="row">
+<div class="col-md-12">
+学校:{$count1["var"][$i]["school"]}
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+地址:{$count1["var"][$i]["home"]}
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+电话:{$count1["var"][$i]["tel"]}
+</div>
+</div>
+
+ </div></div></div>
+	<div class="modal-footer">
+    	<button type="button" class="btn btn-info" data-dismiss="modal">关闭</button> 
+	 </div>
     </div>
   </div>
 </div>

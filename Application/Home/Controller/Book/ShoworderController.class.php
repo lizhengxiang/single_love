@@ -13,7 +13,7 @@ class ShoworderController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-				//获取订单
+				//获取订单(未处理订单)
 				$think_order = M('order');
 				$map_a['members_id_b'] = cookie('user');
 				$map_a['tag'] = 0;
@@ -28,20 +28,32 @@ class ShoworderController extends Controller {
 				//dump($order);
 				$this->assign('count',$order);
 
-
+				//已处理订单
 				$map_a['members_id_b'] = cookie('user');
 				$map_a['tag'] = 1;
-				$order1['var'] = $think_order->where($map_a)->order('time_a desc')->select();
+				$order1['var'] = $think_order->where($map_a)->order('time_b desc')->select();
 				$order1['count'] = $think_order->where($map_a)->count();
-				//取出书的信息
+				//取出书的信息(已处理订单)
 				$think_book = M('book');
 				for($i = 0; $i < $order1['count']; $i++){
 					$map_b['id'] = $order1['var'][$i]['bookid'];
 					$order1['book'][$i] = $think_book->where($map_b)->select();
 				}
-				//dump($order);
 				$this->assign('count1',$order1);
 
+				//我的订单
+				$map_a1['members_id_a'] = cookie('user');
+				$order2['var'] = $think_order->where($map_a1)->order('time_a desc')->select();
+				$order2['count'] = $think_order->where($map_a1)->count();
+				//取出书的信息(已处理订单)
+				$think_book = M('book');
+				for($i = 0; $i < $order2['count']; $i++){
+					$map_b['id'] = $order2['var'][$i]['bookid'];
+					$order2['book'][$i] = $think_book->where($map_b)->select();
+				}
+				$this->assign('count2',$order2);
+
+				
 				$this->display('Personal/Personal/mode/order');
 			}
 		}else{
