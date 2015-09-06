@@ -30,17 +30,17 @@ class ShoworderController extends Controller {
 
 
 				$map_a['members_id_b'] = cookie('user');
-				$map_a['tag'] = 1;
-				$order1['var'] = $think_order->where($map_a)->order('time_a desc')->select();
-				$order1['count'] = $think_order->where($map_a)->count();
+				$map_a['tag'] = 0;
+				$order['var'] = $think_order->where($map_a)->order('time_a desc')->select();
+				$order['count'] = $think_order->where($map_a)->count();
 				//取出书的信息
 				$think_book = M('book');
-				for($i = 0; $i < $order1['count']; $i++){
-					$map_b['id'] = $order1['var'][$i]['bookid'];
-					$order1['book'][$i] = $think_book->where($map_b)->select();
+				for($i = 0; $i < $order['count']; $i++){
+					$map_b['id'] = $order['var'][$i]['bookid'];
+					$order['book'][$i] = $think_book->where($map_b)->select();
 				}
 				//dump($order);
-				$this->assign('count1',$order1);
+				$this->assign('count',$order);
 
 				$this->display('Personal/Personal/mode/order');
 			}
@@ -61,8 +61,7 @@ class ShoworderController extends Controller {
 				$think_order = M('order');
 				$map_a['id'] = $bookid;
 				$mapp['tag'] = 1;
-				$mapp['time_b'] = date('Y-m-d H:i:s');
-				$think_order->where($map_a)->field('tag,time_b')->save($mapp);
+				$think_order->where($map_a)->field('tag')->save($mapp);
 				$this->redirect('Home/Book/Showorder/index');		
 			}
 		}else{

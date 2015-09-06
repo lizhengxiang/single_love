@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_167648016__=0;$__FOR_END_167648016__=$count['count'];for($i=$__FOR_START_167648016__;$i < $__FOR_END_167648016__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_2144649565__=0;$__FOR_END_2144649565__=$count['count'];for($i=$__FOR_START_2144649565__;$i < $__FOR_END_2144649565__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($count["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($count["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -154,7 +154,7 @@
 <div class="row">
 <div class="col-md-12"> 
 
-<?php $__FOR_START_375094614__=0;$__FOR_END_375094614__=$send['count'];for($i=$__FOR_START_375094614__;$i < $__FOR_END_375094614__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_89522805__=0;$__FOR_END_89522805__=$send['count'];for($i=$__FOR_START_89522805__;$i < $__FOR_END_89522805__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($send["email"][$i]["members_id_b"]); ?>"><img src="<?php echo ($send["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -229,7 +229,7 @@
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12"> 
-<?php $__FOR_START_419428323__=0;$__FOR_END_419428323__=$read['count'];for($i=$__FOR_START_419428323__;$i < $__FOR_END_419428323__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_100746947__=0;$__FOR_END_100746947__=$read['count'];for($i=$__FOR_START_100746947__;$i < $__FOR_END_100746947__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($read["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($read["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>

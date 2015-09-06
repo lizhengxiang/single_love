@@ -35,7 +35,7 @@ class BookController extends Controller {
 				$dataa['type'] = I('type');
 				$dataa['bookname'] = I('bookname');
 				$dataa['author'] = I('author');
-				echo $dataa['press'] = I('press');
+				$dataa['press'] = I('press');
 				$dataa['number'] = I('number');
 				$dataa['price'] = I('price');
 				$dataa['members_id'] = cookie('user');			
@@ -53,19 +53,19 @@ class BookController extends Controller {
 				}else{// 上传成功
 					//获取六张照片的路勁
 					if($info[0]["savename"]){
-						echo $dataa['pic1'] = 'https://localhost/single_love/Uploads/'.$info[0]['savepath'].$info[0]["savename"];
+						$dataa['pic1'] = 'https://localhost/single_love/Uploads/'.$info[0]['savepath'].$info[0]["savename"];
 					}else{
-						$dataa['pic_1'] = '0';
+						$dataa['pic1'] = '0';
 					}
 					if($info[1]["savename"]){
-						echo $dataa['pic2'] = 'https://localhost/single_love/Uploads/'.$info[1]['savepath'].$info[1]["savename"];
+						$dataa['pic2'] = 'https://localhost/single_love/Uploads/'.$info[1]['savepath'].$info[1]["savename"];
 					}else{
-						echo $dataa['pic_2'] = '0';
+						$dataa['pic2'] = '0';
 					}
 					if($info[2]["savename"]){
-						echo $dataa['pic3'] = 'https://localhost/single_love/Uploads/'.$info[2]['savepath'].$info[2]["savename"];
+						$dataa['pic3'] = 'https://localhost/single_love/Uploads/'.$info[2]['savepath'].$info[2]["savename"];
 					}else{
-						$dataa['pic_3'] = '0';
+						$dataa['pic3'] = '0';
 					}
 				}
 				$dataa['time'] = date('Y-m-d H:i:s');

@@ -83,7 +83,7 @@ class ShowBookController extends Controller {
 				$think_order->data($map)->add();
 				//数量减一
 				$think_book = M('book');
-				$map_book['id'] = $map['bookid'];
+				$map_book['id'] = $map_a['bookid'];
 				$book_num = $think_book->where($map_book)->field('number')->find();
 				$book_number['number'] = $book_num['number'] - 1;
 				$book_num = $think_book->where($map_book)->field('number')->save($book_number);

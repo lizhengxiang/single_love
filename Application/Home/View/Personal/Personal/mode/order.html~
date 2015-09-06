@@ -105,7 +105,7 @@
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">接收订单</button>
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">处理</button>
 </div>
 <div class="col-md-6">
 
@@ -201,7 +201,7 @@
 
  </div></div></div>
 	<div class="modal-footer">
-		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Book/Showorder/book/bookid/{$count["var"][$i]["id"]}" role="button">确认接收</a>
+		<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Book/Showorder/book/bookid/{$count["var"][$i]["id"]}" role="button">确认处理</a>
       </div>
     </div>
   </div>
@@ -309,23 +309,23 @@
 <div class="col-md-12"> 
 
 
-<for start = "0" end = "$count1['count']">
+<for start = "0" end = "$count['count']">
 <div class="row">
 <div class="col-md-3">
-<img src="{$count1["book"][$i][0]["pic1"]}" alt="..." class="img-rounded"  width="100%" height="100">
+<img src="{$count["book"][$i][0]["pic1"]}" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
 <div class="col-md-1"></div>
 <div class="col-md-4">
 <div class = "row">
 	<div class="col-md-12">&nbsp;</div>
 	<div class="col-md-12">
-		商品名:{$count1["book"][$i][0]["bookname"]}
+		商品名:{$count["book"][$i][0]["bookname"]}
 	</div>
 	<div class="col-md-12">
-		处理时间:{$count1["var"][$i]["time_b"]}
+		订单时间:{$count["var"][$i]["time_a"]}
 	</div>
 	<div class="col-md-12">
-		已处理
+		未处理
 	</div>
 </div>
 </div>
@@ -334,13 +334,13 @@
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-12">&nbsp;</div>
 <div class="col-md-6">
-	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal3{$i}" data-whatever="@mdo">查看</button>
+	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2{$i}" data-whatever="@mdo">处理</button>
 </div>
 <div class="col-md-6">
 
 </div>
 </div>
-<div class="modal fade" id="exampleModal3{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade" id="exampleModal2{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -356,23 +356,23 @@
   </ol>
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-	<if condition ="$count1['book'][$i][0]['pic1']">
+	<if condition ="$count['book'][$i][0]['pic1']">
     <div class="item active">
-      <img src="{$count1['book'][$i][0]['pic1']}" alt="...">
+      <img src="{$count['book'][$i][0]['pic1']}" alt="...">
       <div class="carousel-caption">
       </div>
     </div>
 	</if>
-	<if condition ="$count1['book'][$i][0]['pic2']">
+	<if condition ="$count['book'][$i][0]['pic2']">
     <div class="item">
-      <img src="{$count1['book'][$i][0]['pic2']}" alt="...">
+      <img src="{$count['book'][$i][0]['pic2']}" alt="...">
       <div class="carousel-caption">
       </div>
     </div>
 	</if>
-	<if condition ="$count1['book'][$i][0]['pic3']">
+	<if condition ="$count['book'][$i][0]['pic3']">
 	<div class="item">
-		<img src="{$count1['book'][$i][0]['pic3']}" alt="...">
+		<img src="{$count['book'][$i][0]['pic3']}" alt="...">
 		<div class="carousel-caption">
        	</div>
 	</div>
@@ -391,40 +391,40 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-商品名:{$count1["book"][$i][0]["bookname"]}
+商品名:{$count["book"][$i][0]["bookname"]}
 </div>
 <div class="col-md-4 text-center">
-作者:{$count1["book"][$i][0]["author"]}
+作者:{$count["book"][$i][0]["author"]}
 </div>
 <div class="col-md-2 text-center">
-剩余量:{$count1["book"][$i][0]["number"]}
+剩余量:{$count["book"][$i][0]["number"]}
 </div>
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$count1["book"][$i][0]["press"]}
+出版社:{$count["book"][$i][0]["press"]}
 </div>
 <div class="col-md-4 text-center">
-分类:{$count1["book"][$i][0]["type"]}
+分类:{$count["book"][$i][0]["type"]}
 </div>
 <div class="col-md-2 text-center">
-价格:&yen;{$count1["book"][$i][0]["price"]}
+价格:&yen;{$count["book"][$i][0]["price"]}
 </div>
 <div class="row">
 <div class="col-md-12">
-学校:{$count1["var"][$i]["school"]}
+学校:{$count["var"][$i]["school"]}
 </div>
 </div>
 
 <div class="row">
 <div class="col-md-12">
-地址:{$count1["var"][$i]["home"]}
+地址:{$count["var"][$i]["home"]}
 </div>
 </div>
 
 <div class="row">
 <div class="col-md-12">
-电话:{$count1["var"][$i]["tel"]}
+电话:{$count["var"][$i]["tel"]}
 </div>
 </div>
 
