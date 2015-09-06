@@ -69,9 +69,10 @@ class BookController extends Controller {
 					}
 				}
 				$dataa['time'] = date('Y-m-d H:i:s');
+				$dataa['abc'] = 0;
 				$think_book = M('book');
 				$think_book->data($dataa)->add();
-			//$this->redirect('Home/Home/Home/index');
+			$this->redirect('Home/Book/Showorder/index');
 			}
 		}else{
 			//如果没有登录访问就提示这句话

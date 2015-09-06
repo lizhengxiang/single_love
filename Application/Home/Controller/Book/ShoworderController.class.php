@@ -52,8 +52,14 @@ class ShoworderController extends Controller {
 					$order2['book'][$i] = $think_book->where($map_b)->select();
 				}
 				$this->assign('count2',$order2);
-
 				
+				//我的商品
+				$think_book = M('book');
+				$map_b2['members_id'] = cookie('user');
+				$order3['book'] = $think_book->where($map_b2)->select();
+				$order3['count'] = $think_book->where($map_b2)->count();
+				$this->assign('count3',$order3);
+				dump($order3);
 				$this->display('Personal/Personal/mode/order');
 			}
 		}else{
