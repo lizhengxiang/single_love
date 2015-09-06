@@ -139,7 +139,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_2112419183__=0;$__FOR_END_2112419183__=$goods['count'];for($i=$__FOR_START_2112419183__;$i < $__FOR_END_2112419183__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1304849577__=0;$__FOR_END_1304849577__=$goods['count'];for($i=$__FOR_START_1304849577__;$i < $__FOR_END_1304849577__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -294,7 +294,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="<?php echo ($goods['var'][$i]['members_id']); ?>" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="<?php echo ($goods['var'][$i]['id']); ?>" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -459,6 +460,176 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
+<input type="text" class="form-control input-lg" name="members" value ="<?php echo ($goods['var'][$i]['members_id']); ?>" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="<?php echo ($goods['var'][$i]['id']); ?>" style = "display:none">
+<div class = "row">
+<div class = "col-md-12">
+<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
+</div>
+</div>
+</form>
+
+
+
+			<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		</div>
+      </div>
+    </div>
+  </div>
+</div><?php endif; ?>
+
+
+
+<?php if($goods['var'][++$i]['pic1'] != NULL): ?><div class="col-md-2">
+<div class="row">
+<div class="col-md-12">
+<img src="<?php echo ($goods['var'][$i]['pic1']); ?>"  alt = "<?php echo ($goods['var'][$i]['bookname']); ?>dddd" class="img-rounded"  width="100%" height="150"/></a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 text-center">
+<?php echo ($goods['var'][$i]['bookname']); ?>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 text-center">
+&yen;<?php echo ($goods['var'][$i]['price']); ?>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12 text-center">
+<?php echo ($goods['var'][$i]['school']); ?>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6 text-center">
+<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo">详细信息</button>
+</div>
+<div class="col-md-6 text-center">
+<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#exampleModal2<?php echo ($i); ?>" data-whatever="@mdo">购买商品</button>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="exampleModal1<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">相册</h4>
+		<div class="modal-footer">
+<div id="carousel-example-generic1<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+	<?php if($goods['var'][$i]['pic1']): ?><div class="item active">
+      <img src="<?php echo ($goods['var'][$i]['pic1']); ?>" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div><?php endif; ?>
+	<?php if($goods['var'][$i]['pic2']): ?><div class="item">
+      <img src="<?php echo ($goods['var'][$i]['pic2']); ?>" alt="...">
+      <div class="carousel-caption">
+      </div>
+    </div><?php endif; ?>
+	<?php if($goods['var'][$i]['pic3']): ?><div class="item">
+		<img src="<?php echo ($goods['var'][$i]['pic3']); ?>" alt="...">
+		<div class="carousel-caption">
+       	</div>
+	</div><?php endif; ?>	
+	</div>
+
+<!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="row">
+<div class="col-md-6 text-center">
+商品名:<?php echo ($goods['var'][$i]['bookname']); ?>
+</div>
+<div class="col-md-4 text-center">
+作者:<?php echo ($goods['var'][$i]['author']); ?>
+</div>
+<div class="col-md-2 text-center">
+數量:<?php echo ($goods['var'][$i]['number']); ?>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6 text-center">
+出版社:<?php echo ($goods['var'][$i]['press']); ?>
+</div>
+<div class="col-md-4 text-center">
+分类:<?php echo ($goods['var'][$i]['type']); ?>
+</div>
+<div class="col-md-2 text-center">
+价格:&yen;<?php echo ($goods['var'][$i]['price']); ?>
+</div>
+</div>
+			<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($goods['var'][$i]['members_id']); ?>" role="button">举报</a>
+			<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal2<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">购买商品</h4>
+		<div class="modal-footer">
+
+
+<form class="form-horizontal" action="book" method = "post">
+<div class = "row">
+<div class = "col-md-5">
+<select class="form-control input-lg" name = "provinces">
+<option>四川</option>
+</select>
+</div>
+<div class = "col-md-7">
+<select class="form-control input-lg" name = "school">
+  <option>西南民族大学</option>
+  <option>成都信息工程大学</option>
+  <option>四川大学</option>
+  <option>电子科技大学</option>
+  <option>西南财经大学</option>
+</select>
+</div>
+</div>
+<div class = "col-md-12">&nbsp;</div>
+<div class = "row">
+<div class = "col-md-12">
+<input type="text" class="form-control input-lg" name="place" id="inputEmail3" placeholder="详细地址" required>
+</div>
+</div>
+ <div class = "col-md-12">&nbsp;</div>
+
+<div class = "row">
+<div class = "col-md-12">
+<input type="text" class="form-control input-lg" name="tel" id="inputEmail3" placeholder="联系电话" required>
+</div>
+</div>
+<div class = "col-md-12">&nbsp;</div>
+<input type="text" class="form-control input-lg" name="members" value ="<?php echo ($goods['var'][$i]['members_id']); ?>" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="<?php echo ($goods['var'][$i]['id']); ?>" style = "display:none">
 
 <div class = "row">
 <div class = "col-md-12">
@@ -478,173 +649,6 @@
 
 
 
-<?php if($goods['var'][++$i]['pic1'] != NULL): ?><div class="col-md-2">
-<div class="row">
-<div class="col-md-12">
-<img src="<?php echo ($goods['var'][$i]['pic1']); ?>"  alt = "<?php echo ($goods['var'][$i]['bookname']); ?>dddd" class="img-rounded"  width="100%" height="150"/></a>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12 text-center">
-<?php echo ($goods['var'][$i]['bookname']); ?>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12 text-center">
-&yen;<?php echo ($goods['var'][$i]['price']); ?>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12 text-center">
-<?php echo ($goods['var'][$i]['school']); ?>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-6 text-center">
-<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#exampleModal1<?php echo ($i); ?>" data-whatever="@mdo">详细信息</button>
-</div>
-<div class="col-md-6 text-center">
-<button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#exampleModal2<?php echo ($i); ?>" data-whatever="@mdo">购买商品</button>
-</div>
-</div>
-</div>
-
-<div class="modal fade" id="exampleModal1<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">相册</h4>
-		<div class="modal-footer">
-<div id="carousel-example-generic1<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-	<?php if($goods['var'][$i]['pic1']): ?><div class="item active">
-      <img src="<?php echo ($goods['var'][$i]['pic1']); ?>" alt="...">
-      <div class="carousel-caption">
-      </div>
-    </div><?php endif; ?>
-	<?php if($goods['var'][$i]['pic2']): ?><div class="item">
-      <img src="<?php echo ($goods['var'][$i]['pic2']); ?>" alt="...">
-      <div class="carousel-caption">
-      </div>
-    </div><?php endif; ?>
-	<?php if($goods['var'][$i]['pic3']): ?><div class="item">
-		<img src="<?php echo ($goods['var'][$i]['pic3']); ?>" alt="...">
-		<div class="carousel-caption">
-       	</div>
-	</div><?php endif; ?>	
-	</div>
-
-<!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<div class="row">
-<div class="col-md-6 text-center">
-商品名:<?php echo ($goods['var'][$i]['bookname']); ?>
-</div>
-<div class="col-md-4 text-center">
-作者:<?php echo ($goods['var'][$i]['author']); ?>
-</div>
-<div class="col-md-2 text-center">
-數量:<?php echo ($goods['var'][$i]['number']); ?>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-6 text-center">
-出版社:<?php echo ($goods['var'][$i]['press']); ?>
-</div>
-<div class="col-md-4 text-center">
-分类:<?php echo ($goods['var'][$i]['type']); ?>
-</div>
-<div class="col-md-2 text-center">
-价格:&yen;<?php echo ($goods['var'][$i]['price']); ?>
-</div>
-</div>
-			<a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($goods['var'][$i]['members_id']); ?>" role="button">举报</a>
-			<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-		</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="exampleModal2<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">购买商品</h4>
-		<div class="modal-footer">
-
-
-<form class="form-horizontal" action="book" method = "post">
-<div class = "row">
-<div class = "col-md-5">
-<select class="form-control input-lg" name = "provinces">
-<option>四川</option>
-</select>
-</div>
-<div class = "col-md-7">
-<select class="form-control input-lg" name = "school">
-  <option>西南民族大学</option>
-  <option>成都信息工程大学</option>
-  <option>四川大学</option>
-  <option>电子科技大学</option>
-  <option>西南财经大学</option>
-</select>
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-<div class = "row">
-<div class = "col-md-12">
-<input type="text" class="form-control input-lg" name="place" id="inputEmail3" placeholder="详细地址" required>
-</div>
-</div>
- <div class = "col-md-12">&nbsp;</div>
-
-<div class = "row">
-<div class = "col-md-12">
-<input type="text" class="form-control input-lg" name="tel" id="inputEmail3" placeholder="联系电话" required>
-</div>
-</div>
-<div class = "col-md-12">&nbsp;</div>
-
-<div class = "row">
-<div class = "col-md-12">
-<p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
-</div>
-</div>
-</form>
-
-
-
-			<button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
-		</div>
-      </div>
-    </div>
-  </div>
-</div><?php endif; ?>
-
-
-
 
 
 <?php if($goods['var'][++$i]['pic1'] != NULL): ?><div class="col-md-2">
@@ -795,7 +799,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="<?php echo ($goods['var'][$i]['members_id']); ?>" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="<?php echo ($goods['var'][$i]['id']); ?>" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -959,7 +964,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="<?php echo ($goods['var'][$i]['members_id']); ?>" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="<?php echo ($goods['var'][$i]['id']); ?>" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -1125,7 +1131,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="<?php echo ($goods['var'][$i]['members_id']); ?>" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="<?php echo ($goods['var'][$i]['id']); ?>" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>

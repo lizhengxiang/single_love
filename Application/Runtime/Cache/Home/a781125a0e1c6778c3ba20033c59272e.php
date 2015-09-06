@@ -125,7 +125,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">數量</label>
 <div class = "col-md-8">
 <select class="form-control" name = "number">
-<?php $__FOR_START_424496792__=1;$__FOR_END_424496792__=5;for($i=$__FOR_START_424496792__;$i < $__FOR_END_424496792__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1587135685__=1;$__FOR_END_1587135685__=5;for($i=$__FOR_START_1587135685__;$i < $__FOR_END_1587135685__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
@@ -134,7 +134,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">价格</label>
 <div class = "col-md-8">
 <select class="form-control " name = "price">
-<?php $__FOR_START_1971252086__=1;$__FOR_END_1971252086__=50;for($i=$__FOR_START_1971252086__;$i < $__FOR_END_1971252086__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1152350690__=1;$__FOR_END_1152350690__=50;for($i=$__FOR_START_1152350690__;$i < $__FOR_END_1152350690__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>

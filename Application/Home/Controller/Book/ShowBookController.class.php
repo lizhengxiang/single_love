@@ -64,8 +64,24 @@ class ShowBookController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-
-				//
+				//获取订单信息,然后插入数据库表.
+				$map['members_id_b'] = I('members');
+				$map['school'] = I('school');
+				$map['home'] = I('place');
+				$map['tel'] = I('tel');
+				$map['bookid'] = I('book_id');
+				$map['members_id_a'] = cookie('user');
+				$map['time_a'] = date('Y-m-d H:i:s');
+				$map['tag'] = 0;
+				$think_order = M('order');
+				$think_order->data($map)->add();
+				//数量减一
+				$think_book = M('book');
+				$map_book['id'] = $map['bookid'];
+				$book_num = $think_book->where($map_book)->field('number')->find();
+				$book_number['number'] = $book_num['number'] - 1;
+				$book_num = $think_book->where($map_book)->field('number')->save($book_number);
+				
 			}
 		}else{
 			//如果没有登录访问就提示这句话
