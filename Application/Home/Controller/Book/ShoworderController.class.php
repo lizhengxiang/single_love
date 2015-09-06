@@ -13,7 +13,19 @@ class ShoworderController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
-					
+				//获取订单
+				$think_order = M('order');
+				$map_a['members_id_b'] = cookie('user');
+				$map_a['tag'] = 0;
+				$order['var'] = $think_order->where($map_a)->select();
+				$order['count'] = $think_order->where($map_a)->count();
+				//取出书的信息
+				$think_book = M('book');
+				for($i = 0; $i < $order['count']; $i++){
+					$map_b['id'] = $order['var'][$i]['id'];
+					$order['book'][$i] = $think_book->where($map_b)->select();
+				}
+				dump($order);
 				$this->display('Personal/Personal/mode/order');
 			}
 		}else{
