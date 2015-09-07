@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_1135249984__=0;$__FOR_END_1135249984__=$count['count'];for($i=$__FOR_START_1135249984__;$i < $__FOR_END_1135249984__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1307094821__=0;$__FOR_END_1307094821__=$count['count'];for($i=$__FOR_START_1307094821__;$i < $__FOR_END_1307094821__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -222,7 +222,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1690010909__=0;$__FOR_END_1690010909__=$count2['count'];for($i=$__FOR_START_1690010909__;$i < $__FOR_END_1690010909__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1116518395__=0;$__FOR_END_1116518395__=$count2['count'];for($i=$__FOR_START_1116518395__;$i < $__FOR_END_1116518395__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count2["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -251,7 +251,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal4<?php echo ($i); ?>" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+
 </div>
 </div>
 <div class="modal fade" id="exampleModal4<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -261,7 +261,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">订单信息</h4>
 		<div class="modal-footer">
-<div id="carousel-example-generic1<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic4<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -287,12 +287,12 @@
 	</div><?php endif; ?>	
 	</div>
 <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel-example-generic4<?php echo ($i); ?>" role="button" data-slide="prev">
 
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-example-generic4<?php echo ($i); ?>" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -368,7 +368,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_300885125__=0;$__FOR_END_300885125__=$count1['count'];for($i=$__FOR_START_300885125__;$i < $__FOR_END_300885125__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1108433511__=0;$__FOR_END_1108433511__=$count1['count'];for($i=$__FOR_START_1108433511__;$i < $__FOR_END_1108433511__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count1["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -395,7 +395,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal3<?php echo ($i); ?>" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+<a class="btn btn-warning" href="https://localhost/single_love/index.php/Home/Book/Showorder/book_a/bookid/<?php echo ($count1["var"][$i]["id"]); ?>" role="button">删除</a>
 </div>
 </div>
 <div class="modal fade" id="exampleModal3<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -405,7 +405,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">订单信息</h4>
 		<div class="modal-footer">
-<div id="carousel-example-generic1<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic3<?php echo ($i); ?>" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -431,12 +431,12 @@
 	</div><?php endif; ?>	
 	</div>
 <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel-example-generic3<?php echo ($i); ?>" role="button" data-slide="prev">
 
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic1<?php echo ($i); ?>" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-example-generic3<?php echo ($i); ?>" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -514,7 +514,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_745837064__=0;$__FOR_END_745837064__=$count3['count'];for($i=$__FOR_START_745837064__;$i < $__FOR_END_745837064__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1187038555__=0;$__FOR_END_1187038555__=$count3['count'];for($i=$__FOR_START_1187038555__;$i < $__FOR_END_1187038555__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count3["book"][$i]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -526,10 +526,7 @@
 		商品名:<?php echo ($count3["book"][$i]["bookname"]); ?>
 	</div>
 	<div class="col-md-12">
-		处理时间:<?php echo ($count3["var"][$i]["time_b"]); ?>
-	</div>
-	<div class="col-md-12">
-		已处理
+		上传时间:<?php echo ($count3["book"][$i]["time"]); ?>
 	</div>
 </div>
 </div>
@@ -541,7 +538,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal5<?php echo ($i); ?>" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+<a class="btn btn-warning" href="https://localhost/single_love/index.php/Home/Book/Showorder/book_b/bookid/<?php echo ($count3['book'][$i]['id']); ?>" role="button">删除</a>
 </div>
 </div>
 <div class="modal fade" id="exampleModal5<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">

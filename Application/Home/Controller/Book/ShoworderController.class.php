@@ -31,6 +31,7 @@ class ShoworderController extends Controller {
 				//已处理订单
 				$map_a['members_id_b'] = cookie('user');
 				$map_a['tag'] = 1;
+				$map_a['abc'] = 0;
 				$order1['var'] = $think_order->where($map_a)->order('time_b desc')->select();
 				$order1['count'] = $think_order->where($map_a)->count();
 				//取出书的信息(已处理订单)
@@ -56,10 +57,11 @@ class ShoworderController extends Controller {
 				//我的商品
 				$think_book = M('book');
 				$map_b2['members_id'] = cookie('user');
+				$map_b2['abc'] = 0;
 				$order3['book'] = $think_book->where($map_b2)->select();
 				$order3['count'] = $think_book->where($map_b2)->count();
 				$this->assign('count3',$order3);
-				dump($order3);
+				//dump($order3);
 				$this->display('Personal/Personal/mode/order');
 			}
 		}else{
@@ -81,6 +83,49 @@ class ShoworderController extends Controller {
 				$mapp['tag'] = 1;
 				$mapp['time_b'] = date('Y-m-d H:i:s');
 				$think_order->where($map_a)->field('tag,time_b')->save($mapp);
+				$this->redirect('Home/Book/Showorder/index');		
+			}
+		}else{
+			//如果没有登录访问就提示这句话
+			$this->success('请您登录后再访问','/single_love/index.php/Home/Login/Login/index', 5);
+		}		
+	}
+
+	//删除已处理订单
+	public function book_a($bookid){
+		if($map_id['members_id'] = cookie('user')){
+			//根据用户名获取psssword再和cookie的password做比较
+			$password = M('registered');
+			$data = $password->where($map_id)->find();
+			//根据密码判断是不是自己
+			if(!$data['password'] === cookie('password')){
+				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+			}else{
+				$think_order = M('order');
+				$map_a['id'] = $bookid;
+				$mapp['abc'] = 1;
+				$think_order->where($map_a)->field('abc')->save($mapp);
+				$this->redirect('Home/Book/Showorder/index');		
+			}
+		}else{
+			//如果没有登录访问就提示这句话
+			$this->success('请您登录后再访问','/single_love/index.php/Home/Login/Login/index', 5);
+		}		
+	}
+	//删除商品
+	public function book_b($bookid){
+		if($map_id['members_id'] = cookie('user')){
+			//根据用户名获取psssword再和cookie的password做比较
+			$password = M('registered');
+			$data = $password->where($map_id)->find();
+			//根据密码判断是不是自己
+			if(!$data['password'] === cookie('password')){
+				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+			}else{
+				$think_order = M('book');
+				$map_a['id'] = $bookid;
+				$mapp['abc'] = 1;
+				$think_order->where($map_a)->field('abc')->save($mapp);
 				$this->redirect('Home/Book/Showorder/index');		
 			}
 		}else{

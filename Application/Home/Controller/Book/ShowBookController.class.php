@@ -29,6 +29,7 @@ class ShowBookController extends Controller {
 				}
 				//若类型和商品名为空,则取出该学校的所有商品,且数量大于一
 				$map['number'] = array('gt', 0);
+				$map['abc'] = 0;
 				if($type == NULL AND $username == NULL){
 					$map['school'] = $school;
 					$goods['var'] = $think_book->where($map)->select();
@@ -79,6 +80,7 @@ class ShowBookController extends Controller {
 				$map['members_id_a'] = cookie('user');
 				$map['time_a'] = date('Y-m-d H:i:s');
 				$map['tag'] = 0;
+				$map['abc'] = 0;
 				$think_order = M('order');
 				$think_order->data($map)->add();
 				//数量减一

@@ -262,7 +262,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal4{$i}" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+
 </div>
 </div>
 <div class="modal fade" id="exampleModal4{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -272,7 +272,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">订单信息</h4>
 		<div class="modal-footer">
-<div id="carousel-example-generic1{$i}" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic4{$i}" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -304,12 +304,12 @@
 	</if>	
 	</div>
 <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel-example-generic4{$i}" role="button" data-slide="prev">
 
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-example-generic4{$i}" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -414,7 +414,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal3{$i}" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+<a class="btn btn-warning" href="https://localhost/single_love/index.php/Home/Book/Showorder/book_a/bookid/{$count1["var"][$i]["id"]}" role="button">删除</a>
 </div>
 </div>
 <div class="modal fade" id="exampleModal3{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -424,7 +424,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">订单信息</h4>
 		<div class="modal-footer">
-<div id="carousel-example-generic1{$i}" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic3{$i}" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -456,12 +456,12 @@
 	</if>	
 	</div>
 <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel-example-generic3{$i}" role="button" data-slide="prev">
 
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic1{$i}" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-example-generic3{$i}" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -553,10 +553,7 @@
 		商品名:{$count3["book"][$i]["bookname"]}
 	</div>
 	<div class="col-md-12">
-		处理时间:{$count3["var"][$i]["time_b"]}
-	</div>
-	<div class="col-md-12">
-		已处理
+		上传时间:{$count3["book"][$i]["time"]}
 	</div>
 </div>
 </div>
@@ -568,7 +565,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal5{$i}" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+<a class="btn btn-warning" href="https://localhost/single_love/index.php/Home/Book/Showorder/book_b/bookid/{$count3['book'][$i]['id']}" role="button">删除</a>
 </div>
 </div>
 <div class="modal fade" id="exampleModal5{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
