@@ -250,7 +250,7 @@
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
+							                <a href="https://localhost/single_love/index.php/Home/Book/Book/other">
 																<button class="btn btn-default btn-lg btn-block" type="button">上传其它商品</button>
 															</a>
 														</div>
@@ -400,7 +400,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1913945715__=0;$__FOR_END_1913945715__=$about['num'];for($i=$__FOR_START_1913945715__;$i < $__FOR_END_1913945715__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_566420118__=0;$__FOR_END_566420118__=$about['num'];for($i=$__FOR_START_566420118__;$i < $__FOR_END_566420118__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>

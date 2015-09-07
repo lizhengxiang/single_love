@@ -91,7 +91,13 @@
 <option>医药</option>
 <option>艺术</option>
 <option>数学</option>
+<option>其他</option>
 <option>心理学</option>
+
+<option>电子产品</option>
+<option>体育用品</option>
+<option>运动户外</option>
+<option>办公文具</option>
 <option>水利水电</option>
 <option>社会科学</option>
 <option>经济管理</option>
@@ -235,7 +241,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -244,10 +252,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -301,7 +311,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="{$goods['var'][$i]['members_id']}" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="{$goods['var'][$i]['id']}" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -407,7 +418,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -416,10 +429,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -473,7 +488,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="{$goods['var'][$i]['members_id']}" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="{$goods['var'][$i]['id']}" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -582,7 +598,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+ <if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -591,10 +609,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+ <if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -648,6 +668,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
+<input type="text" class="form-control input-lg" name="members" value ="{$goods['var'][$i]['members_id']}" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="{$goods['var'][$i]['id']}" style = "display:none">
 
 <div class = "row">
 <div class = "col-md-12">
@@ -759,7 +781,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -768,10 +792,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -825,7 +851,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="{$goods['var'][$i]['members_id']}" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="{$goods['var'][$i]['id']}" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -932,7 +959,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -941,10 +970,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -998,7 +1029,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="{$goods['var'][$i]['members_id']}" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="{$goods['var'][$i]['id']}" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>
@@ -1106,7 +1138,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -1115,10 +1149,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -1172,7 +1208,8 @@
 </div>
 </div>
 <div class = "col-md-12">&nbsp;</div>
-
+<input type="text" class="form-control input-lg" name="members" value ="{$goods['var'][$i]['members_id']}" style = "display:none">
+<input type="text" class="form-control input-lg" name="book_id" value ="{$goods['var'][$i]['id']}" style = "display:none">
 <div class = "row">
 <div class = "col-md-12">
 <p class = "text-center"><button type = "submit" class = "btn btn-primary btn-lg">完成</button></p>

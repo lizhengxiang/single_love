@@ -91,7 +91,13 @@
 <option>医药</option>
 <option>艺术</option>
 <option>数学</option>
+<option>其他</option>
 <option>心理学</option>
+
+<option>电子产品</option>
+<option>体育用品</option>
+<option>运动户外</option>
+<option>办公文具</option>
 <option>水利水电</option>
 <option>社会科学</option>
 <option>经济管理</option>
@@ -235,7 +241,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -244,10 +252,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -408,7 +418,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -417,10 +429,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -584,7 +598,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+ <if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -593,10 +609,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+ <if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -763,7 +781,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -772,10 +792,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -937,7 +959,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -946,10 +970,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
@@ -1112,7 +1138,9 @@
 商品名:{$goods['var'][$i]['bookname']}
 </div>
 <div class="col-md-4 text-center">
+<if condition = "$goods['var'][$i]['author'] neq NULL">
 作者:{$goods['var'][$i]['author']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 數量:{$goods['var'][$i]['number']}
@@ -1121,10 +1149,12 @@
 
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$goods['var'][$i]['press']}
+分类:{$goods['var'][$i]['type']}
 </div>
 <div class="col-md-4 text-center">
-分类:{$goods['var'][$i]['type']}
+<if condition = "$goods['var'][$i]['press'] neq NULL">
+出版社:{$goods['var'][$i]['press']}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$goods['var'][$i]['price']}
