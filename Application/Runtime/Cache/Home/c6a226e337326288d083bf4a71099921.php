@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_1713024556__=0;$__FOR_END_1713024556__=$count['count'];for($i=$__FOR_START_1713024556__;$i < $__FOR_END_1713024556__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1779638367__=0;$__FOR_END_1779638367__=$count['count'];for($i=$__FOR_START_1779638367__;$i < $__FOR_END_1779638367__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -158,7 +158,7 @@
 商品名:<?php echo ($count["book"][$i][0]["bookname"]); ?>
 </div>
 <div class="col-md-4 text-center">
-作者:<?php echo ($count["book"][$i][0]["author"]); ?>
+<?php if($count['book'][$i][0]['author']): ?>作者:<?php echo ($count["book"][$i][0]["author"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 剩余量:<?php echo ($count["book"][$i][0]["number"]); ?>
@@ -166,10 +166,10 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:<?php echo ($count["book"][$i][0]["press"]); ?>
+分类:<?php echo ($count["book"][$i][0]["type"]); ?>
 </div>
 <div class="col-md-4 text-center">
-分类:<?php echo ($count["book"][$i][0]["type"]); ?>
+<?php if($count['book'][$i][0]['press']): ?>出版社:<?php echo ($count["book"][$i][0]["press"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;<?php echo ($count["book"][$i][0]["price"]); ?>
@@ -222,7 +222,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1129762102__=0;$__FOR_END_1129762102__=$count2['count'];for($i=$__FOR_START_1129762102__;$i < $__FOR_END_1129762102__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_2087350652__=0;$__FOR_END_2087350652__=$count2['count'];for($i=$__FOR_START_2087350652__;$i < $__FOR_END_2087350652__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count2["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -302,7 +302,7 @@
 商品名:<?php echo ($count2["book"][$i][0]["bookname"]); ?>
 </div>
 <div class="col-md-4 text-center">
-作者:<?php echo ($count2["book"][$i][0]["author"]); ?>
+<?php if($count2['book'][$i][0]['author']): ?>作者:<?php echo ($count2["book"][$i][0]["author"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 剩余量:<?php echo ($count2["book"][$i][0]["number"]); ?>
@@ -310,10 +310,10 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:<?php echo ($count2["book"][$i][0]["press"]); ?>
+分类:<?php echo ($count2["book"][$i][0]["type"]); ?>
 </div>
 <div class="col-md-4 text-center">
-分类:<?php echo ($count2["book"][$i][0]["type"]); ?>
+<?php if($count2['book'][$i][0]['press']): ?>出版社:<?php echo ($count2["book"][$i][0]["press"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;<?php echo ($count2["book"][$i][0]["price"]); ?>
@@ -368,7 +368,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1468067759__=0;$__FOR_END_1468067759__=$count1['count'];for($i=$__FOR_START_1468067759__;$i < $__FOR_END_1468067759__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_311452136__=0;$__FOR_END_311452136__=$count1['count'];for($i=$__FOR_START_311452136__;$i < $__FOR_END_311452136__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count1["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -446,7 +446,7 @@
 商品名:<?php echo ($count1["book"][$i][0]["bookname"]); ?>
 </div>
 <div class="col-md-4 text-center">
-作者:<?php echo ($count1["book"][$i][0]["author"]); ?>
+<?php if($count1['book'][$i][0]['author']): ?>作者:<?php echo ($count1["book"][$i][0]["author"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 剩余量:<?php echo ($count1["book"][$i][0]["number"]); ?>
@@ -454,10 +454,10 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:<?php echo ($count1["book"][$i][0]["press"]); ?>
+分类:<?php echo ($count1["book"][$i][0]["type"]); ?>
 </div>
 <div class="col-md-4 text-center">
-分类:<?php echo ($count1["book"][$i][0]["type"]); ?>
+<?php if($count1['book'][$i][0]['press']): ?>出版社:<?php echo ($count1["book"][$i][0]["press"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;<?php echo ($count1["book"][$i][0]["price"]); ?>
@@ -514,7 +514,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1984724020__=0;$__FOR_END_1984724020__=$count3['count'];for($i=$__FOR_START_1984724020__;$i < $__FOR_END_1984724020__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1563755841__=0;$__FOR_END_1563755841__=$count3['count'];for($i=$__FOR_START_1563755841__;$i < $__FOR_END_1563755841__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count3["book"][$i]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -589,7 +589,7 @@
 商品名:<?php echo ($count3["book"][$i]["bookname"]); ?>
 </div>
 <div class="col-md-4 text-center">
-作者:<?php echo ($count3["book"][$i]["author"]); ?>
+<?php if($count3['book'][$i][0]['author']): ?>作者:<?php echo ($count3["book"][$i]["author"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 剩余量:<?php echo ($count3["book"][$i]["number"]); ?>
@@ -597,10 +597,10 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:<?php echo ($count3["book"][$i]["press"]); ?>
+分类:<?php echo ($count3["book"][$i]["type"]); ?>
 </div>
 <div class="col-md-4 text-center">
-分类:<?php echo ($count3["book"][$i]["type"]); ?>
+<?php if($count3['book'][$i][0]['press']): ?>出版社:<?php echo ($count3["book"][$i]["press"]); endif; ?>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;<?php echo ($count3["book"][$i]["price"]); ?>

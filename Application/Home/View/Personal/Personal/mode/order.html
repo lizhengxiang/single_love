@@ -165,7 +165,9 @@
 商品名:{$count["book"][$i][0]["bookname"]}
 </div>
 <div class="col-md-4 text-center">
+<if condition ="$count['book'][$i][0]['author']">
 作者:{$count["book"][$i][0]["author"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 剩余量:{$count["book"][$i][0]["number"]}
@@ -173,10 +175,12 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$count["book"][$i][0]["press"]}
+分类:{$count["book"][$i][0]["type"]}
 </div>
 <div class="col-md-4 text-center">
-分类:{$count["book"][$i][0]["type"]}
+<if condition ="$count['book'][$i][0]['press']">
+出版社:{$count["book"][$i][0]["press"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$count["book"][$i][0]["price"]}
@@ -319,7 +323,9 @@
 商品名:{$count2["book"][$i][0]["bookname"]}
 </div>
 <div class="col-md-4 text-center">
+<if condition ="$count2['book'][$i][0]['author']">
 作者:{$count2["book"][$i][0]["author"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 剩余量:{$count2["book"][$i][0]["number"]}
@@ -327,10 +333,12 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$count2["book"][$i][0]["press"]}
+分类:{$count2["book"][$i][0]["type"]}
 </div>
 <div class="col-md-4 text-center">
-分类:{$count2["book"][$i][0]["type"]}
+<if condition ="$count2['book'][$i][0]['press']">
+出版社:{$count2["book"][$i][0]["press"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$count2["book"][$i][0]["price"]}
@@ -471,7 +479,9 @@
 商品名:{$count1["book"][$i][0]["bookname"]}
 </div>
 <div class="col-md-4 text-center">
+<if condition ="$count1['book'][$i][0]['author']">
 作者:{$count1["book"][$i][0]["author"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 剩余量:{$count1["book"][$i][0]["number"]}
@@ -479,10 +489,12 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$count1["book"][$i][0]["press"]}
+分类:{$count1["book"][$i][0]["type"]}
 </div>
 <div class="col-md-4 text-center">
-分类:{$count1["book"][$i][0]["type"]}
+<if condition ="$count1['book'][$i][0]['press']">
+出版社:{$count1["book"][$i][0]["press"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$count1["book"][$i][0]["price"]}
@@ -622,7 +634,9 @@
 商品名:{$count3["book"][$i]["bookname"]}
 </div>
 <div class="col-md-4 text-center">
+<if condition ="$count3['book'][$i][0]['author']">
 作者:{$count3["book"][$i]["author"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 剩余量:{$count3["book"][$i]["number"]}
@@ -630,10 +644,12 @@
 </div>
 <div class="row">
 <div class="col-md-6 text-center">
-出版社:{$count3["book"][$i]["press"]}
+分类:{$count3["book"][$i]["type"]}
 </div>
 <div class="col-md-4 text-center">
-分类:{$count3["book"][$i]["type"]}
+<if condition ="$count3['book'][$i][0]['press']">
+出版社:{$count3["book"][$i]["press"]}
+</if>
 </div>
 <div class="col-md-2 text-center">
 价格:&yen;{$count3["book"][$i]["price"]}
