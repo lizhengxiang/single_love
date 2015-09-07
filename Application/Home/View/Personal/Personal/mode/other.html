@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$id}" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/{$user_id}" role="button">我的主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">緣分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -54,8 +54,6 @@
 		<img src="__ROOT__/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="300">
 		</div>
   					<div class="col-md-5">
-	
-
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>						
 <form class = "form-horizontal" action="book" enctype = "multipart/form-data" method="POST">
@@ -108,7 +106,8 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">价格</label>
 <div class = "col-md-8">
 <select class="form-control " name = "price">
-<for start = "1" end = "50">
+<for start = "1" end = "250">
+	{$i += 4}
   <option>{$i}</option>
 </for>
 </select>

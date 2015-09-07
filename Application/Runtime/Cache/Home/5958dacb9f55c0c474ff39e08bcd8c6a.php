@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -360,7 +360,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1470997781__=0;$__FOR_END_1470997781__=$about['num'];for($i=$__FOR_START_1470997781__;$i < $__FOR_END_1470997781__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_661072429__=0;$__FOR_END_661072429__=$about['num'];for($i=$__FOR_START_661072429__;$i < $__FOR_END_661072429__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>

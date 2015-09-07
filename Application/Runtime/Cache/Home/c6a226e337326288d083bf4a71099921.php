@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($photo['members_id']); ?>" role="button">个人主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">个人主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -80,7 +80,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_1779638367__=0;$__FOR_END_1779638367__=$count['count'];for($i=$__FOR_START_1779638367__;$i < $__FOR_END_1779638367__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_505282581__=0;$__FOR_END_505282581__=$count['count'];for($i=$__FOR_START_505282581__;$i < $__FOR_END_505282581__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -222,7 +222,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_2087350652__=0;$__FOR_END_2087350652__=$count2['count'];for($i=$__FOR_START_2087350652__;$i < $__FOR_END_2087350652__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1359610129__=0;$__FOR_END_1359610129__=$count2['count'];for($i=$__FOR_START_1359610129__;$i < $__FOR_END_1359610129__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count2["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -368,7 +368,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_311452136__=0;$__FOR_END_311452136__=$count1['count'];for($i=$__FOR_START_311452136__;$i < $__FOR_END_311452136__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1476702341__=0;$__FOR_END_1476702341__=$count1['count'];for($i=$__FOR_START_1476702341__;$i < $__FOR_END_1476702341__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count1["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -514,7 +514,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1563755841__=0;$__FOR_END_1563755841__=$count3['count'];for($i=$__FOR_START_1563755841__;$i < $__FOR_END_1563755841__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1070225457__=0;$__FOR_END_1070225457__=$count3['count'];for($i=$__FOR_START_1070225457__;$i < $__FOR_END_1070225457__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count3["book"][$i]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>

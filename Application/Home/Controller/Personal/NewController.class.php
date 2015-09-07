@@ -6,6 +6,9 @@ require_once 'AboutController.class.php';
 
 class NewController extends Controller {
    public function index($user_id){
+		//删除说说时候判断是不是自己
+		$this->assign('user1a', $user_id);
+		$this->assign('user2a', cookie('user'));
 
 		//取出新加入的五个会员的id号
 		$think_data1 = M('registered');
@@ -19,7 +22,7 @@ class NewController extends Controller {
 			$this->assign('user1', $user1);	
 		}
 		//要去出新会员的用户数量
-		$usercount = 3;
+		$usercount = 4;
 		$this->assign('usercount', $usercount);
 		
 			
@@ -66,7 +69,7 @@ class NewController extends Controller {
 				//获取最近登录的时间
 				$think_logintime = M('logintime');
 				$logintime = $think_logintime->where($map)->find();
-				$login_time = $logintime['logintime1'];
+				$login_time = $logintime['logintime'];
 				$this->assign('login_time', $login_time);	
 				//获取用户头像及照片
 				$photo1 = M('photo');

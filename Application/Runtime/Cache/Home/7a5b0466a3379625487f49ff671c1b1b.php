@@ -75,7 +75,7 @@
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Book/Showorder/index"><button type="button" class="btn btn-default btn-lg btn-block">处理订单<span class="badge">3</span></button></a>
+												<a href="https://localhost/single_love/index.php/Home/Forgot/Modifypass/index"><button type    ="button" class="btn btn-default btn-lg btn-block">修改密码</button></a>
 											</div>
 										</div>
 
@@ -98,7 +98,7 @@
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Forgot/Modifypass/index"><button type="button" class="btn btn-default btn-lg btn-block">修改密码</button></a>
+											<a href="https://localhost/single_love/index.php/Home/Book/Showorder/index"><button type="b    utton" class="btn btn-default btn-lg btn-block">处理订单<span class="badge">3</span></button></a>
 											</div>
 										</div>
 
@@ -258,24 +258,24 @@
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">内心独白</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index">
+												<button class="btn btn-default btn-lg btn-block" type="button">待处理订单</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">联系方式</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index">
+												<button class="btn btn-default btn-lg btn-block" type="button">已处理订单</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">外貌性格</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index">
+														<button class="btn btn-default btn-lg btn-block" type="button">我的订单</button>
 															</a>
 														</div>
 													</div>												
@@ -283,11 +283,11 @@
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">工作学习</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index">
+													<button class="btn btn-default btn-lg btn-block" type="button">我的商品</button>
 															</a>
 														</div>
-													</div>
+													</div><!--
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
@@ -303,7 +303,7 @@
 																<button class="btn btn-default btn-lg btn-block" type="button">兴趣爱好</button>
 															</a>
 														</div>
-													</div>
+													</div>-->
 
       								</div>
     							</div>
@@ -400,7 +400,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_2137273408__=0;$__FOR_END_2137273408__=$about['num'];for($i=$__FOR_START_2137273408__;$i < $__FOR_END_2137273408__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_211527348__=0;$__FOR_END_211527348__=$about['num'];for($i=$__FOR_START_211527348__;$i < $__FOR_END_211527348__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>

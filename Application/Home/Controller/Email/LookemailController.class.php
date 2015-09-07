@@ -28,7 +28,7 @@ class LookemailController extends Controller {
 				$email_count = new EmailSendController();
  				$send = $email_count->index(cookie('user'));
  				$this->assign('send', $send);
-				//$this->display();
+				$this->assign('user_id', cookie('user'));
 				$this->display('Personal/Personal/mode/lookemail');
 			}
 		}else{

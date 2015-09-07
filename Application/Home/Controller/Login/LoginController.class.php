@@ -56,7 +56,7 @@ class LoginController extends Controller {
 				cookie('password',$password);
 				//写入这次的登录时间
 				$logintime = M('logintime');
-				$data['logintime'] = date('Y-m-d h:i:sa');
+				$data['logintime'] = date('Y-m-d H:i:s');
 				$login_time = $logintime->where($map)->find();
 				$data['logintime1'] = $login_time['logintime'];
 				$logintime->where($map)->data($data)->save();

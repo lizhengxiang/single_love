@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">我的主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">緣分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -125,7 +125,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">數量</label>
 <div class = "col-md-8">
 <select class="form-control" name = "number">
-<?php $__FOR_START_314048007__=1;$__FOR_END_314048007__=5;for($i=$__FOR_START_314048007__;$i < $__FOR_END_314048007__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_321792296__=1;$__FOR_END_321792296__=5;for($i=$__FOR_START_321792296__;$i < $__FOR_END_321792296__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
@@ -134,7 +134,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">价格</label>
 <div class = "col-md-8">
 <select class="form-control " name = "price">
-<?php $__FOR_START_920416727__=1;$__FOR_END_920416727__=50;for($i=$__FOR_START_920416727__;$i < $__FOR_END_920416727__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1829274579__=1;$__FOR_END_1829274579__=50;for($i=$__FOR_START_1829274579__;$i < $__FOR_END_1829274579__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>

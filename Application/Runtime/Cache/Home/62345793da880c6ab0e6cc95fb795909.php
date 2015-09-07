@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($photo['memb    ers_id']); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">我的主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -112,17 +112,17 @@
 <div class = "row">
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "year">
-<?php $__FOR_START_909944827__=1980;$__FOR_END_909944827__=2013;for($i=$__FOR_START_909944827__;$i < $__FOR_END_909944827__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1416303028__=1980;$__FOR_END_1416303028__=2013;for($i=$__FOR_START_1416303028__;$i < $__FOR_END_1416303028__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "mouth">
-<?php $__FOR_START_1583444421__=1;$__FOR_END_1583444421__=13;for($i=$__FOR_START_1583444421__;$i < $__FOR_END_1583444421__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_3193093__=1;$__FOR_END_3193093__=13;for($i=$__FOR_START_3193093__;$i < $__FOR_END_3193093__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
  <div class = "col-md-4">
 <select class="form-control input-lg" name = "day">
-<?php $__FOR_START_1242152350__=1;$__FOR_END_1242152350__=32;for($i=$__FOR_START_1242152350__;$i < $__FOR_END_1242152350__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1969402719__=1;$__FOR_END_1969402719__=32;for($i=$__FOR_START_1969402719__;$i < $__FOR_END_1969402719__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>

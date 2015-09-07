@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">我的主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">緣分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -54,8 +54,6 @@
 		<img src="/single_love/Application/Home/View/Personal/Personal/mode/a.jpg" alt="..." class="img-rounded"  width="100%" height="300">
 		</div>
   					<div class="col-md-5">
-	
-
 <div class = "col-md-12">&nbsp;</div>
 <div class = "col-md-12">&nbsp;</div>						
 <form class = "form-horizontal" action="book" enctype = "multipart/form-data" method="POST">
@@ -97,7 +95,7 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">數量</label>
 <div class = "col-md-8">
 <select class="form-control" name = "number">
-<?php $__FOR_START_1801784076__=1;$__FOR_END_1801784076__=5;for($i=$__FOR_START_1801784076__;$i < $__FOR_END_1801784076__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1322301170__=1;$__FOR_END_1322301170__=5;for($i=$__FOR_START_1322301170__;$i < $__FOR_END_1322301170__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>
@@ -106,7 +104,8 @@
 <label for = "inputphoto6" class = "col-md-3 control-label">价格</label>
 <div class = "col-md-8">
 <select class="form-control " name = "price">
-<?php $__FOR_START_566503753__=1;$__FOR_END_566503753__=50;for($i=$__FOR_START_566503753__;$i < $__FOR_END_566503753__;$i+=1){ ?><option><?php echo ($i); ?></option><?php } ?>
+<?php $__FOR_START_1761265355__=1;$__FOR_END_1761265355__=250;for($i=$__FOR_START_1761265355__;$i < $__FOR_END_1761265355__;$i+=1){ echo ($i += 4); ?>
+  <option><?php echo ($i); ?></option><?php } ?>
 </select>
 </div>
 </div>

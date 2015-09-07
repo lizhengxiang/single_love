@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">緣分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市場</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市場</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -122,7 +122,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_605590029__=0;$__FOR_END_605590029__=$count;for($i=$__FOR_START_605590029__;$i < $__FOR_END_605590029__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1411742147__=0;$__FOR_END_1411742147__=$count;for($i=$__FOR_START_1411742147__;$i < $__FOR_END_1411742147__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

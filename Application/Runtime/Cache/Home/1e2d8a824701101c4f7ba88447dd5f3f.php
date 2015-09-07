@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($photo['members_id']); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user2a); ?>" role="button">我的主页</a></div>
 
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
@@ -43,7 +43,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -144,7 +144,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_2111952570__=0;$__FOR_END_2111952570__=$countGift;for($i=$__FOR_START_2111952570__;$i < $__FOR_END_2111952570__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_947562301__=0;$__FOR_END_947562301__=$countGift;for($i=$__FOR_START_947562301__;$i < $__FOR_END_947562301__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -247,14 +247,14 @@
 	<table class="table table-bordered">
 		<tr class = "warning">
 			<td>
-				<div class="col-md-8">
+				<div class="col-md-9">
 
 
 <table class="table table-bordered">
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_1447390200__=0;$__FOR_END_1447390200__=$about['num'];for($i=$__FOR_START_1447390200__;$i < $__FOR_END_1447390200__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_655920933__=0;$__FOR_END_655920933__=$about['num'];for($i=$__FOR_START_655920933__;$i < $__FOR_END_655920933__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -333,7 +333,7 @@
 <input type="text" name="userid" value = <?php echo ($about['about'][$i]['members_id']); ?> style = "display:none;">
 </div>
 <div class = "col-md-3">
-<button type = "submit" class = "btn btn-info btn-sm">删除</button>
+<?php if($user1a == $user2a): ?><button type = "submit" class = "btn btn-info btn-sm">删除</button><?php endif; ?>
 </div>
 </div>
 </form>
@@ -363,15 +363,16 @@
 
 
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-3">
 						<table class="table table-bordered">
 							<tr class = "success">
 								<td>
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_2013562238__=0;$__FOR_END_2013562238__=$usercount;for($i=$__FOR_START_2013562238__;$i < $__FOR_END_2013562238__;$i+=1){ ?><div class="row">
-											<div class="col-md-6">
+										<?php $__FOR_START_1799312753__=0;$__FOR_END_1799312753__=$usercount;for($i=$__FOR_START_1799312753__;$i < $__FOR_END_1799312753__;$i+=1){ ?><div class="row">
+											<div class="col-md-2"></div>
+											<div class="col-md-8">
 											<div class="row">
  				                   				<div class="col-md-12">
 												<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user1[$i]['id']); ?>"><img src="<?php echo ($user1[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
@@ -388,7 +389,7 @@
 											</div>
 											</div>
 
-
+											<!--
 											<div class="col-md-6">
 											<div class="row">
  				                   				<div class="col-md-12">
@@ -405,8 +406,8 @@
 												<div class="col-md-12">&nbsp;</div>
 											</div>
 											</div>
-
-
+											-->
+											<div class="col-md-2"></div>
 											</div><?php } ?>
 									</div>
 								</td>

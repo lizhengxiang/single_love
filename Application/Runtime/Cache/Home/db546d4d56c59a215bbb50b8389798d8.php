@@ -33,7 +33,7 @@
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($photo['memb    ers_id']); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">我的主页</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
@@ -42,7 +42,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">二手市场</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -73,7 +73,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_1203790801__=0;$__FOR_END_1203790801__=$count;for($i=$__FOR_START_1203790801__;$i < $__FOR_END_1203790801__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_639806158__=0;$__FOR_END_639806158__=$count;for($i=$__FOR_START_639806158__;$i < $__FOR_END_639806158__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -281,7 +281,7 @@
 
 </div>
 <div role="tabpanel" class="tab-pane" id="messages">
-<?php $__FOR_START_70842729__=0;$__FOR_END_70842729__=$count1;for($i=$__FOR_START_70842729__;$i < $__FOR_END_70842729__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1644945512__=0;$__FOR_END_1644945512__=$count1;for($i=$__FOR_START_1644945512__;$i < $__FOR_END_1644945512__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

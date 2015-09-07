@@ -14,6 +14,7 @@ class BookController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
+				$this->assign('user_id', cookie('user'));
 				$this->display('Personal/Personal/mode/book');
 			}
 		}else{
@@ -30,6 +31,7 @@ class BookController extends Controller {
 			if(!$data['password'] === cookie('password')){
 				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
 			}else{
+				$this->assign('user_id', cookie('user'));
 				$this->display('Personal/Personal/mode/other');
 			}
 		}else{

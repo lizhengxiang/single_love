@@ -32,17 +32,17 @@
 	</div>
 	<nav class="navbar navbar-inverse container-fluid">
 		<div class="row">
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人主页</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">缘分搜索</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">线下活动</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Home/Home/index" role="button">个人中心</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($user_id); ?>" role="button">我的主页</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Social/Home/index" role="button">社交主页</a></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Information/Information/index" role="button">修改资料</a></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="#" role="button">使用帮助</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
 	</nav>
@@ -76,7 +76,7 @@
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_993387727__=0;$__FOR_END_993387727__=$count;for($i=$__FOR_START_993387727__;$i < $__FOR_END_993387727__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_439730834__=0;$__FOR_END_439730834__=$count;for($i=$__FOR_START_439730834__;$i < $__FOR_END_439730834__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -158,7 +158,7 @@
 
 </div>
 <div role="tabpanel" class="tab-pane" id="messages">
-<?php $__FOR_START_439648994__=0;$__FOR_END_439648994__=$Follower['count'];for($i=$__FOR_START_439648994__;$i < $__FOR_END_439648994__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_563402762__=0;$__FOR_END_563402762__=$Follower['count'];for($i=$__FOR_START_563402762__;$i < $__FOR_END_563402762__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -241,7 +241,7 @@
 
 <div role="tabpanel" class="tab-pane" id="profile">
 
-<?php $__FOR_START_1309394122__=0;$__FOR_END_1309394122__=$Seenuser;for($i=$__FOR_START_1309394122__;$i < $__FOR_END_1309394122__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1540240271__=0;$__FOR_END_1540240271__=$Seenuser;for($i=$__FOR_START_1540240271__;$i < $__FOR_END_1540240271__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -325,7 +325,7 @@
 <div role="tabpanel" class="tab-pane" id="settings">
 
 
-<?php $__FOR_START_780509985__=0;$__FOR_END_780509985__=$Following['count'];for($i=$__FOR_START_780509985__;$i < $__FOR_END_780509985__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_329729317__=0;$__FOR_END_329729317__=$Following['count'];for($i=$__FOR_START_329729317__;$i < $__FOR_END_329729317__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -406,7 +406,7 @@
 </div>
 
 <div role="tabpanel" class="tab-pane" id="blacklist">
-<?php $__FOR_START_630377853__=0;$__FOR_END_630377853__=0;for($i=$__FOR_START_630377853__;$i < $__FOR_END_630377853__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1463625255__=0;$__FOR_END_1463625255__=0;for($i=$__FOR_START_1463625255__;$i < $__FOR_END_1463625255__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

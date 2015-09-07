@@ -31,6 +31,7 @@ class GetGiftController extends Controller {
 					$map['gift_id'] = $gift['user'][$i]['giftid'];
 					$giftroat[$i] = $think_gift->field('road,name')->where($map)->find();
 				}
+				$this->assign('user_id', cookie('user'));
 				$this->assign('giftroat', $giftroat);
 				$this->assign('user', $user);
 		
