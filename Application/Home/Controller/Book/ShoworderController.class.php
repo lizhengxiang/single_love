@@ -4,7 +4,7 @@ namespace Home\Controller\Book;
 //import("ORG.Net.UploadFile");
 use Think\Controller;
 class ShoworderController extends Controller {
-	public function index(){
+	public function index($abc){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
 			$password = M('registered');
@@ -58,11 +58,12 @@ class ShoworderController extends Controller {
 				$think_book = M('book');
 				$map_b2['members_id'] = cookie('user');
 				$map_b2['abc'] = 0;
-				$order3['book'] = $think_book->where($map_b2)->select();
+				$order3['book'] = $think_book->where($map_b2)->order('time desc')->select();
 				$order3['count'] = $think_book->where($map_b2)->count();
 				$this->assign('count3',$order3);
 				//dump($order3);
 				$this->assign('user_id', cookie('user'));
+				$this->assign('tag', $abc);
 				$this->display('Personal/Personal/mode/order');
 			}
 		}else{
@@ -84,7 +85,7 @@ class ShoworderController extends Controller {
 				$mapp['tag'] = 1;
 				$mapp['time_b'] = date('Y-m-d H:i:s');
 				$think_order->where($map_a)->field('tag,time_b')->save($mapp);
-				$this->redirect('Home/Book/Showorder/index');		
+				$this->redirect('Home/Book/Showorder/index/abc/2');		
 			}
 		}else{
 			//如果没有登录访问就提示这句话
@@ -106,7 +107,7 @@ class ShoworderController extends Controller {
 				$map_a['id'] = $bookid;
 				$mapp['abc'] = 1;
 				$think_order->where($map_a)->field('abc')->save($mapp);
-				$this->redirect('Home/Book/Showorder/index');		
+				$this->redirect('Home/Book/Showorder/index/abc/2');		
 			}
 		}else{
 			//如果没有登录访问就提示这句话
@@ -127,7 +128,7 @@ class ShoworderController extends Controller {
 				$map_a['id'] = $bookid;
 				$mapp['abc'] = 1;
 				$think_order->where($map_a)->field('abc')->save($mapp);
-				$this->redirect('Home/Book/Showorder/index');		
+				$this->redirect('Home/Book/Showorder/index/abc/4');		
 			}
 		}else{
 			//如果没有登录访问就提示这句话

@@ -90,7 +90,7 @@ class BookController extends Controller {
 				$dataa['abc'] = 0;
 				$think_book = M('book');
 				$think_book->data($dataa)->add();
-			$this->redirect('Home/Book/Showorder/index');
+			$this->redirect('Home/Book/Showorder/index/abc/4');
 			}
 		}else{
 			//如果没有登录访问就提示这句话

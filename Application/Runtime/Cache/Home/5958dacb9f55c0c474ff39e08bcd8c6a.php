@@ -41,7 +41,7 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
 		<div class="col-md-1"></div>
-		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">缘分搜索</a></div>
+		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Edge/Edge/index" role="button">緣分搜索</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Book/ShowBook/index" role="button">二手市场</a></div>
 		<div class="col-md-1"><a class="btn btn-sucess" href="https://localhost/single_love/index.php/Home/Login/Login/index" role="button">退出</a></div>
 		</div>
@@ -69,20 +69,20 @@
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="#"><button type="button" class="btn btn-default btn-lg btn-block">更改头像</button></a>
+												<a href="https://localhost/single_love/index.php/Home/Information/Information/index"><button type="button" class="btn btn-default btn-lg btn-block">修改资料</button></a>
 											</div>
 										</div>
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($id); ?>"><button type="button" class="btn btn-default btn-lg btn-block">我的资料</button></a>
+												<a href="https://localhost/single_love/index.php/Home/Forgot/Modifypass/index"><button type    ="button" class="btn btn-default btn-lg btn-block">修改密码</button></a>
 											</div>
 										</div>
 
 										<div class = "row">
  										 	<div class="col-md-0.5"></div>
 										 	<div class="col-md-11">
- 												<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index">
+ 												<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index/abc/1">
 													<button class="btn btn-default btn-lg btn-block" type="button">收件箱 <span class="badge"><?php echo ($count); ?></span></button>
 												</a>
       	              </div>
@@ -90,7 +90,7 @@
 										<div class = "row">
  											<div class="col-md-0.5"></div>
  												<div class="col-md-11">
- 													<a href="https://localhost/single_love/index.php/Home/Look/Look/index">
+ 													<a href="https://localhost/single_love/index.php/Home/Look/Look/index/abc/1">
  														<button class="btn btn-default btn-lg btn-block" type="button">谁看过我<span class="badge"><?php echo ($look_count); ?></span></button>
  												</a>
  											</div>
@@ -98,7 +98,7 @@
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Forgot/Modifypass/index"><button type="button" class="btn btn-default btn-lg btn-block">修改密码</button></a>
+											<a href="https://localhost/single_love/index.php/Home/Book/Showorder/index/abc/1"><button type="b    utton" class="btn btn-default btn-lg btn-block">处理订单<span class="badge">3</span></button></a>
 											</div>
 										</div>
 
@@ -119,24 +119,35 @@
 														<div class = "row">
  						                  <div class="col-md-0.5"></div>
  								              <div class="col-md-11">
- 									            	<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index">
- 										            	<button class="btn btn-default btn-lg btn-block" type="button">我的收件箱 <span class="badge"><?php echo ($count); ?></span></button>
+ 									            	<a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index/abc/1">
+ 										            	<button class="btn btn-default btn-lg btn-block" type="button">收件箱(未读)</button>
  														 	</a>
         	                	</div>
 	     		                 </div>
 
+
+													<div class = "row">
+                                                  <div class="col-md-0.5"></div>
+                                                 <div class="col-md-11">
+                                             <a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index/abc/2">
+                                                 <button class="btn btn-default btn-lg btn-block" type="button">收件箱(已读)</button>
+                                                       </a>                                                         
+														</div>
+                                                     </div>
+
+
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">我的发件箱</button>
+							                <a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index/abc/3">
+																<button class="btn btn-default btn-lg btn-block" type="button">已发邮件</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index">
+							                <a href="https://localhost/single_love/index.php/Home/Email/Lookemail/index/abc/4">
 																<button class="btn btn-default btn-lg btn-block" type="button">系统邮件</button>
 															</a>
 														</div>
@@ -158,40 +169,40 @@
 												<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">谁看过我<span class="badge"><?php echo ($look_count); ?></span></button>
+							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index/abc/1">
+																<button class="btn btn-default btn-lg btn-block" type="button">谁看过我</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">我看过的人</button>
+							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index/abc/2">
+																<button class="btn btn-default btn-lg btn-block" type="button">我看过谁</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">谁关注我<span class="badge"><?php echo ($followers); ?></span></button>
+							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index/abc/3">
+																<button class="btn btn-default btn-lg btn-block" type="button">谁关注我</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">我关注的人</button>
+							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index/abc/4">
+																<button class="btn btn-default btn-lg btn-block" type="button">我关注谁</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">我的黑名单</button>
+							                <a href="https://localhost/single_love/index.php/Home/Look/Look/index/abc/5">
+																<button class="btn btn-default btn-lg btn-block" type="button">黑名单</button>
 															</a>
 														</div>
 													</div>												
@@ -211,14 +222,14 @@
 									<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index"><button type="button" class="btn btn-default btn-lg btn-block">我收到的礼物<span class="badge"><?php echo ($giftcount); ?></span></button></a>
+												<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index/abc/1"><button type="button" class="btn btn-default btn-lg btn-block">我收到的礼物<span class="badge"><?php echo ($giftcount); ?></span></button></a>
 											</div>
 										</div>
 
 										<div class = "row">
 											<div class="col-md-0.5"></div>
 											<div class="col-md-11">
-												<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index"><button type="button" class="btn btn-default btn-lg btn-block">我送出的礼物</button></a>
+												<a href="https://localhost/single_love/index.php/Home/Gift/GetGift/index/abc/2"><button type="button" class="btn btn-default btn-lg btn-block">我送出的礼物</button></a>
 											</div>
 										</div>
 
@@ -233,7 +244,7 @@
     										<div class="panel-heading" role="tab" id="headingFour">
       										<h4 class="panel-title">
         										<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          								<button type="button" class="btn btn-default btn-lg btn-block">完善资料</button>
+          								<button type="button" class="btn btn-default btn-lg btn-block">商品管理</button>
         										</a>
       									</h4>
     									</div>
@@ -242,40 +253,40 @@
 												<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">基本资料</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Book/index">
+																<button class="btn btn-default btn-lg btn-block" type="button">上传图书商品</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">我的相册</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Book/other">
+																<button class="btn btn-default btn-lg btn-block" type="button">上传其它商品</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">内心独白</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index/abc/1">
+												<button class="btn btn-default btn-lg btn-block" type="button">待处理订单</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">联系方式</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index/abc/2">
+												<button class="btn btn-default btn-lg btn-block" type="button">已处理订单</button>
 															</a>
 														</div>
 													</div>
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">外貌性格</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index/abc/3">
+														<button class="btn btn-default btn-lg btn-block" type="button">我的订单</button>
 															</a>
 														</div>
 													</div>												
@@ -283,11 +294,11 @@
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
-							                <a href="https://localhost/single_love/index.php/Home/Information/Information/index">
-																<button class="btn btn-default btn-lg btn-block" type="button">工作学习</button>
+							                <a href="https://localhost/single_love/index.php/Home/Book/Showorder/index/abc/4">
+													<button class="btn btn-default btn-lg btn-block" type="button">我的商品</button>
 															</a>
 														</div>
-													</div>
+													</div><!--
 													<div class = "row">
 											     <div class="col-md-0.5"></div>
 									            <div class="col-md-11">
@@ -303,7 +314,7 @@
 																<button class="btn btn-default btn-lg btn-block" type="button">兴趣爱好</button>
 															</a>
 														</div>
-													</div>
+													</div>-->
 
       								</div>
     							</div>
@@ -318,6 +329,9 @@
 								</tr>
 							</table>
 						</div>
+
+
+
 
   					<div class="col-md-9">
 							
@@ -360,7 +374,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_1213877756__=0;$__FOR_END_1213877756__=$about['num'];for($i=$__FOR_START_1213877756__;$i < $__FOR_END_1213877756__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_1204853672__=0;$__FOR_END_1204853672__=$about['num'];for($i=$__FOR_START_1204853672__;$i < $__FOR_END_1204853672__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>

@@ -32,26 +32,26 @@ class ShowBookController extends Controller {
 				$map['abc'] = 0;
 				if($type == NULL AND $username == NULL){
 					$map['school'] = $school;
-					$goods['var'] = $think_book->where($map)->select();
+					$goods['var'] = $think_book->order('time desc')->where($map)->select();
 					$goods['count'] = $think_book->where($map)->count();
 					$this->assign('goods', $goods);
 				}else if($type != NULL AND $username == NULL){
 					$map['school'] = $school;
 					$map['type'] = $type;
-                    $goods['var'] = $think_book->where($map)->select();
+                    $goods['var'] = $think_book->order('time desc')->where($map)->select();
 					$goods['count'] = $think_book->where($map)->count();
 					$this->assign('goods', $goods);
 				}else if($type == NULL AND $username != NULL){
 					$map['bookname'] = array('like', '%'.$username.'%');
 					$map['school'] = $school;
-                   	$goods['var'] = $think_book->where($map)->select();
+                   	$goods['var'] = $think_book->order('time desc')->where($map)->select();
 					$goods['count'] = $think_book->where($map)->count();
 					$this->assign('goods', $goods);
 				}else if($type != NULL AND $username != NULL){
 					$map['school'] = $school;
 					$map['type'] = $type;
 					$map['bookname'] = array('like', '%'.$username.'%');
-					$goods['var'] = $think_book->where($map)->select();
+					$goods['var'] = $think_book->order('time desc')->where($map)->select();
 					$goods['count'] = $think_book->where($map)->count();
 					$this->assign('goods', $goods);
 				}
@@ -89,7 +89,7 @@ class ShowBookController extends Controller {
 				$book_num = $think_book->where($map_book)->field('number')->find();
 				$book_number['number'] = $book_num['number'] - 1;
 				$book_num = $think_book->where($map_book)->field('number')->save($book_number);
-				
+				 $this->redirect('Home/Book/Showorder/index/abc/3');
 			}
 		}else{
 			//如果没有登录访问就提示这句话

@@ -65,22 +65,32 @@
 <div>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">待处理订单</a></li>
-<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已处理订单</a></li>
-<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我的订单</a></li>
-<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我的商品</a></li>
+<?php if($tag == 1): ?><li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">待处理订单</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">待处理订单</a></li><?php endif; ?>
+<?php if($tag == 2): ?><li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已处理订单</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已处理订单</a></li><?php endif; ?>
+<?php if($tag == 3): ?><li role="presentation" class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我的订单</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我的订单</a></li><?php endif; ?>
+<?php if($tag == 4): ?><li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我的商品</a></li>
+<?php else: ?>
+ <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我的商品</a></li><?php endif; ?>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="home">
+<?php if($tag == 1): ?><div role="tabpanel" class="tab-pane active" id="home">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="home"><?php endif; ?>
 <div class="row">	
 <div class="col-md-1"></div>
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_432863355__=0;$__FOR_END_432863355__=$count['count'];for($i=$__FOR_START_432863355__;$i < $__FOR_END_432863355__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1500354061__=0;$__FOR_END_1500354061__=$count['count'];for($i=$__FOR_START_1500354061__;$i < $__FOR_END_1500354061__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -213,8 +223,9 @@
 </div>
 </div>
 </div>
-<div role="tabpanel" class="tab-pane" id="messages">
-
+<?php if($tag == 3): ?><div role="tabpanel" class="tab-pane active" id="messages">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="messages"><?php endif; ?>
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
@@ -222,7 +233,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1628740421__=0;$__FOR_END_1628740421__=$count2['count'];for($i=$__FOR_START_1628740421__;$i < $__FOR_END_1628740421__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1735842620__=0;$__FOR_END_1735842620__=$count2['count'];for($i=$__FOR_START_1735842620__;$i < $__FOR_END_1735842620__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count2["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -359,8 +370,9 @@
 </div>
 
 </div>
-
-<div role="tabpanel" class="tab-pane" id="profile">
+<?php if($tag == 2): ?><div role="tabpanel" class="tab-pane active" id="profile">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="profile"><?php endif; ?>
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
@@ -368,7 +380,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_195081933__=0;$__FOR_END_195081933__=$count1['count'];for($i=$__FOR_START_195081933__;$i < $__FOR_END_195081933__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_152442159__=0;$__FOR_END_152442159__=$count1['count'];for($i=$__FOR_START_152442159__;$i < $__FOR_END_152442159__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count1["book"][$i][0]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -503,10 +515,9 @@
 </div>
 
 </div>
-
-<div role="tabpanel" class="tab-pane" id="settings">
-
-
+<?php if($tag == 4): ?><div role="tabpanel" class="tab-pane active" id="settings">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="settings"><?php endif; ?>
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
@@ -514,7 +525,7 @@
 <div class="col-md-12"> 
 
 
-<?php $__FOR_START_1867552160__=0;$__FOR_END_1867552160__=$count3['count'];for($i=$__FOR_START_1867552160__;$i < $__FOR_END_1867552160__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_511588720__=0;$__FOR_END_511588720__=$count3['count'];for($i=$__FOR_START_511588720__;$i < $__FOR_END_511588720__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count3["book"][$i]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
