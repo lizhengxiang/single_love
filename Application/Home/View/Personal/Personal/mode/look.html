@@ -65,17 +65,40 @@
 <div>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
+<if condition = "$tag eq 1">
 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">谁看过我</a></li>
+<else />
+<li role="presentation" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">谁看过我</a></li>
+</if>
+<if condition = "$tag eq 2">
+<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我看过谁</a></li>
+<else />
 <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我看过谁</a></li>
+</if>
+<if condition = "$tag eq 3">
+<li role="presentation" class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">谁关注我</a></li>
+<else />
 <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">谁关注我</a></li>
+</if>
+<if condition = "$tag eq 4">
+<li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我关注谁</a></li>
+<else />
 <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我关注谁</a></li>
+</if>
+<if condition = "$tag eq 5">
+<li role="presentation" class="active"><a href="#blacklist" aria-controls="blacklist" role="tab" data-toggle="tab">黑名单</a></li>
+<else />
 <li role="presentation"><a href="#blacklist" aria-controls="blacklist" role="tab" data-toggle="tab">黑名单</a></li>
+</if>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
+<if condition = "$tag eq 1">
 <div role="tabpanel" class="tab-pane active" id="home">
-
+<else />
+<div role="tabpanel" class="tab-pane " id="home">
+</if>
 <for tart = "0" end = "$count">
 <div class="row">
 <div class="col-md-12">
@@ -166,7 +189,11 @@
 </for>
 
 </div>
+<if condition = "$tag eq 3">
+<div role="tabpanel" class="tab-pane active" id="messages">
+<else />
 <div role="tabpanel" class="tab-pane" id="messages">
+</if>
 <for tart = "0" end = "$Follower['count']">
 <div class="row">
 <div class="col-md-12">
@@ -255,9 +282,11 @@
 </for>
 
 </div>
-
+<if condition = "$tag eq 2">
+<div role="tabpanel" class="tab-pane active" id="profile">
+<else />
 <div role="tabpanel" class="tab-pane" id="profile">
-
+</if>
 <for tart = "0" end = "$Seenuser">
 <div class="row">
 <div class="col-md-12">
@@ -346,9 +375,11 @@
 </for>
 
 </div>
-
-<div role="tabpanel" class="tab-pane" id="settings">
-
+<if condition = "$tag eq 4">
+<div role="tabpanel" class="tab-pane active" id="settings">
+<else />
+ <div role="tabpanel" class="tab-pane" id="settings">
+</if>
 
 <for tart = "0" end = "$Following['count']">
 <div class="row">
@@ -437,8 +468,12 @@
 </div>
 </for>
 </div>
-
+<if condition = "$tag eq 5">
+<div role="tabpanel" class="tab-pane active" id="blacklist">
+<else />
 <div role="tabpanel" class="tab-pane" id="blacklist">
+</if>
+
 <for tart = "0" end = "0">
 <div class="row">
 <div class="col-md-12">

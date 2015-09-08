@@ -65,15 +65,35 @@
 <div>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
+ <if condition ="$tag eq 1">
+<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">收件箱(未读)</a></li>
+<else/>
 <li role="presentation" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">收件箱(未读)</a></li>
+</if>
+<if condition ="$tag eq 2">
+<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">收件箱(已读)</a></li>
+<else/>
 <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">收件箱(已读)</a></li>
-<li role="presentation" class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">发件箱</a></li>
+</if>
+<if condition ="$tag eq 3">
+<li role="presentation" class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">已发邮件</a></li>
+<else/>
+<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">已发邮件</a></li>
+</if>
+<if condition ="$tag eq 4">
+<li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">系统邮件</a></li>
+<else/>
 <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">系统邮件</a></li>
+</if>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-<div role="tabpanel" class="tab-pane " id="home">
+<if condition ="$tag eq 1">
+<div role="tabpanel" class="tab-pane active" id="home">
+<else/>
+<div role="tabpanel" class="tab-pane" id="home">
+</if>
 <div class="row">	
 <div class="col-md-1"></div>
 <div class="col-md-10">
@@ -148,8 +168,11 @@
 </div>
 </div>
 </div>
+<if condition ="$tag eq 3">
 <div role="tabpanel" class="tab-pane active" id="messages">
-
+<else/>
+<div role="tabpanel" class="tab-pane" id="messages">
+</if>
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
@@ -228,7 +251,11 @@
 
 </div>
 
+<if condition ="$tag eq 2">
+<div role="tabpanel" class="tab-pane active" id="profile">
+<else/>
 <div role="tabpanel" class="tab-pane" id="profile">
+</if>
 <div class="row">
 <div class="col-md-1"></div>
 <div class="col-md-10">
@@ -300,8 +327,12 @@
 </div>
 
 </div>
-
-<div role="tabpanel" class="tab-pane" id="settings">...7</div>
+<if condition ="$tag eq 4">
+<div role="tabpanel" class="tab-pane active" id="settings">
+<else/>
+<div role="tabpanel" class="tab-pane " id="settings">
+</if>
+...7</div>
 </div>
 
 </div>

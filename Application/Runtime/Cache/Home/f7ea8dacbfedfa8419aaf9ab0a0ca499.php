@@ -231,7 +231,7 @@
 <tr class = "info">
 <td>
 
-<?php $__FOR_START_1503251521__=0;$__FOR_END_1503251521__=$commit['count'];for($i=$__FOR_START_1503251521__;$i < $__FOR_END_1503251521__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
+<?php $__FOR_START_1172601074__=0;$__FOR_END_1172601074__=$commit['count'];for($i=$__FOR_START_1172601074__;$i < $__FOR_END_1172601074__;$i+=1){ if($commit['about'][$i]['tag'] == 0): ?><div class = "row">
 <div class="col-md-2">
 <div class = "row">
 <div class="col-md-12">

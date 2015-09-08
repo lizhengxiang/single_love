@@ -10,7 +10,7 @@ require_once 'FollowersbController.class.php';
 
 class LookController extends Controller {
 
-   public function index(){
+   public function index($abc){
 		//echo $map;
 		//获取用户帐号
 		$mapa['members_id'] = cookie('user');
@@ -87,7 +87,7 @@ class LookController extends Controller {
                     $this->assign('Following', $Following);
                	}
 
-				
+				$this->assign('tag', $abc);
 				$this->display('Personal/Personal/mode/look');
 				//$this->display();
 			}

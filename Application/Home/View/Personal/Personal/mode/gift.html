@@ -65,14 +65,25 @@
 <div>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
+<if condition = "$tag eq 1">
 <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">我收到的礼物</a></li>
-<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我送出的礼物</a></li>
+<else />
+<li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">我收到的礼物</a></li>
+</if>
+<if condition = "$tag eq 2">
+<li role="presentation" class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我送出的礼物</a></li>
+<else />
+<li role="presentation" ><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">我送出的礼物</a></li>
+</if>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
+<if condition = "$tag eq 1">
 <div role="tabpanel" class="tab-pane active" id="home">
-
+<else />
+<div role="tabpanel" class="tab-pane" id="home">
+</if>
 <for tart = "0" end = "$count">
 <div class="row">
 <div class="col-md-12">
@@ -292,7 +303,11 @@
 </for>
 
 </div>
-<div role="tabpanel" class="tab-pane" id="messages">
+<if condition = "$tag eq 2">
+<div role="tabpanel" class="tab-pane active" id="messages">
+<else />
+<div role="tabpanel" class="tab-pane " id="messages">
+</if>
 <for tart = "0" end = "$count1">
 <div class="row">
 <div class="col-md-12">

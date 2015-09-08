@@ -65,18 +65,29 @@
 <div>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">谁看过我</a></li>
-<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我看过谁</a></li>
-<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">谁关注我</a></li>
-<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我关注谁</a></li>
-<li role="presentation"><a href="#blacklist" aria-controls="blacklist" role="tab" data-toggle="tab">黑名单</a></li>
+<?php if($tag == 1): ?><li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">谁看过我</a></li>
+<?php else: ?>
+<li role="presentation" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">谁看过我</a></li><?php endif; ?>
+<?php if($tag == 2): ?><li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我看过谁</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">我看过谁</a></li><?php endif; ?>
+<?php if($tag == 3): ?><li role="presentation" class="active"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">谁关注我</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">谁关注我</a></li><?php endif; ?>
+<?php if($tag == 4): ?><li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我关注谁</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">我关注谁</a></li><?php endif; ?>
+<?php if($tag == 5): ?><li role="presentation" class="active"><a href="#blacklist" aria-controls="blacklist" role="tab" data-toggle="tab">黑名单</a></li>
+<?php else: ?>
+<li role="presentation"><a href="#blacklist" aria-controls="blacklist" role="tab" data-toggle="tab">黑名单</a></li><?php endif; ?>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="home">
-
-<?php $__FOR_START_439730834__=0;$__FOR_END_439730834__=$count;for($i=$__FOR_START_439730834__;$i < $__FOR_END_439730834__;$i+=1){ ?><div class="row">
+<?php if($tag == 1): ?><div role="tabpanel" class="tab-pane active" id="home">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane " id="home"><?php endif; ?>
+<?php $__FOR_START_1341007487__=0;$__FOR_END_1341007487__=$count;for($i=$__FOR_START_1341007487__;$i < $__FOR_END_1341007487__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -157,8 +168,10 @@
 </div><?php } ?>
 
 </div>
-<div role="tabpanel" class="tab-pane" id="messages">
-<?php $__FOR_START_563402762__=0;$__FOR_END_563402762__=$Follower['count'];for($i=$__FOR_START_563402762__;$i < $__FOR_END_563402762__;$i+=1){ ?><div class="row">
+<?php if($tag == 3): ?><div role="tabpanel" class="tab-pane active" id="messages">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="messages"><?php endif; ?>
+<?php $__FOR_START_1926362112__=0;$__FOR_END_1926362112__=$Follower['count'];for($i=$__FOR_START_1926362112__;$i < $__FOR_END_1926362112__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -238,10 +251,10 @@
 </div><?php } ?>
 
 </div>
-
-<div role="tabpanel" class="tab-pane" id="profile">
-
-<?php $__FOR_START_1540240271__=0;$__FOR_END_1540240271__=$Seenuser;for($i=$__FOR_START_1540240271__;$i < $__FOR_END_1540240271__;$i+=1){ ?><div class="row">
+<?php if($tag == 2): ?><div role="tabpanel" class="tab-pane active" id="profile">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="profile"><?php endif; ?>
+<?php $__FOR_START_765162701__=0;$__FOR_END_765162701__=$Seenuser;for($i=$__FOR_START_765162701__;$i < $__FOR_END_765162701__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -321,11 +334,11 @@
 </div><?php } ?>
 
 </div>
+<?php if($tag == 4): ?><div role="tabpanel" class="tab-pane active" id="settings">
+<?php else: ?>
+ <div role="tabpanel" class="tab-pane" id="settings"><?php endif; ?>
 
-<div role="tabpanel" class="tab-pane" id="settings">
-
-
-<?php $__FOR_START_329729317__=0;$__FOR_END_329729317__=$Following['count'];for($i=$__FOR_START_329729317__;$i < $__FOR_END_329729317__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_30644642__=0;$__FOR_END_30644642__=$Following['count'];for($i=$__FOR_START_30644642__;$i < $__FOR_END_30644642__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -404,9 +417,11 @@
 </div><?php endif; ?>
 </div><?php } ?>
 </div>
+<?php if($tag == 5): ?><div role="tabpanel" class="tab-pane active" id="blacklist">
+<?php else: ?>
+<div role="tabpanel" class="tab-pane" id="blacklist"><?php endif; ?>
 
-<div role="tabpanel" class="tab-pane" id="blacklist">
-<?php $__FOR_START_1463625255__=0;$__FOR_END_1463625255__=0;for($i=$__FOR_START_1463625255__;$i < $__FOR_END_1463625255__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1696990560__=0;$__FOR_END_1696990560__=0;for($i=$__FOR_START_1696990560__;$i < $__FOR_END_1696990560__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

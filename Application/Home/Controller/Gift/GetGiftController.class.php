@@ -6,7 +6,7 @@ require_once 'NewuserController.class.php';
 require_once 'SendGiftController.class.php';
 
 class GetGiftController extends Controller {
-	public function index(){
+	public function index($abc){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
 			$password = M('registered');
@@ -56,6 +56,7 @@ class GetGiftController extends Controller {
 				//dump($giftroat1);
 				$this->assign('user1', $user1);
 				//dump($user1);
+				$this->assign('tag', $abc);
 				$this->display('Personal/Personal/mode/gift');
 				//$this->display();
 			}
