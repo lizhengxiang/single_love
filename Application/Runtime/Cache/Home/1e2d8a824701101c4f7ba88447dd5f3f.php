@@ -144,7 +144,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_197129195__=0;$__FOR_END_197129195__=$countGift;for($i=$__FOR_START_197129195__;$i < $__FOR_END_197129195__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_906518628__=0;$__FOR_END_906518628__=$countGift;for($i=$__FOR_START_906518628__;$i < $__FOR_END_906518628__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -254,7 +254,7 @@
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_802553953__=0;$__FOR_END_802553953__=$about['num'];for($i=$__FOR_START_802553953__;$i < $__FOR_END_802553953__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_488364202__=0;$__FOR_END_488364202__=$about['num'];for($i=$__FOR_START_488364202__;$i < $__FOR_END_488364202__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -338,7 +338,7 @@
 </div>
 </form>
 
-
+</div>
 <div class = "row">
 <div class="col-md-12">
 <table class="table table-bordered">
@@ -370,7 +370,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_46372703__=0;$__FOR_END_46372703__=$usercount;for($i=$__FOR_START_46372703__;$i < $__FOR_END_46372703__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_1821325213__=0;$__FOR_END_1821325213__=$usercount;for($i=$__FOR_START_1821325213__;$i < $__FOR_END_1821325213__;$i+=1){ ?><div class="row">
 											<div class="col-md-2"></div>
 											<div class="col-md-8">
 											<div class="row">
