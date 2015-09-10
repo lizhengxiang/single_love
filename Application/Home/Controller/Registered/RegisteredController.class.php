@@ -14,7 +14,9 @@ class RegisteredController extends Controller {
 		//实例化registered模型
 		$registered = M('registered');
 		$data['email'] = trim(I('email'));
-		$data['members_id'] = members_id();
+		$data_num = $registered->limit(1)->order('id desc')->select();
+		//echo $data_num[0]['members_id'];
+		$data['members_id'] = members_id($data_num[0]['members_id']);
 		$data['weChat'] = trim(I('wechat'));
 		$data['type'] = make_password(8);
 
@@ -108,6 +110,7 @@ class RegisteredController extends Controller {
 		$think_choose->add();
 		//创建登录数据表
 		*/
+		
 		$think_logintime = M('logintime');
 		$login['members_id'] = $data['members_id'];
 		$think_logintime->create($login);
@@ -122,6 +125,5 @@ class RegisteredController extends Controller {
 		}else{
 			$this->error('新增失敗,亲您重新注册');
 		}
-
 	}
 }

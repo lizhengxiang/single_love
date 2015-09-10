@@ -34,7 +34,7 @@ class FollowersController extends Controller {
 						$think_look->add($dataa);
 					}
 				}
-				$this->redirect('/Home/Look/Look/index');
+				$this->redirect('/Home/Look/Look/index/abc/4');
 			}
 		
 		}else{
