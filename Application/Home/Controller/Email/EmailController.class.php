@@ -35,7 +35,7 @@ class EmailController extends Controller {
 				$data['state'] = 0;
 				$think_email = M('email');
 				$think_email->field('members_id_a,members_id_b,content,time_a,state')->data($data)->add();
-				$this->redirect('/Home/Email/Lookemail/index');
+				$this->redirect('/Home/Email/Lookemail/index/abc/3');
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);

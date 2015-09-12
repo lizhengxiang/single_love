@@ -21,7 +21,7 @@ class ReademailController extends Controller {
 				$email['state'] = 1;
 				$email['time_b'] = date('Y-m-d H:i:s');
 				$think_email->where($map)->field('time_b,state')->data($email)->save();
-				$this->redirect('/Home/Email/Lookemail/index');	
+				$this->redirect('/Home/Email/Lookemail/index/abc/2');	
 			}
 		}else{
 			$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
