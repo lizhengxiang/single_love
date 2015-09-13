@@ -5,18 +5,6 @@ use Think\Controller;
 use Think\Upload;
 require_once'NewuserController.class.php';
 class EmailController extends Controller {
-	/*
-	public static $members_id_a = 9;
-	public function index($user_id){
-		$this->$members_id_a = $user_id;
-		//获取会员资料
-		$nweuser = new NewuserController();
-		$user_1 = $nweuser->index($user_id);
-		//$user_1['id'] = $user_id;
-		$this->assign('data', $user_1);	
-		//调用邮件发送
-		$this->display();
-    }*/
 	public function email(){
 		if($map_id['members_id'] = cookie('user')){
 			//根据用户名获取psssword再和cookie的password做比较
@@ -33,8 +21,12 @@ class EmailController extends Controller {
 				$data['content'] = trim(I('email'));
 				$data['time_a'] = date('Y-m-d H:i:s');
 				$data['state'] = 0;
+				//表示有没有删除邮件的状态0表示正常,1表示删除
+				$data['tag_a'] = 0;
+				$data['tag_b'] = 0;
+				$data['tag_c'] = 0;
 				$think_email = M('email');
-				$think_email->field('members_id_a,members_id_b,content,time_a,state')->data($data)->add();
+				$think_email->field('members_id_a,members_id_b,content,time_a,state,tag_a,tag_b,tag_c')->data($data)->add();
 				$this->redirect('/Home/Email/Lookemail/index/abc/3');
 			}
 		}else{

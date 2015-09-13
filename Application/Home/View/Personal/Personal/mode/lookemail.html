@@ -210,7 +210,20 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1{$i}" data-whatever="@mdo">看信</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+
+<div class = "row">
+<form action="__ROOT__/index.php/Home/Email/Delete/index" enctype = "multipart/form-data" method="POST">
+<div class="row">
+<div class="col-md-1">
+<input type="text" name="emailid" value = {$send["email"][$i]["id"]} style = "display:none;">
+</div>
+<div class = "col-md-11">
+<button type = "submit" class="btn btn-warning">删除</button>
+</div>
+</div>
+</form>
+</div>
+
 </div>
 </div>
 <div class="modal fade" id="exampleModal1{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -288,7 +301,22 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal{$i}" data-whatever="@mdo">看信</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="#" role="button">删除</a>
+
+
+<div class = "row">
+<form action="__ROOT__/index.php/Home/Email/Deleteemail/index" enctype = "multipart/form-data" method="POST">
+<div class="row">
+<div class="col-md-1">
+<input type="text" name="emailid" value = {$read["email"][$i]["id"]} style = "display:none;">
+</div>
+<div class = "col-md-11">
+<button type = "submit" class="btn btn-warning">删除</button>
+</div>
+</div>
+</form>
+</div>
+
+
 </div>
 </div>
 <div class="modal fade" id="exampleModal{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">

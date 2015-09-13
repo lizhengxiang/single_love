@@ -21,6 +21,7 @@ class EmailreadController extends Controller {
 				$think_email = M('email');
 				$map['members_id_b'] = $userid;
 				$map['state'] = 1;
+				$map['tag_a'] = 0;
 				$count['count'] = $think_email->where($map)->count();
 				$count['email'] = $think_email->where($map)->order('time_b desc')->select();	
 				//获取用户头像及照片

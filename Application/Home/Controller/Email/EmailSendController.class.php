@@ -20,6 +20,9 @@ class EmailSendController extends Controller {
 				//获取发送邮件数量
 				$think_email = M('email');
 				$map['members_id_a'] = $userid;
+				//0表示沒有刪除郵件
+				$map['tag_b'] = 0;
+				$map['tag_c'] = 0;
 				$count['count'] = $think_email->where($map)->count();	
 				$count['email'] = $think_email->order('time_a desc')->where($map)->select();
 							

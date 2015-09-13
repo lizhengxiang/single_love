@@ -24,10 +24,12 @@ class LookemailController extends Controller {
 				$email_count = new EmailreadController();
         		$read = $email_count->index(cookie('user'));
         		$this->assign('read', $read);
+
 				//统计发送邮件
 				$email_count = new EmailSendController();
  				$send = $email_count->index(cookie('user'));
  				$this->assign('send', $send);
+				//dump($send);
 				$this->assign('user_id', cookie('user'));
 				$this->assign('tag', $abc);
 				$this->display('Personal/Personal/mode/lookemail');

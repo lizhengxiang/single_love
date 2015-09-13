@@ -33,6 +33,7 @@ class  CommentsController extends Controller {
 				//dump($commit);
 				$this->assign('commit',$commit);
 				//dump($commit);
+				$this->assign('user_id', cookie('user'));
 				$this->display('Personal/Personal/mode/comments');
 				//$this->display('Personal/Personal/mode/iii');
 			}
