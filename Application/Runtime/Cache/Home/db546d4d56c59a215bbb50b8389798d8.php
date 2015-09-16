@@ -78,7 +78,7 @@
 <?php if($tag == 1): ?><div role="tabpanel" class="tab-pane active" id="home">
 <?php else: ?>
 <div role="tabpanel" class="tab-pane" id="home"><?php endif; ?>
-<?php $__FOR_START_1287771188__=0;$__FOR_END_1287771188__=$count;for($i=$__FOR_START_1287771188__;$i < $__FOR_END_1287771188__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1611313404__=0;$__FOR_END_1611313404__=$count;for($i=$__FOR_START_1611313404__;$i < $__FOR_END_1611313404__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -288,7 +288,7 @@
 <?php if($tag == 2): ?><div role="tabpanel" class="tab-pane active" id="messages">
 <?php else: ?>
 <div role="tabpanel" class="tab-pane " id="messages"><?php endif; ?>
-<?php $__FOR_START_52418704__=0;$__FOR_END_52418704__=$count1;for($i=$__FOR_START_52418704__;$i < $__FOR_END_52418704__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1274466628__=0;$__FOR_END_1274466628__=$count1;for($i=$__FOR_START_1274466628__;$i < $__FOR_END_1274466628__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

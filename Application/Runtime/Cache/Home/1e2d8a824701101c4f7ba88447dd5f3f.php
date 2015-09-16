@@ -76,13 +76,50 @@
 					<?php else: ?>
 					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Unfollowers/index/user_id/<?php echo ($photo['members_id']); ?>">取消关注</a></div><?php endif; ?>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">送礼物</button></div>
-					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">举报</a></div>
+					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2a" data-whatever="@mdo">举报</button></div>
 					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">加黑名单</a></div>
 				</div>
 			</td>
 		</tr>
 
 	</table>
+
+
+<div class="modal fade" id="exampleModal2a" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel2a">举报</h4>
+      </div>
+      <div class="modal-body">
+        <form action="/single_love/index.php/Home/Email/Report/email" method="post">
+		<input type = "hidden" name = "user_id" value = <?php echo ($photo['members_id']); ?>>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label"><?php echo ($photo['members_id']); ?></label>
+          </div>
+			<div class="form-group">
+             <label for="recipient-name" class="control-label"><?php echo ($data['age']); ?>岁&nbsp;&nbsp;<?php echo ($data['gender']); ?>&nbsp;&nbsp;<?php echo ($data['schooling']); ?></label>
+		   </div>
+
+          <div class="form-group">
+            <label for="message-text" class="control-label">举报原因:</label>
+            <textarea class="form-control" name="email" id="message-text2" rows = "8"></textarea>
+          </div>
+     
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		<input type="submit" value="举报" class="btn btn-primary">
+      </div>
+		</form>
+    </div>
+  </div>
+</div>
+
+
+
+
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -144,7 +181,7 @@
 						<table class="table table-bordered">
 							<tr>
 								<td>
-										<?php $__FOR_START_616747914__=0;$__FOR_END_616747914__=$countGift;for($i=$__FOR_START_616747914__;$i < $__FOR_END_616747914__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_400325863__=0;$__FOR_END_400325863__=$countGift;for($i=$__FOR_START_400325863__;$i < $__FOR_END_400325863__;$i+=1){ ?><div class="row">
 												<div class="col-md-1"></div>
  				                   				<div class="col-md-5"><img src="<?php echo ($gift[$i]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
 												<div class="col-md-5"><img src="<?php echo ($gift[$i += 1]['road']); ?>" alt="..." class="img-rounded"  width="100%" height="150"></a></div>
@@ -254,7 +291,7 @@
 <tr class = "success">
 <td>
 
-<?php $__FOR_START_994710438__=0;$__FOR_END_994710438__=$about['num'];for($i=$__FOR_START_994710438__;$i < $__FOR_END_994710438__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_686824140__=0;$__FOR_END_686824140__=$about['num'];for($i=$__FOR_START_686824140__;$i < $__FOR_END_686824140__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -370,7 +407,7 @@
 									<div class="row">
 										<div class="col-md-12"><h4><p class = "text-center">最新加入的会员</p></h4></div>
 									</div>
-										<?php $__FOR_START_1476925108__=0;$__FOR_END_1476925108__=$usercount;for($i=$__FOR_START_1476925108__;$i < $__FOR_END_1476925108__;$i+=1){ ?><div class="row">
+										<?php $__FOR_START_604364865__=0;$__FOR_END_604364865__=$usercount;for($i=$__FOR_START_604364865__;$i < $__FOR_END_604364865__;$i+=1){ ?><div class="row">
 											<div class="col-md-2"></div>
 											<div class="col-md-8">
 											<div class="row">

@@ -78,13 +78,50 @@
 					<div class="col-md-2"><a class="btn btn-info" href="https://localhost/single_love/index.php/Home/Look/Unfollowers/index/user_id/{$photo['members_id']}">取消关注</a></div>
 					</if>
 					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1" data-whatever="@mdo">送礼物</button></div>
-					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">举报</a></div>
+					<div class="col-md-2"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal2a" data-whatever="@mdo">举报</button></div>
 					<div class="col-md-2"><a class="btn btn-info" href="#" role="button">加黑名单</a></div>
 				</div>
 			</td>
 		</tr>
 
 	</table>
+
+
+<div class="modal fade" id="exampleModal2a" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel2a">举报</h4>
+      </div>
+      <div class="modal-body">
+        <form action="__ROOT__/index.php/Home/Email/Report/email" method="post">
+		<input type = "hidden" name = "user_id" value = {$photo['members_id']}>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">{$photo['members_id']}</label>
+          </div>
+			<div class="form-group">
+             <label for="recipient-name" class="control-label">{$data['age']}岁&nbsp;&nbsp;{$data['gender']}&nbsp;&nbsp;{$data['schooling']}</label>
+		   </div>
+
+          <div class="form-group">
+            <label for="message-text" class="control-label">举报原因:</label>
+            <textarea class="form-control" name="email" id="message-text2" rows = "8"></textarea>
+          </div>
+     
+      </div>
+      <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		<input type="submit" value="举报" class="btn btn-primary">
+      </div>
+		</form>
+    </div>
+  </div>
+</div>
+
+
+
+
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
