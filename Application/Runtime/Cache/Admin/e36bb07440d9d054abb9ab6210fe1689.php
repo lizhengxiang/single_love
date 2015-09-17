@@ -53,7 +53,7 @@
 <div class="row">
 <div class="col-md-12">
 <!--未读收件箱内容-->
-<?php $__FOR_START_1813161575__=0;$__FOR_END_1813161575__=$count['count'];for($i=$__FOR_START_1813161575__;$i < $__FOR_END_1813161575__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1040179566__=0;$__FOR_END_1040179566__=$count['count'];for($i=$__FOR_START_1040179566__;$i < $__FOR_END_1040179566__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($count["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($count["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -132,7 +132,7 @@
 <div class="col-md-10">
 <div class="row">
 <div class="col-md-12"> 
-<?php $__FOR_START_1111115288__=0;$__FOR_END_1111115288__=$read['count'];for($i=$__FOR_START_1111115288__;$i < $__FOR_END_1111115288__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_195582052__=0;$__FOR_END_195582052__=$read['count'];for($i=$__FOR_START_195582052__;$i < $__FOR_END_195582052__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($read["email"][$i]["members_id_a"]); ?>"><img src="<?php echo ($read["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -225,7 +225,7 @@
 <div class="col-md-4">
 <div class = "row">
 <div class="col-md-12">
-<form class="form-horizontal" action="index" method = "post">
+<form class="form-horizontal" action="/single_love/index.php/Admin/Data/Data/index" method = "post">
 <div class="col-md-12">
 <input type="text" class="form-control input-lg" name="username" id="inputEmail3" placeholder="用户名ID" placeholder = ".input-lg" required>
 </div>

@@ -1,5 +1,5 @@
 <?php
-namespace Home\Controller\Personal;
+namespace Admin\Controller\Data;
 use Think\Controller;
 
 class AboutController extends Controller {

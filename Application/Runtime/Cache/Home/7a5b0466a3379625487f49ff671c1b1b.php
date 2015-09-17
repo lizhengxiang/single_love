@@ -411,7 +411,7 @@
 <table class="table table-bordered">
 <tr class = "success">
 <td>
-<?php $__FOR_START_459341642__=0;$__FOR_END_459341642__=$about['num'];for($i=$__FOR_START_459341642__;$i < $__FOR_END_459341642__;$i+=1){ ?><div class = "row"> 
+<?php $__FOR_START_840099848__=0;$__FOR_END_840099848__=$about['num'];for($i=$__FOR_START_840099848__;$i < $__FOR_END_840099848__;$i+=1){ ?><div class = "row"> 
 <div class="col-md-2">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($about['about'][$i]['members_id']); ?>"><img src="<?php echo ($about['head'][$i] ['head_ptoto']); ?>" alt="..." class="img-rounded"  width="100%" height="50"></a>
 </div>
