@@ -51,7 +51,7 @@
 
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_590881625__=0;$__FOR_END_590881625__=$about['num'];for($i=$__FOR_START_590881625__;$i < $__FOR_END_590881625__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_1908037707__=0;$__FOR_END_1908037707__=$about['num'];for($i=$__FOR_START_1908037707__;$i < $__FOR_END_1908037707__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -153,7 +153,7 @@
 
 <div role="tabpanel" class="tab-pane" id="messages">
 
-<?php $__FOR_START_1692290540__=0;$__FOR_END_1692290540__=$send['count'];for($i=$__FOR_START_1692290540__;$i < $__FOR_END_1692290540__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1672026009__=0;$__FOR_END_1672026009__=$send['count'];for($i=$__FOR_START_1672026009__;$i < $__FOR_END_1672026009__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($send["email"][$i]["members_id_b"]); ?>"><img src="<?php echo ($send["photo"][$i]["head_ptoto"]); ?>" alt="..." class="img-rounded"  width="100%" height="100"></a>
 </div>
@@ -236,7 +236,7 @@
 
 <div role="tabpanel" class="tab-pane" id="profile">
 
-<?php $__FOR_START_813456263__=0;$__FOR_END_813456263__=$count3['count'];for($i=$__FOR_START_813456263__;$i < $__FOR_END_813456263__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1622590889__=0;$__FOR_END_1622590889__=$count3['count'];for($i=$__FOR_START_1622590889__;$i < $__FOR_END_1622590889__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count3["book"][$i]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -347,94 +347,138 @@
 
 
 </div>
-<?php if($tag == 4): ?><div role="tabpanel" class="tab-pane active" id="settings">
-<?php else: ?>
- <div role="tabpanel" class="tab-pane" id="settings"><?php endif; ?>
+ <div role="tabpanel" class="tab-pane" id="settings">
+<div class="row">
 
-<?php $__FOR_START_2047060082__=0;$__FOR_END_2047060082__=$Following['count'];for($i=$__FOR_START_2047060082__;$i < $__FOR_END_2047060082__;$i+=1){ ?><div class="row">
+<div class="col-md-4">
+<div class="row">
 <div class="col-md-12">
-&nbsp;
+<img src="<?php echo ($photo['head_ptoto']); ?>" alt="..." width="100%" height="200">
 </div>
 </div>
 <div class="row">
-<div class="col-md-2">
-<div class="row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($Following[$i]['id']); ?>"><img src="<?php echo ($Following[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
 </div>
 </div>
 <div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="row">
 <div class="col-md-12">
-<p class = "text-center"><?php echo ($Following[$i]['nickname']); ?></p>
+<img src="<?php echo ($photo['life_photo_1']); ?>" alt="..." width="100%" height="200">
 </div>
 </div>
 <div class="row">
-<div class="col-md-12">
-<?php echo ($Following[$i]['time']); ?>
-</div>
-</div>
-</div>
-<div class="col-md-1"></div>
-<?php if($Following[++$i]['id'] != 0): ?><div class="col-md-2">
-<div class="row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($Following[$i]['id']); ?>"><img src="<?php echo ($Following[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
 </div>
 </div>
 <div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="row">
 <div class="col-md-12">
-<p class = "text-center"><?php echo ($Following[$i]['nickname']); ?></p>
+<img src="<?php echo ($photo['life_photo_2']); ?>" alt="..." width="100%" height="200">
 </div>
 </div>
 <div class="row">
-<div class="col-md-12">
-<?php echo ($Following[$i]['time']); ?>
-</div>
-</div>
-</div><?php endif; ?>
-<div class="col-md-2"></div>
-<?php if($Following[++$i]['id'] != 0): ?><div class="col-md-2">
-<div class="row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($Following[$i]['id']); ?>"><img src="<?php echo ($Following[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
 </div>
 </div>
 <div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="row">
 <div class="col-md-12">
-<p class = "text-center"><?php echo ($Following[$i]['nickname']); ?></p>
+<img src="<?php echo ($photo['life_photo_3']); ?>" alt="..." width="100%" height="200">
 </div>
 </div>
 <div class="row">
-<div class="col-md-12">
-<?php echo ($Following[$i]['time']); ?>
-</div>
-</div>
-</div><?php endif; ?>
-<div class="col-md-1"></div>
-<?php if($Following[++$i]['id'] != 0): ?><div class="col-md-2">
-<div class="row">
-<div class="col-md-12">
-<a href="https://localhost/single_love/index.php/Home/Personal/New/index/user_id/<?php echo ($Following[$i]['id']); ?>"><img src="<?php echo ($Following[$i]['head_photo']); ?>" alt="..." class="img-rounded"  width="100%" height="100"/></a>
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
 </div>
 </div>
 <div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="row">
 <div class="col-md-12">
-<p class = "text-center"><?php echo ($Following[$i]['nickname']); ?></p>
+<img src="<?php echo ($photo['life_photo_4']); ?>" alt="..." width="100%" height="200">
 </div>
 </div>
 <div class="row">
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="row">
 <div class="col-md-12">
-<?php echo ($Following[$i]['time']); ?>
+<img src="<?php echo ($photo['life_photo_5']); ?>" alt="..." width="100%" height="200">
 </div>
 </div>
-</div><?php endif; ?>
-</div><?php } ?>
+<div class="row">
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="row">
+<div class="col-md-12">
+<img src="<?php echo ($photo['life_photo_6']); ?>" alt="..." width="100%" height="200">
+</div>
+</div>
+<div class="row">
+<div class="col-md-5 "></div>
+<div class="col-md-2 ">
+<a class="btn btn-warning center" href="" role="button">删除</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">&nbsp;</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3"></div>
+</div>
+
 </div>
 <?php if($tag == 5): ?><div role="tabpanel" class="tab-pane active" id="blacklist">
 <?php else: ?>
 <div role="tabpanel" class="tab-pane" id="blacklist"><?php endif; ?>
 
-<?php $__FOR_START_2118683322__=0;$__FOR_END_2118683322__=0;for($i=$__FOR_START_2118683322__;$i < $__FOR_END_2118683322__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_855102899__=0;$__FOR_END_855102899__=0;for($i=$__FOR_START_855102899__;$i < $__FOR_END_855102899__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
