@@ -2,6 +2,7 @@
 namespace Admin\Controller\Data;
 use Think\Controller;
 require_once 'AboutController.class.php';
+require_once 'EmailSendController.class.php';
 class DataController extends Controller {
 	public function index($user_id = 0){
 		if($map_id['members_id'] = cookie('user')){
@@ -29,6 +30,20 @@ class DataController extends Controller {
 				$about_t = new AboutController();
 				$about = $about_t->index($user_id);
 				$this->assign('about', $about);				
+				
+				//获取发送邮件
+				$email_count = new EmailSendController();
+ 				$send = $email_count->index(cookie('user'));
+ 				$this->assign('send', $send);
+				
+				//获取用户头像及照片
+				$photo1 = M('photo');
+				//根据id取出照片
+				$map_a['members_id'] = $user_id;
+				$photo = $photo1->where($map_a)->find();
+				//给模板变量赋
+				$this->assign('photo', $photo);
+
 				$this->display('/mode/look');
 			}
 		}else{
