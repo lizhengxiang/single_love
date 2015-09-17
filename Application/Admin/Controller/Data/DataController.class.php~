@@ -35,4 +35,26 @@ class DataController extends Controller {
 			$this->success('请您现登录再访问','/single_love/index.php/Admin/Login/Login/index', 2);
 		}					
 	}
+	
+	public function book_b($bookid){
+		if($map_id['members_id'] = cookie('user')){
+			//根据用户名获取psssword再和cookie的password做比较
+			$password = M('registered');
+			$data = $password->where($map_id)->find();
+			//根据密码判断是不是自己
+			if(!$data['password'] === cookie('password')){
+				$this->success('请您现登录再访问','/single_love/index.php/Home/Login/Login/index', 2);
+			}else{
+				$think_order = M('book');
+				$map_a['id'] = $bookid;
+				$mapp['abc'] = 1;
+				$think_order->where($map_a)->field('abc')->save($mapp);
+				$this->redirect('Home/Book/Showorder/index/abc/4');		
+			}
+		}else{
+			//如果没有登录访问就提示这句话
+			$this->success('请您登录后再访问','/single_love/index.php/Home/Login/Login/index', 5);
+		}		
+	}
+
 }

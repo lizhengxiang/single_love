@@ -51,7 +51,7 @@
 
 <div role="tabpanel" class="tab-pane active" id="home">
 
-<?php $__FOR_START_1660700653__=0;$__FOR_END_1660700653__=$about['num'];for($i=$__FOR_START_1660700653__;$i < $__FOR_END_1660700653__;$i+=1){ ?><div class = "row">
+<?php $__FOR_START_859319634__=0;$__FOR_END_859319634__=$about['num'];for($i=$__FOR_START_859319634__;$i < $__FOR_END_859319634__;$i+=1){ ?><div class = "row">
 <div class="col-md-12">
 <a href = "https://localhost/single_love/index.php/Home/Comments/Comments/index/aboutid/<?php echo ($about['about'][$i]['id']); ?>">
 <blockquote>
@@ -153,7 +153,7 @@
 <?php if($tag == 3): ?><div role="tabpanel" class="tab-pane active" id="messages">
 <?php else: ?>
 <div role="tabpanel" class="tab-pane" id="messages"><?php endif; ?>
-<?php $__FOR_START_2034260671__=0;$__FOR_END_2034260671__=$Follower['count'];for($i=$__FOR_START_2034260671__;$i < $__FOR_END_2034260671__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_929893445__=0;$__FOR_END_929893445__=$Follower['count'];for($i=$__FOR_START_929893445__;$i < $__FOR_END_929893445__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -236,7 +236,7 @@
 
 <div role="tabpanel" class="tab-pane" id="profile">
 
-<?php $__FOR_START_1841643368__=0;$__FOR_END_1841643368__=$count3['count'];for($i=$__FOR_START_1841643368__;$i < $__FOR_END_1841643368__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_1404549096__=0;$__FOR_END_1404549096__=$count3['count'];for($i=$__FOR_START_1404549096__;$i < $__FOR_END_1404549096__;$i+=1){ ?><div class="row">
 <div class="col-md-3">
 <img src="<?php echo ($count3["book"][$i]["pic1"]); ?>" alt="..." class="img-rounded"  width="100%" height="100">
 </div>
@@ -260,7 +260,7 @@
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal5<?php echo ($i); ?>" data-whatever="@mdo">查看</button>
 </div>
 <div class="col-md-6">
-<a class="btn btn-warning" href="https://localhost/single_love/index.php/Home/Book/Showorder/book_b/bookid/<?php echo ($count3['book'][$i]['id']); ?>" role="button">删除</a>
+<a class="btn btn-warning" href="https://localhost/single_love/index.php/Admin/Data/Data/book_b/bookid/<?php echo ($count3['book'][$i]['id']); ?>/userid/<?php echo ($count3['book'][$i]['members_id']); ?>" role="button">删除</a>
 </div>
 </div>
 <div class="modal fade" id="exampleModal5<?php echo ($i); ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -351,7 +351,7 @@
 <?php else: ?>
  <div role="tabpanel" class="tab-pane" id="settings"><?php endif; ?>
 
-<?php $__FOR_START_489116534__=0;$__FOR_END_489116534__=$Following['count'];for($i=$__FOR_START_489116534__;$i < $__FOR_END_489116534__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_628372272__=0;$__FOR_END_628372272__=$Following['count'];for($i=$__FOR_START_628372272__;$i < $__FOR_END_628372272__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>
@@ -434,7 +434,7 @@
 <?php else: ?>
 <div role="tabpanel" class="tab-pane" id="blacklist"><?php endif; ?>
 
-<?php $__FOR_START_1470798388__=0;$__FOR_END_1470798388__=0;for($i=$__FOR_START_1470798388__;$i < $__FOR_END_1470798388__;$i+=1){ ?><div class="row">
+<?php $__FOR_START_878721934__=0;$__FOR_END_878721934__=0;for($i=$__FOR_START_878721934__;$i < $__FOR_END_878721934__;$i+=1){ ?><div class="row">
 <div class="col-md-12">
 &nbsp;
 </div>

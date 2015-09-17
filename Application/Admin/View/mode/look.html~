@@ -259,7 +259,6 @@
 </div>
 
 <div role="tabpanel" class="tab-pane" id="profile">
-
 <for start = "0" end = "$count3['count']">
 <div class="row">
 <div class="col-md-3">
@@ -284,8 +283,9 @@
 <div class="col-md-6">
 	<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal5{$i}" data-whatever="@mdo">查看</button>
 </div>
+
 <div class="col-md-6">
-<a class="btn btn-warning" href="https://localhost/single_love/index.php/Home/Book/Showorder/book_b/bookid/{$count3['book'][$i]['id']}" role="button">删除</a>
+<a class="btn btn-warning" href="https://localhost/single_love/index.php/Admin/Data/Data/book_b/userid/{$count3['book'][$i]['members_id']}/bookid/{$count3['book'][$i]['id']}" role="button">删除</a>
 </div>
 </div>
 <div class="modal fade" id="exampleModal5{$i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
